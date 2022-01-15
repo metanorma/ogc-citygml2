@@ -1,0 +1,67 @@
+
+[[cls_3]]
+[bibliography]
+== Normative references
+
+[NOTE,type=boilerplate]
+====
+The following normative documents contain provisions which, through reference in this text, constitute provisions of this part of OGC 12-019. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. However, parties to agreements based on this part of OGC 12-019 are encouraged to investigate the possibility of applying the most recent editions of the normative documents indicated below. For undated references, the latest edition of the normative document referred to applies.
+
+The following documents are indispensable for the application of the CityGML standard. The geometry model of GML 3.1.1 is used except for some added concepts like implicit geometries (cf. chapter <<scls_8-2>>). The appearance model (cf. <<cls_9>>) draws concepts from both _X3D_ and _COLLADA_. Addresses are represented using the OASIS extensible Address Language _xAL_.
+====
+
+* [[[ISO_8601_2004,ISO 8601:2004]]], _Data elements and interchange formats – Information interchange – Representation of dates and times_
+
+* [[[ISO_TS_19103_2005,ISO/TS 19103:2005]]], _Geographic Information – Conceptual Schema Language_
+
+* [[[ISO_19105_2000,ISO 19105:2000]]], _Geographic information – Conformance and testing_
+
+* [[[ISO_19107_2003,ISO 19107:2003]]], _Geographic Information – Spatial Schema_
+
+* [[[ISO_19109_2005,ISO 19109:2005]]], _Geographic Information – Rules for Application Schemas_
+
+* [[[ISO_19111_2003,ISO 19111:2003]]], _Geographic information_ _–_ _Spatial referencing by coordinates_
+
+* [[[ISO_19115_2003,ISO 19115:2003]]], _Geographic Information – Metadata_
+
+* [[[ISO_19123_2005,ISO 19123:2005]]], _Geographic Information – Coverages_
+
+* [[[ISO_TS_19139_2007,ISO/TS 19139:2007]]], _Geographic Information – Metadata – XML schema implementation_
+
+* [[[ISO_IEC_19775_2004,ISO/IEC 19775:2004]]], _X3D Abstract Specification_
+
+* [[[ogc_04-084,OGC 04-084]]], OpenGIS(R) Abstract Specification Topic 0, _Overview, OGC document_ _04-084_
+
+* [[[ogc_99-105r2,OGC 99-105r2]]], OpenGIS(R) Abstract Specification Topic 5, _The OpenGIS Feature, OGC document 99-105r2_
+
+* [[[ogc_99-108r2,OGC 99-108r2]]], OpenGIS(R) Abstract Specification Topic 8, _Relations between Features, OGC document 99-108r2_
+
+* [[[ogc_99-110,OGC 99-110]]], OpenGIS(R) Abstract Specification Topic 10, _Feature Collections, OGC document 99-110_
+
+* [[[ogc_03-105r1,OGC 03-105r1]]], OpenGIS(R) Geography Markup Language Implementation Specification, _Version 3.1.1__, OGC document 03-105r1_
+
+* [[[ogc_05-099r2,OGC 05-099r2]]], OpenGIS(R) GML 3.1.1 Simple Dictionary Profile, _Version 1.0.0, OGC document 05-099r2_
+
+* [[[IETF_RFC_2045,IETF RFC 2045]]], IETF RFC 2045 & 2046, _Multipurpose Internet Mail Extensions (MIME). (November 1996)_
+
+* [[[IETF_RFC_2396,IETF RFC 2396]]], IETF RFC 2396, _Uniform Resource Identifiers (URI): Generic Syntax. (August 1998)_
+
+* [[[W3C_XLink,W3C XLink]]], W3C XLink, _XML Linking Language (XLink) Version 1.0. W3C Recommendation (27 June 2001)_
+
+* [[[W3C_XMLName,W3C XMLName]]], W3C XMLName, _Namespaces in XML. W3C Recommendation (14 January 1999)_
+
+* [[[W3C_XMLSchema-1,W3C XMLSchema-1]]], W3C XMLSchema-1, _XML Schema Part 1: Structures. W3C Recommendation (2 May 2001)_
+
+* [[[W3C_XMLSchema-2,W3C XMLSchema-2]]], W3C XMLSchema-2, _XML Schema Part 2: Datatypes. W3C Recommendation (2 May 2001)_
+
+* [[[W3C_XPointer,W3C XPointer]]], W3C XPointer, _XML Pointer Language (XPointer) Version 1.0. W3C Working Draft (16 August 2002)_
+
+* [[[W3C_XML_Base,W3C XML Base]]], W3C XML Base, _XML Base, W3C Recommendation (27 June 2001)_
+
+* [[[W3C_XML,W3C XML]]], W3C XML, _Extensible Markup Language (XML) 1.0 (Second Edition), W3C Recommendation (6 October 2000)_
+
+* [[[OASIS,OASIS]]], OASIS (Organization for the Advancement of Structured Information Standards): extensible Address Language (xAL v2.0).
+
+* [[[Khronos,Khronos]]], Khronos Group Inc.: COLLADA – Digital Asset Schema Release 1.4.1
+
+* [[[Schematron,Schematron]]], The Schematron Assertion Language 1.5. Rick Jelliffe 2002-10-01

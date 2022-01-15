@@ -1,0 +1,51 @@
+[[annex_d]]
+[appendix,obligation="informative"]
+== Overview of employed GML3 geometry classes
+
+[width=756,options="unnumbered"]
+|===
+h| *Abstract GML classes referenced in CityGML* h| *GML subclass actually used in CityGML*
+| _Geometry a|
+| _Solid | Solid (boundary is restricted to OrientableSurfaces, TexturedSurfaces, Polygons or CompositeSurfaces)
+
+| | CompositeSolid
+
+| _Surface | Polygon (with holes, modelled by _Rings. The boundary is restricted to LineStrings or CompositeCurves)
+
+| | OrientableSurface
+
+| | TexturedSurface (defined in CityGML's _TexturedSurface_ module, not in GML. This modelling approach has been marked deprecated)
+
+| | CompositeSurface (members are restricted to OrientableSurfaces, TexturedSurfaces, Polygons or CompositeSurfaces)
+
+| | TriangulatedSurface
+
+| | TIN
+
+| _Curve | LineString
+
+| a| CompositeCurve (members are restricted to +
+LineStrings or CompositeCurves)
+
+| |
+
+| | Point
+
+| _Coverage | RectifiedGridCoverage
+
+| |
+
+| _AbstractGeometricAggregate | MultiSolid
+
+| a| MultiSurface (members are restricted to +
+OrientableSurfaces, TexturedSurfaces, Polygons or CompositeSurfaces)
+
+| | MultiCurve (members are restricted to LineStrings or CompositeCurves)
+
+| | MultiPoint
+
+| |
+
+| | GeometricComplex (restricted to connected, linear networks)
+
+|===

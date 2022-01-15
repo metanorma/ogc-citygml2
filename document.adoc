@@ -1,0 +1,71 @@
+= OGC City Geography Markup Language (CityGML) Encoding Standard
+:edition: 2.0.0
+:docnumber: 12-019
+:received-date: 2011-05-24
+:issued-date: 2012-03-09
+:published-date: 2012-04-04
+:external-id: http://www.opengis.net/spec/citygml/2.0
+:committee: technical
+:fullname: Gerhard Gröger
+:fullname_2: Thomas H. Kolbe
+:fullname_3: Claus Nagel
+:fullname_4: Karl-Heinz Häfele
+:copyright-year: 2012
+:language: en
+:script: Latn
+:doctype: standard
+:docsubtype: encoding
+:submitting-organizations: Autodesk, Inc. (primary submitter); Bentley Systems, Inc. (primary submitter); Technical University Berlin (submitter of technology); Ordnance Survey, UK; University of Bonn, Germany; Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam; Institute for Applied Computer Science, Karlsruhe Institute of Technology
+:status: approved
+:imagesdir: images
+:mn-document-class: ogc
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+
+include::sections/00-preface.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-conformance.adoc[]
+
+include::sections/03-norm_refs.adoc[]
+
+include::sections/04-conventions.adoc[]
+
+include::sections/05-overview.adoc[]
+
+include::sections/06-general_characteristics.adoc[]
+
+include::sections/07-modularisation.adoc[]
+
+include::sections/08-spatial_model.adoc[]
+
+include::sections/09-appearance_model.adoc[]
+
+include::sections/10-thematic_model.adoc[]
+
+include::sections/aa-xml_schema.adoc[]
+
+include::sections/ab-abstract_test_suite.adoc[]
+
+include::sections/ac-code_lists.adoc[]
+
+include::sections/ad-overview_gml3.adoc[]
+
+include::sections/ae-overview_assignment.adoc[]
+
+include::sections/af-changelog.adoc[]
+
+include::sections/ag-example_datasets.adoc[]
+
+include::sections/ah-example_ade_noise.adoc[]
+
+include::sections/ai-example_ade_ubiquitous.adoc[]
+
+include::sections/ak-revision_history.adoc[]
+
+include::sections/az-bibliography.adoc[]
+

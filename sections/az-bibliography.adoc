@@ -1,0 +1,79 @@
+[bibliography]
+== Bibliography
+
+* [[[Albert_2003,Albert 2003]]], Albert, J., Bachmann, M., Hellmeier, A (2003): Zielgruppen und Anwendungen für Digitale Stadtmodelle und Digitale Geländemodelle. Erhebungen im Rahmen der SIG 3D der GDI NRW (in German only). Available at http://www.ikg.uni-bonn.de/fileadmin/sig3d/pdf/Tabelle_Anwendungen_Zielgruppen.pdf.
+
+* [[[Becker_2011,Becker 2011]]], Becker, T., Nagel, C., Kolbe, T.H. (2011): Integrated 3D modeling of multi-utility networks and their interdependencies for critical infrastructure analysis. In: Kolbe, T.H., König, G., Nagel, C. (Eds.), Advances in 3D Geo-Information Sciences. Springer, Berlin, Heidelberg, pp. 1–20.
+
+* [[[Benner_2005,Benner 2005]]], Benner, J., Geiger, A., Leinemann, K. (2005): Flexible generation of semantic 3D building models. In: Gröger, G., Kolbe, T. H. (eds.): First International ISPRS/EuroSDR/DGPF-Workshop on Next Generation 3D City Models. Bonn, Germany, EuroSDR Publication No. 49. pp.17-22.
+
+* [[[Berlo_2011,Berlo 2011]]], Berlo, L. van, Laat, R. de, (2011): Integration of BIM and GIS: The development of the CityGML GeoBIM extension. In: Kolbe, T.H., König, G., Nagel, C. (Eds.), Advances in 3D Geo-Information Sciences. Springer, Berlin, Heidelberg, pp. 211–225.
+
+* [[[BImSchV_2006,BImSchV 2006]]], BImSchV (2006): Federal Government of Germany (eds.): 34. Verordnung zur Durchführung des Bundesimmissionsschutzgesetzes - Verordnung über die Lärmkartierung [34. BImSchV], in der Fassung vom 6.3.06, in Kraft seit 16.3.06, In: BGBl. I 06, Nr. 12, S. 516 (in German only).
+
+* [[[Bleifu_2009,Bleifu 2009]]], Bleifuß, R., Donaubauer, A., Liebscher, J., Seitle, M., (2009): Entwicklung einer CityGML-Erweiterung für das Facility Management am Beispiel Landeshauptstadt München. In: Symposium angewandte Geoinformatik (AGIT), Salzburg.
+
+* [[[Booch_1997,Booch 1997]]], Booch, G., Rumbaugh, J., Jacobson, I. (1997): Unified Modeling Language User Guide. Addison-Wesley.
+
+* [[[CityGML_2007,CityGML 2007]]], CityGML 2007. Official homepage of CityGML. http://www.citygml.org.
+
+* [[[Cox_2004,Cox 2004]]], Cox, S., Daisy, P., Lake, R., Portele, C., Whiteside, A. (2004): OpenGIS Geography Markup Language (GML 3.1), Implementation Specification Version 3.1.0, Recommendation Paper, OGC Doc. No. 03-105r1.
+
+* [[[Czerwinski_2006,Czerwinski 2006]]], Czerwinski, A., Kolbe, T. H., Plümer, L., Stöcker-Meier, E. (2006): Interoperability and accuracy requirements for EU environmental noise mapping, In: Kremers, Horst (ed.): Proceedings, InterCarto – InterGIS 12. Berlin 2006.
+
+* [[[Czerw_2006,Czerw 2006]]], Czerwinski, A., Kolbe, T. H., Plümer, L., Stöcker-Meier, E. (2006b): Spatial data infrastructure techniques for flexible noise mapping strategies, In: Tochtermann, K. / Scharl, A. (eds.): Proceedings of the 20th International Conference on Environmental Informatics - Managing Environmental Knowledge. Graz 2006.
+
+* [[[Czerwinski_2007,Czerwinski 2007]]], Czerwinski, A., Sandmann, S., Stöcker-Meier, E., Plümer, L. (2007): Sustainable SDI for EU noise mapping in NRW – best practice for INSPIRE, In: International Journal for Spatial Data Infrastructure Research (IJSDIR, http://ijsdir.jrc.it), 2007, vol. 1.
+
+* [[[D_2006,D 2006]]], Döllner, J., Kolbe, T. H., Liecke, F., Sgouros, T., Teichmann, K. (2006): The Virtual 3D City Model of Berlin - Managing, Integrating and Communicating Complex Urban Information. In: Proc. of the 25th Intern. Symposium on Urban Data Management UDMS 2006 in Aal-borg, Denmark, 15-17 May 2006.
+
+* [[[European_2002,European 2002]]], European Union (eds.): Directive 2002/49/EG of the European Parliament and of the Council of 25 June 2002 relating to the assessment and management of environmental noise, in: Official Journal of the European Communities from 18.7.02.
+
+* [[[Federal_1794,Federal 1794]]], Federal Government of Germany (eds.): Gesetz zur Umsetzung der EG-Richtlinie über die Bewertung und Bekämpfung von Umgebungslärm vom 24. Juni 2005, in: Bundesgesetzblatt Jg. 2005, Teil 1, Nr. 38, Bonn 29.6.05 (in German only). Available at http://217.160.60.235/BGBL/bgbl1f/bgbl105s1794.pdf[http://217.160.60.235/BGBL/bgbl1f/bgbl105s1794.pdf].
+
+* [[[Foley_1995,Foley 1995]]], Foley, J., van Dam, A,. Feiner, S., Hughes, J. (1995): Computer Graphics: Principles and Practice. Addison Wesley, 2nd Ed.
+
+* [[[Gamma_1995,Gamma 1995]]], Gamma, E., Helm, R., Johnson, R., Vlissides, J. (1995). Design Patterns: Elements of Reusable Object-Oriented Software, Addison-Wesley.
+
+* [[[Groger,Groger 2005]]], Gröger, G., Plümer, L. (2005): How to get 3-D for the Price of 2-D – Topology and Consistency of 3-D Urban GIS. _Geoinformatica_, 9(2).
+
+* [[[Gr_2005,Gr 2005]]], Gröger, G., Benner, J., Dörschlag, D., Drees, R., Gruber U., Leinemann K., Löwner, M.-O.(2005): Das interoperable 3D-Stadtmodell der SIG 3D, in: Zeitschrift für Vermessungswesen (in German only).
+
+* [[[Herring_9107,Herring 9107]]], Herring, J. (2001): The OpenGIS Abstract Specification, Topic 1: Feature Geometry (ISO 19107 Spatial Schema), Version 5. OGC Document Number 01-101.
+
+* [[[IAI_2006,IAI 2006]]], IAI (2006): International Alliance for Interoperability: IFC 2x3 – Industry Foundation Classes. http://www.iai-international.org/Model/IFC(ifcXML)Specs.html, 2006.
+
+* [[[Khronos_2006,Khronos 2006]]], Khronos Group Inc., Sony Computer Inc. (June 2006): COLLADA – Digital Asset Schema Release 1.4.1 – Specification. http://www.khronos.org/files/collada_spec_1_4.pdf.
+
+* [[[Kohlhaas_2007,Kohlhaas 2007]]], Kohlhaas, A., Mitchell, J. (2007): Modelling cities. In: Constructing the future: nD modelling, p. 372-392, Taylor & Francis
+
+* [[[Kolbe_2003,Kolbe 2003]]], Kolbe, T. H., Gröger, G. (2003): Towards unified 3D city models. In: Schiewe, J., Hahn, M., Madden, M., Sester, M. (eds): Challenges in Geospatial Analysis, Integration and Visualization II. Proc. of Joint ISPRS Workshop, Stuttgart.
+
+* [[[Kolbe_2005,Kolbe 2005]]], Kolbe, T. H., Gröger, G., Plümer, L. (2005): CityGML – Interoperable Access to 3D City Models, In: van Oosterom, Peter, Zlatanova, Sisi, Fendel, E.M. (eds.): Geo-information for Disaster Management. Proc. of the 1st International Symposium on Geo-information for Disaster Management, Delft, The Netherlands, March 21-23. Delft.
+
+* [[[Kolbe_2008,Kolbe 2008]]], Kolbe, T. H., Gröger, G., Plümer, L. (2008): CityGML - 3D City Models for Emergency Response, In: Zlatanova, Li (eds.): Geospatial Information Technology for Emergency Response, ISPRS book series, Taylor & Francis.
+
+* [[[Kolbe_2009,Kolbe 2009]]], Kolbe, T. H., Nagel, C., Lorenz, A. (2009): CityGML – OGC Standard for Photogrammetry?, In: Fritsch, D. (ed.): Photogrammetric Week, Wichmann, Heidelberg, pp. 265-277.
+
+* [[[OASIS_2003,OASIS 2003]]], OASIS 2003: xNAL Name and Address Standard. Organization for the Advancement of Structured Information Standards. http://xml.coverpages.org/xnal.html
+
+* [[[Okabe_1992,Okabe 1992]]], Okabe, A., Boots, B., Sugihara, K. (1992): Spatial Tessellations: Concepts and Applications of Voronoi Diagrams. John Wiley & Sons.
+
+* [[[Sato_2009,Sato 2009]]], Sato, A. (ed.) (2009): OWS-6 Outdoor and Indoor 3D Routing Services Engineering Report, Public Engineering Report, OGC Doc. No. 09-067r2.
+
+* [[[Schulte_2008,Schulte 2008]]], Schulte, C., Coors, V., (2008): Development of a CityGML ADE for dynamic 3D flood information,. In: Joint ISCRAM-CHINA and GI4DM Conference on Information Systems on Information Systems for Crisis Management, Harbin, China, 2008.
+
+* [[[Stadler_2007,Stadler 2007]]], Stadler, A., Kolbe, T. H. (2007): Spatio-Semantic Coherence in the Integration of 3D City Models. In: Proceedings of 5th International ISPRS Symposium on Spatial Data Quality ISSDQ 2007 in Enschede, The Netherlands, 13-15 June 2007
+
+* [[[VBUS_2006,VBUS 2006]]], VBUS (2006): Federal Government of Germany (eds.): Vorläufige Berechnungsmethode für den Umgebungslärm an Straßen vom 15.5.2006 (in German only).
+
+* [[[VBUSch_2006,VBUSch 2006]]], VBUSch (2006): Federal Government of Germany (eds.): Vorläufige Berechnungsmethode für den Umgebungslärm an Schienenwegen vom 10.5.2006 (in German only).
+
+* [[[VRML97_1997,VRML97 1997]]], VRML97, Information technology - Computer graphics and image processing - The Virtual Reality Modeling Language (VRML) – Part 1: Functional specification and UTF-8 encoding. Part 1 of ISO/IEC Standard 14772-1:1997.
+
+* [[[Web_2004,Web 2004]]], Web 3D, Information technology - Computer graphics and image processing - Extensible 3D (X3D). ISO/IEC 19775:2004. http://www.web3d.org/x3d/specifications/, 2004.
+
+* [[[Whiteside_2009,Whiteside 2009]]], Whiteside, A. (ed.) (2009): Definition identifier URNs in OGC namespace, Version: 1.3, OGC(R) Best Practices, OGC Doc. No. 07-092r3.
+
+* [[[Whiteside_2005,Whiteside 2005]]], Whiteside, A. (ed.) (2005): GML 3.1.1 Simple Dictionary Profile, Version: 1.0.0, OpenGIS(R) Implementation Specification, OGC Doc. No. 05-099r2.
+

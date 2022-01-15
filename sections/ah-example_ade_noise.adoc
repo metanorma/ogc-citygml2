@@ -1,0 +1,417 @@
+
+[[annex_h]]
+[appendix,obligation="informative"]
+== Example ADE for Noise Immission Simulation
+
+This annex illustrates the usage of CityGML within an environmental simulation application. The definition of the corresponding Application Domain Extension (ADE) is included as an example.
+
+The Environmental Noise Directive of the European Union 2002/49/EG obligates the EU member states to calculate every 5 years the noise levels at a height of 4m on buildings and to document the results in noise maps. The noise maps serve as information for the European Union and the citizens affected by noise (<<fig_94>>). These noise maps are generated on the basis of acoustic models and noise propagation calculations, not on the basis of measurements (<<fig_95>>). For the noise propagation calculations, a great number of thematic data and 3D geodata is necessary for each EU member state. Because of the large spatial extent of the noise calculation, the provision of statewide and ubiquitous 3D geodata on buildings, roads, railways and terrain for a multitude of users is necessary, in part with high requirements on resolution.
+
+The calculation of noise levels from a road requires information about the traffic flow, the heavy vehicle percentage, the speed limits, the road surface types and the road gradient. Furthermore, the noise level depends on the distance between point of emission and reception (immission) as well as on reflection (e.g. on building facades) or shielding effects (e.g. noise barriers). The noise level is calculated separately for the day (06.00-18.00), the evening (18.00-22.00) and the night (22.00-06.00). As the noise level is calculated at a height of 4m and as the influence of vertical reflecting surfaces is considered (e.g. noise barriers and buildings), a multitude of geodata in the third dimension is necessary. In addition to all 3D geodata specific thematic data are required. For example the following data are necessary for the noise calculation of roads: Digital Terrain Model with 10m grid, 3D building models with their thematic attributes (e.g. reflection, inhabitants), 3D road data with their thematic attributes (e.g. traffic flow, heavy vehicle percentage, speed limit, type of road surface, road gradient, width of a road), 3D noise barriers and their thematic attributes (e.g. reflection).
+
+
+
+[[fig_94]]
+.Noise map generated from the 3D CityGML geodata and used for the reporting demanded of the EU Environmental Noise Directive (dark colours show higher noise immission) (source: State Agency for nature, environment and consumer protection NRW).
+image::217.png["",413,489]
+
+
+
+[[fig_95]]
+.Modelling a noise emission source using the 3D CityGML geodata in a special noise calculation software as first step before generating the noise map in <<fig_94>> (source: Surveying and Mapping Agency NRW, Stapelfeldt GmbH, Institute of Geodesy and Geoinformation Uni Bonn).
+image::218.png["",432,277]
+
+
+
+In the state of North Rhine-Westphalia, special conditions have to be considered: high population and transportation route density and therefore the highest amount of noise calculation areas and objects in Germany. The aim is to provide a sustainable, efficient and variable access to the required 3D geodata for the 5 years iteration period and the different noise calculation authorities.
+
+In order to provide this considerable amount of statewide 3D geodata, the responsible partners, in particular the State Ministry of Environment, Nature Conservation, Agriculture and Consumer Protection of North Rhine-Westphalia, the State Agency for nature, environment and consumer protection of North Rhine-Westphalia and the Surveying and Mapping Agency of North Rhine-Westphalia, have decided to use the Spatial Data Infrastructure in North Rhine-Westphalia (GDI NRW) and to extend it with statewide Web Services for 2.5D and 3D geoinformation. Therefore, new OGC Web Services for building models, terrain, road and railway data were implemented (e.g. Web Feature Service for 3D block models in LOD1 and for 3D road and railway data, Web Coverage Service for DTM).
+
+
+[[fig_96]]
+.3D geodata in CityGML for the calculation of the noise map in <<fig_94>>: DTM in GeoTiff, 3D block model in CityGML, 3D road and railway data in CityGML, state road data for higher-level roads in CityGML (source: Surveying and Mapping Agency NRW, State Road Enterprice NRW, Stapelfeldt GmbH, Institute of Geodesy and Geoinformation Uni Bonn).
+image::224.png["",754,455]
+
+
+
+CityGML is used together with GeoTIFF as the only exchange formats between web services and noise calculation software (<<fig_96>> - <<fig_98>>). For the special requirements of the noise directive, a CityGML noise application schema has been developed by the Institute of Geodesy and Geoinformation University of Bonn and the Special Interest Group SIG 3D of GDI NRW. It is based on the ADE mechanism (see <<scls_6-12>> and <<scls_10-13>>). This mechanism allows the supplementation of existing classes and objects in CityGML (e.g. buildings) by thematic attributes. The quantity as well as the type of these attributes is selectable. The CityGML schema can also be complemented by new classes. Hence, the noise application schema contains new objects (e.g. segmentation of roads according to noise requirements - _NoiseRoadSegment_, <<fig_99>>) as well as noise attributes attached to existing objects (e.g. reflection of buildings, <<fig_100>>). These additional noise attributes are derived from regulations issued by the Federal Government of Germany realising the obligations of the Environmental Noise Directive of the European Union (cf. BImSchV 2006, VBUS 2006, VBUSch 2006).
+
+The interoperability techniques of this project demonstrate a remarkable innovation, as for the first time statewide 3D geodata are provided via common standards and web services (cf. Czerwinski et al. 2006b). Therefore, the Spatial Data Infrastructure for noise calculation in North Rhine-Westphalia provides an application example for the INSPIRE directive of the European Union 2007/2/EC (Infrastructure for Spatial Information in Europe) (cf. Czerwinski et al. 2007).
+
+[[fig_97]]
+.3D geodata in CityGML for the calculation of the noise map in <<fig_94>>: Derived contour lines for the generation of CityGML breaklines, 3D block model in CityGML, 3D road and railway data in CityGML, state road data for higher-level roads in CityGML (source: Surveying and Mapping Agency NRW, State Road Enterprise NRW, Stapelfeldt GmbH, Institute of Geodesy and Geoinformation Uni Bonn).
+image::226.png["",758,337]
+
+
+[[fig_98]]
+.Extract from <<fig_97>> shows the integration of 3D block models in the DTM by appropriate CityGML modelling (lowest point of ALK building polygon is taken as measure to generate the building bottom side) (source: Surveying and Mapping Agency NRW, Stapelfeldt GmbH, Institute of Geodesy and Geoinformation Uni Bonn).
+image::227.png["",703,241]
+
+
+
+=== CityGML Noise ADE
+
+In this section the data models for the CityGML Noise ADE are given as UML diagrams and XML schema. As the semantics of the specific attributes and object types result from the German regulations for noise immision computations, they are not explained in detail here (see BimSchV 2006, VBUS 2006, VBUSch 2006). The purpose of this section is to provide an example how CityGML can be extended using the ADE mechanism. The XML Schema definition of the CityGML Noise ADE together with example datasets can be obtained from http://schemas.opengis.net/citygml/examples/2.0/ade/noise-ade/[http://schemas.opengis.net/citygml/examples/2.0/ade/noise-ade/].
+
+
+
+[[fig_99]]
+.CityGML noise application schema – transportation model (light yellow=CityGML _Transportation_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _Transportation_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
+image::228.png["",756,733]
+
+[[fig_100]]
+.CityGML noise application schema – excerpt of the building model (light yellow=CityGML _Building_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _Building_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
+image::229.png["",475,559]
+
+[[fig_101]]
+.CityGML noise application schema – city furniture model (light yellow=CityGML _CityFurniture_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _CityFurniture_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
+image::230.png["",755,370]
+
+
+
+
+.Header of the Noise ADE Schema definition file
+[source%unnumbered,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.citygml.org/ade/noise_de/2.0" 
+	xmlns:gml="http://www.opengis.net/gml"
+	xmlns:core="http://www.opengis.net/citygml/2.0"
+	xmlns:bldg="http://www.opengis.net/citygml/building/2.0" 
+	xmlns:frn="http://www.opengis.net/citygml/cityfurniture/2.0"
+	xmlns:tran="http://www.opengis.net/citygml/transportation/2.0" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"targetNamespace="http://www.citygml.org/ade/noise_de/2.0" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+	<xsd:import namespace="http://www.opengis.net/citygml/2.0" 
+							schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
+	<xsd:import namespace="http://www.opengis.net/citygml/transportation/2.0" 
+							schemaLocation="http://schemas.opengis.net/citygml/transportation/2.0/transportation.xsd"/>
+	<xsd:import namespace="http://www.opengis.net/citygml/building/2.0" 
+							schemaLocation="http://schemas.opengis.net/citygml/building/2.0/building.xsd"/>
+	<xsd:import namespace="http://www.opengis.net/citygml/cityfurniture/2.0" 
+							schemaLocation="http://schemas.opengis.net/citygml/cityfurniture/2.0/cityFurniture.xsd"/>	
+	...
+</xsd:schema>
+----
+
+
+
+.NoiseCityFurnitureSegmentTypeType**, NoiseCityFurnitureSegment
+[source%unnumbered,xml]
+----
+<xsd:element name="noiseCityFurnitureSegmentProperty" type="NoiseCityFurnitureSegmentPropertyType"
+	substitutionGroup="frn:_GenericApplicationPropertyOfCityFurniture"/>
+<!-- ============================================================================================ -->
+<xsd:complexType name="NoiseCityFurnitureSegmentPropertyType">
+	<xsd:sequence minOccurs="0">
+		<xsd:element ref="NoiseCityFurnitureSegment" minOccurs="0"/>
+	</xsd:sequence>
+	<xsd:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xsd:complexType>
+<!-- ============================================================================================ -->
+<xsd:complexType name="NoiseCityFurnitureSegmentType">
+	<xsd:complexContent>
+		<xsd:extension base="core:AbstractCityObjectType">
+			<xsd:sequence>
+				<xsd:element name="type" type="gml:CodeType" minOccurs="0"/>
+				<xsd:element name="reflection" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="reflectionCorrection" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="height" type="gml:LengthType" minOccurs="0"/>
+				<xsd:element name="distance" type="gml:LengthType" minOccurs="0"/>
+				<xsd:element name="lod0BaseLine" type="gml:CurvePropertyType"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+<!-- ============================================================================================ -->
+<xsd:element name="NoiseCityFurnitureSegment" type="NoiseCityFurnitureSegmentType" substitutionGroup="core:_CityObject"/>
+----
+
+
+
+.NoiseRoadSegmentType, NoiseRoadSegment
+[source%unnumbered,xml]
+----
+<xsd:element name="noiseRoadSegmentProperty" type="NoiseRoadSegmentPropertyType"
+	substitutionGroup="tran:_GenericApplicationPropertyOfRoad"/>
+<!-- ============================================================================================ -->
+<xsd:complexType name="NoiseRoadSegmentPropertyType">
+	<xsd:sequence minOccurs="0">
+		<xsd:element ref="NoiseRoadSegment"/>
+	</xsd:sequence>
+	<xsd:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xsd:complexType>
+<!-- ============================================================================================ -->
+<xsd:complexType name="NoiseRoadSegmentType">
+	<xsd:complexContent>
+		<xsd:extension base="tran:AbstractTransportationObjectType">
+			<xsd:sequence>
+				<xsd:element name="mDay" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="mEvening" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="mNight" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="mDay16" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="pDay" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="pEvening" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="pNight" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="pDay16" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="dtv" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="speedDayPkw" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="speedEveningPkw" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="speedNightPkw" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="speedDayLkw" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="speedEveningLkw" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="speedNightLkw" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="roadSurfaceMaterial" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="roadSurfaceCorrection" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="distanceCarriageway" type="gml:LengthType" minOccurs="0"/>
+				<xsd:element name="distanceD" type="gml:LengthType" minOccurs="0"/>
+				<xsd:element name="bridge" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element name="tunnel" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element name="roadGradientPercent" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="lod0BaseLine" type="gml:CurvePropertyType"/>
+				<xsd:element name="lineage" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+<!-- ============================================================================================ -->
+<xsd:element name="NoiseRoadSegment" type="NoiseRoadSegmentType" substitutionGroup="core:_CityObject"/>
+----
+
+
+
+.NoiseRailwaySegmentType, NoiseRailwaySegment
+[source%unnumbered,xml]
+----
+<xsd:complexType name="NoiseRailwaySegmentPropertyType">
+	<xsd:sequence minOccurs="0">
+		<xsd:element ref="NoiseRailwaySegment"/>
+	</xsd:sequence>
+	<xsd:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xsd:complexType>
+<!-- ============================================================================================ -->
+<xsd:complexType name="NoiseRailwaySegmentType">
+	<xsd:complexContent>
+		<xsd:extension base="tran:AbstractTransportationObjectType">
+			<xsd:sequence>
+				<xsd:element name="railwaySurfaceMaterial" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="railwaySurfaceCorrection" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="bridge" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element name="crossing" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element name="curveRadius" type="gml:LengthType" minOccurs="0"/>
+				<xsd:element name="additionalCorrectionSegment" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="lod0BaseLine" type="gml:CurvePropertyType"/>
+				<xsd:element name="usedBy" type="TrainPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+<!-- ============================================================================================ -->
+<xsd:element name="NoiseRailwaySegment" type="NoiseRailwaySegmentType" substitutionGroup="core:_CityObject"/>
+----
+
+
+.TrainType, TrainPropertyType
+[source%unnumbered,xml]
+----
+<xsd:complexType name="TrainPropertyType">
+	<xsd:sequence>
+		<xsd:element name="Train" type="TrainType"/>
+	</xsd:sequence>
+	<xsd:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xsd:complexType>
+<!-- ============================================================================================ -->
+<xsd:complexType name="TrainType">
+	<xsd:complexContent>
+		<xsd:extension base="gml:AbstractFeatureType">
+			<xsd:sequence>
+				<xsd:element name="trainType" type="xsd:string"/>
+				<xsd:element name="trainTypeCorrection" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="brakePortionDay" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="brakePortionEvening" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="brakePortionNight" type="gml:MeasureType" minOccurs="0"/>
+				<xsd:element name="lengthDay" type="gml:LengthType" minOccurs="0"/>
+				<xsd:element name="lengthEvening" type="gml:LengthType" minOccurs="0"/>
+				<xsd:element name="lengthNight" type="gml:LengthType" minOccurs="0"/>
+				<xsd:element name="speedDay" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="speedEvening" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="speedNight" type="gml:SpeedType" minOccurs="0"/>
+				<xsd:element name="additionalCorrectionTrain" type="gml:MeasureType" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+----
+
+.Application specific attributes for _AbstractBuilding
+[source%unnumbered,xml]
+----
+<xsd:element name="buildingReflection" type="xsd:string" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingReflectionCorrection" type="gml:MeasureType" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingLDenMax" type="gml:MeasureType" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingLDenMin" type="gml:MeasureType" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingLDenEq" type="gml:MeasureType" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingLNightMax" type="gml:MeasureType" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingLNightMin" type="gml:MeasureType" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingLNightEq" type="gml:MeasureType" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingHabitants" type="xsd:positiveInteger" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingAppartments" type="xsd:positiveInteger" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="buildingImmissionPoints" type="gml:integerList" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+<xsd:element name="remark" type="xsd:string" 
+                            substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
+----
+
+
+
+=== Example dataset
+
+The following dataset illustrates a CityGML instance document which uses the application noise schema. It contains two CityObject features: a road object and a building object. The dataset references the XML Schema definition file of the CityGML Noise ADE which explicitly imports the XML Schema definitions of the CityGML modules extended by the Noise ADE (_CityGML Core_, _Building_, _Transportation_, and _CityFurniture_ module). Thus, all classes defined by the employed CityGML modules can be used in the instance document. Furthermore, the application specific additions such as new object types (e.g. _NoiseRoadSegment_) and additional thematic attributes (e.g. the attributes defined for __AbstractBuilding_) are available. These additional elements are distinguished from standard CityGML elements by the namespace prefix _noise_ which refers to the noise schema definition.
+
+
+[[listing_14:]]
+.Excerpt from a CityGML dataset implementing the illustrated CityGML noise application schema.
+[source,xml]
+----
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CityModel xmlns="http://www.opengis.net/citygml/2.0" 
+	xmlns:tran="http://www.opengis.net/citygml/transportation/2.0"
+	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
+	xmlns:noise="http://www.citygml.org/ade/noise_de/2.0"    
+	xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.citygml.org/ade/noise_de NoiseADE/CityGML-NoiseADE.xsd">
+	<gml:boundedBy>
+		<gml:Envelope srsName="urn:ogc:def:crs,crs:EPSG:6.12:31466,crs:EPSG:6.12:5783">
+			<gml:pos srsDimension="3">5616000.0 2540097.5 54.5</gml:pos>
+			<gml:pos srsDimension="3">5673522.3 2576495.6 172.9</gml:pos>
+		</gml:Envelope>
+	</gml:boundedBy>
+	<cityObjectMember>
+		<tran:Road gml:id="CR_0815">
+			<gml:name>B1</gml:name>
+			<gml:boundedBy>
+				<gml:Envelope srsName="urn:ogc:def:crs,crs:EPSG:6.12:31466,crs:EPSG:6.12:5783">
+					<gml:pos srsDimension="3">5618686.0 2573988.4 158.0</gml:pos>
+					<gml:pos srsDimension="3">5618705.5 2574049.8 158.2</gml:pos>
+				</gml:Envelope>
+			</gml:boundedBy>
+			<tran:function>B1303</tran:function>
+			<noise:noiseRoadSegmentProperty>
+				<noise:NoiseRoadSegment gml:id="CNRS_0815">
+					<gml:boundedBy>
+						<gml:Envelope srsName="urn:ogc:def:crs,crs:EPSG:6.12:31466,crs:EPSG:6.12:5783">
+							<gml:pos srsDimension="3">5618686.0 2573988.4 158.0</gml:pos>
+							<gml:pos srsDimension="3">5618705.5 2574049.8 158.2</gml:pos>
+						</gml:Envelope>
+					</gml:boundedBy>
+					<noise:mDay uom="kfzph">2564.123</noise:mDay>
+					<noise:mEvening uom="kfzph">145.123</noise:mEvening>
+					<noise:mNight uom="kfzph">1231.123</noise:mNight>
+					<noise:mDay16 uom="kfzph">2010.123</noise:mDay16>
+					<noise:pDay uom="percent">25.123</noise:pDay>
+					<noise:pEvening uom="percent">35.123</noise:pEvening>
+					<noise:pNight uom="percent">45.123</noise:pNight>
+					<noise:pDay16 uom="percent">30.123</noise:pDay16>
+					<noise:dtv uom="kfzp24h">20564.123</noise:dtv>
+					<noise:speedDayPkw uom="kmph">130.123</noise:speedDayPkw>
+					<noise:speedEveningPkw uom="kmph">100.123</noise:speedEveningPkw>
+					<noise:speedNightPkw uom="kmph">50.123</noise:speedNightPkw>
+					<noise:speedDayLkw uom="kmph">80.123</noise:speedDayLkw>
+					<noise:speedEveningLkw uom="kmph">80.123</noise:speedEveningLkw>
+					<noise:speedNightLkw uom="kmph">50.123</noise:speedNightLkw>
+					<noise:roadSurfaceMaterial>Pflaster mit ebener Oberfläche</noise:roadSurfaceMaterial>
+					<noise:roadSurfaceCorrection uom="dB">2.123</noise:roadSurfaceCorrection>
+					<noise:distanceCarriageway uom="m">15.123</noise:distanceCarriageway>
+					<noise:distanceD uom="m">10.123</noise:distanceD>
+					<noise:bridge>true</noise:bridge>
+					<noise:tunnel>false</noise:tunnel>
+					<noise:roadGradientPercent uom="percent">5.245</noise:roadGradientPercent>
+					<noise:lod0BaseLine>
+						<gml:LineString srsName="urn:ogc:def:crs,crs:EPSG:6.12:31466,crs:EPSG:6.12:5783" srsDimension="3">
+							<gml:coordinates decimal="." cs="," ts=" ">5618686.0, 2573988.4,158.200000
+								5618692.5,2574008.8,158.000000 5618705.5,2574049.8,158.100000</gml:coordinates>
+						</gml:LineString>
+					</noise:lod0BaseLine>
+					<noise:lineage>ATKIS-LVermA</noise:lineage>
+				</noise:NoiseRoadSegment>
+			</noise:noiseRoadSegmentProperty>
+			...
+		</tran:Road>
+	</cityObjectMember>
+	<cityObjectMember>
+		<bldg:Building gml:id="UUID_ef6e19e3-c412-440b-8ba9-24900aa173b5">
+			<gml:name>small building</gml:name>
+			<creationDate>2007-01-04</creationDate>
+			<bldg:function>1060</bldg:function>
+			<bldg:measuredHeight uom="m">2.38</bldg:measuredHeight>
+			<bldg:lod1Solid>
+				<gml:Solid>
+					<gml:exterior>
+						<gml:CompositeSurface>
+							<gml:surfaceMember>
+								<gml:Polygon srsName="urn:ogc:def:crs,crs:EPSG:6.12:31466,crs:EPSG:6.12:5783">
+									<gml:outerBoundaryIs>
+										<gml:LinearRing>
+											<gml:coordinates cs="," decimal="." ts=" ">5662497.03,2559357.47,38.2357750703488
+												5662489.23,2559355.51,38.2357750703488 5662488.178,2559355.247,38.2357750703488
+												5662489.022,2559351.872,38.2357750703488 5662497.877,2559354.097,38.2357750703488
+												5662501.43,2559354.99,38.2357750703488 5662500.584,2559358.357,38.2357750703488
+												5662497.03,2559357.47,38.2357750703488</gml:coordinates>
+										</gml:LinearRing>
+									</gml:outerBoundaryIs>
+								</gml:Polygon>
+							</gml:surfaceMember>
+							...
+						</gml:CompositeSurface>
+					</gml:exterior>
+				</gml:Solid>
+			</bldg:lod1Solid>
+			<bldg:address>
+				<Address>
+					<xalAddress>
+						<xAL:AddressDetails>
+							<xAL:Country>
+								<xAL:CountryName>Germany</xAL:CountryName>
+								<xAL:Locality Type="Town">
+									<xAL:LocalityName>Musterstadt</xAL:LocalityName>
+									<xAL:Thoroughfare Type="Street">
+										<xAL:ThoroughfareNumber>1</xAL:ThoroughfareNumber>
+										<xAL:ThoroughfareName>Musterstrasse</xAL:ThoroughfareName>
+									</xAL:Thoroughfare>
+									<xAL:PostalCode>
+										<xAL:PostalCodeNumber>10000</xAL:PostalCodeNumber>
+									</xAL:PostalCode>
+								</xAL:Locality>
+							</xAL:Country>
+						</xAL:AddressDetails>
+					</xalAddress>
+				</Address>
+			</bldg:address>
+			<noise:buildingReflection>Fassade</noise:buildingReflection>
+			<noise:buildingReflectionCorrection uom="dB">3.23</noise:buildingReflectionCorrection>
+			<noise:buildingLDenMax uom="dB">10</noise:buildingLDenMax>
+			<noise:buildingLDenMin uom="dB">30</noise:buildingLDenMin>
+			<noise:buildingLDenEq uom="dB">20</noise:buildingLDenEq>
+			<noise:buildingLNightMax uom="dB">40</noise:buildingLNightMax>
+			<noise:buildingLNightMin uom="dB">60</noise:buildingLNightMin>
+			<noise:buildingLNightEq uom="dB">50</noise:buildingLNightEq>
+			<noise:buildingHabitants>32</noise:buildingHabitants>
+			<noise:buildingAppartments>8</noise:buildingAppartments>
+			<noise:buildingImmissionPoints>45 1 1 1 50 2 2 2 </noise:buildingImmissionPoints>
+		</bldg:Building>
+	</cityObjectMember>
+</CityModel>
+----
+

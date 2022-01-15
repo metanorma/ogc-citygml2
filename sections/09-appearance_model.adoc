@@ -1,0 +1,660 @@
+
+[[cls_9]]
+== Appearance model
+
+In addition to spatial properties, CityGML features have _appearances_ – observable properties of the feature's surface. Appearances are not limited to visual data but represent arbitrary categories called _themes_ such as infrared radiation, noise pollution, or earthquake-induced structural stress. Each LOD can have an individual appearance for a specific theme. An appearance is composed of data for each surface geometry object, i.e. _surface data_. A single surface geometry object may have surface data for multiple themes. Similarly, surface data can be shared by multiple surface geometry objects (e.g. road paving). Finally, surface data values can either be constant across a surface or depend on the exact location within the surface.
+
+CityGML's appearance model is defined within the extension module _Appearance_ (cf. <<cls_7>>). The UML diagram of the appearance model is illustrated in <<fig_14>>, for the XML Schema definition see <<a_A-2>>.
+
+[[fig_14]]
+.UML diagram of CityGML's appearance model. Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _Appearance_ module.
+image::022.png["",756,805]
+
+
+In CityGML's appearance model, themes are represented by an identifier only. The appearance of a city model for a given theme is defined by a set of _Appearance_ objects referencing this theme. Thus, the _Appearance_ objects belonging to the same theme compose a virtual group. They may be included in different places within a CityGML dataset. Furthermore a single CityGML dataset may contain several themes. An _Appearance_ object collects surface data relevant for a specific theme either for individual features or the whole city model in any LOD. Surface data is represented by objects of class &#95;__SurfaceData__ and its descendents with each covering the whole area of a surface geometry object. The relation between surface data and surface geometry objects is expressed by an _URI_ (_Uniform Resource Identifier_) link from a &#95;__SurfaceData__ object to an object of type _gml:AbstractSurfaceType_ or type _gml:MultiSurface_.
+
+A constant surface property is modelled as material. A surface property, which depends on the location within the surface, is modelled as texture. Each surface geometry object can have both a material and a texture per theme and side. This allows for providing both a constant approximation and a complex measurement of a surface's property simultaneously. An application is responsible for choosing the appropriate property representation for its task (e.g. analysis or rendering). A specific mixing is not defined since this is beyond the scope of CityGML. If a surface geometry object is to receive multiple textures or materials, each texture or material requires a separate theme. The mixing of themes or their usage is not defined within CityGML and left to the application.
+
+*XML namespace*
+
+The XML namespace of the CityGML _Appearance_ module is identified by the Uniform Resource Identifier (URI) http://www.opengis.net/citygml/appearance/2.0. Within the XML Schema definition of the _Appearance_ module, this URI is also used to identify the default namespace.
+
+[[scls_9-1]]
+=== Relation between appearances, features and geometry
+
+Despite the close relation between surface data and surface, surface data is stored separately in the feature to preserve the original GML geometry model. Instead of surface data being an attribute of the respective target surface geometry object, each surface data object maintains a set of URIs specifying the __gml:id__s of the target surface geometry objects (of type _gml:AbstractSurfaceType_ or _gml:MultiSurface_). In case of a composite or aggregate target surface, the surface data object is assigned to all contained surfaces. Other target types such as features, solids, or _gml:AbstractSurfacePatchType_ (which includes _gml:Triangle_) are invalid, even though the XML schema language cannot formally express constrains on URI target types. For the exact mapping function of surface data values to a surface patch refer to the respective surface data type description.
+
+The limitation of valid target types to _gml:AbstractSurfaceType_ and _gml:MultiSurface_ excluding _gml:Abstract­Surface­Patch­Type_ is based on the GML geometry model and its use in CityGML. In general, GML surfaces are represented using subclasses of _gml:AbstractSurfaceType_. Such surfaces are required to be continuous. A _gml:Multi­Surface_ does not need to fulfill this requirement and consequently is no _gml:AbstractSurfaceType_ (cf. 8.1). Since captured real-world surfaces often cannot be guaranteed to be continuous, CityGML allows for _gml:Multi­Surface_ to represent a feature's boundary in various places as an alternative to a continuous surface. To treat such surfaces similarly to a _gml:CompositeSurface_, surface data objects are allowed to link to _gml:Multi­Surface_ objects. _gml:AbstractSurfacePatchType_ is no valid target type since it is not derived from _gml:AbstractGMLType_. Thus, a _gml:AbstractSurface­PatchType_ (which includes _gml:Triangle_ and _gml:Rectangle_) cannot receive a _gml:id_ and cannot be referenced.
+
+Each surface geometry object can have per theme at most one active front-facing material, one active back-facing material, one active front-facing texture, and one active back-facing texture. If multiple surface data objects of the same category and theme are assigned to a surface geometry object, one is chosen to become active. Multiple indirect assignments due to nested surface definitions are resolved by overwriting, e.g. the front-facing material of a _gml:Polygon_ becomes active by overwriting the front-facing material of the parental _gml:CompositeSurface_. Multiple direct assignments, i.e. a surface geometry object's _gml:id_ is referenced multiple times within a theme, are not allowed and are resolved implementation-dependently by choosing exactly one of the conflicting surface data objects. Thus, multiple direct assignments within a theme need to be avoided.
+
+Each &#95;__CityObject__ feature can store surface data. Thus, surface data is arranged in the feature hierarchy of a CityGML dataset. Surface data then links to its target surface using URIs. Even though the linking mechanism permits arbitrary links across the feature hierarchy to another feature's surface, it is recommended to follow the principle of locality: Surface data should be stored such that the linked surfaces only belong to the containing &#95;__CityObject__ feature and its children. "Global" surface data should be stored with the city model. Adhering to the locality principle also ensures that CityObjects retrieved from a WFS will contain the respective appearance information.
+
+The locality principle allows for the following algorithm to find all relevant &#95;__SurfaceData__ objects referring to a given surface geometry object (of type _gml:AbstractSurfaceType_ or _gml:MultiSurface_) in a given &#95;__CityObject__:
+
+
+[[listing_1]]
+.Algorithm to find all relevant &#95;__SurfaceData__ objects referring to a given surface geometry object (of type _gml:AbstractSurfaceType_ or _gml:MultiSurface_) in a given &#95;__CityObject__.
+[source,subs="verbatim,quotes"]
+----
+*function findSurfaceData*
+_in:_ gmlSurface, cityObject
+_out:_ frontMaterial, frontTexture, backMaterial, backTexture
+
+1: frontMaterial := empty
+2: frontTexture := empty
+3: backMaterial := empty
+4: backTexture := empty
+5: flip := false
+6:
+7: *while* (gmlSurface) { _// traverse the geometry hierarchy from inner to outer_
+8:      cObj := cityObject _// start from the innermost cityobject_
+9:
+10:     *while* (cObj) { _// traverse the cityobject hierarchy for the current geometry object +_
+11:         // search all surfaceData objects in all appearance containers
+12:         *foreach* (appearance *in* cObj) {
+13:             *foreach* (surfaceData *in* appearance) {
+14:                 *if* (surfaceData refers to gmlSurface) { _// if a surfaceData object refers to the geometry object, check its category_
+15:                     *if* (flip) { _// consider flipping_
+16:                         // only pick the first surfaceData for a particular category
+17:                         *if* (surfaceData is frontside material *AND* backMaterial is empty) {
+18:                             backMaterial := surfaceData
+19:                         }
+20:                         *if* (surfaceData is frontside texture *AND* backTexture is empty) {
+21:                             backTexture := surfaceData
+22:                         }
+23:                         *if* (surfaceData is backside material *AND* frontMaterial is empty) {
+24:                             frontMaterial := surfaceData
+25:                         }
+26:                         *if* (surfaceData is backside texture *AND* frontTexture is empty) {
+27:                             frontTexture := surfaceData
+28:                         }
+29:                     } *else* {
+30:                         // only pick the first surfaceData for a particular category
+31:                         *if* (surfaceData is frontside material *AND* frontMaterial is empty) {
+32:                             frontMaterial := surfaceData
+33:                         }
+34:                         *if* (surfaceData is frontside texture *AND* frontTexture is empty) {
+35:                             frontTexture := surfaceData
+36:                         }
+37:                         *if* (surfaceData is backside material *AND* backMaterial is empty) {
+38:                             backMaterial := surfaceData
+39:                         }
+40:                         *if* (surfaceData is backside texture *AND* backTexture is empty) {
+41:                             backTexture := surfaceData
+42:                         }
+43:                     }
+44:
+45:                     // shortcut: could stop here if all 4 categories have been found
+46:                 }
+47:             }
+48:         }
+49:         cObj := cObj.parent _// this also includes the global CityModel_
+50:     }
+51:     gmlSurface := gmlSurface.parent _// this also includes a root gml:MultiSurface_
+52:     *if* (gmlSurface isA gml:OrientableSurface *AND* gmlSurface.orientation is negative) {
+53:         negate flip
+54:     }
+55: }
+----
+
+The evaluation of the _isFront_ property of a &#95;__SurfaceData__ object needs to take _gml:OrientableSurface_s into account, as those can flip the orientation of a surface. Assume a _gml:OrientableSurface__ os_, which flips its base surface _bs_. A front side texture stem:[t] targeting _bs_ will appear on the actual front side of _bs_. If stem:[t] targets _os_, it will appear on the back side of _bs_. If stem:[t] targets both _os_ and _bs_, it appears on both sides of _bs_ since it becomes the front and back side texture.
+
+XLinks influence the hierarchy traversal in the pseudocode. In general, the separation of surface data and geometry objects requires the reevaluation of the surface data assignment for each occurrence of a geometry object in the context of the respective &#95;__CityObject__. Stepping up the (geometry or &#95;__CityObject__) hierarchy in the algorithm takes XLinks into account, i.e., for the purpose of this algorithm, referenced objects are conceptually copied to the location of the referring XLink. In particular, this applies to _ImplicitGeometry_ objects. If an _ImplicitGeometry_ object contains GML geometry (in the _relativeGMLGeometry_ property), the surface data assignment needs to be reevaluated in the context of each referring &#95;__CityObject__. Thus, the appearance (but not the relative geometry) of a given _ImplicitGeometry_ can differ between its occurrences. A consistent appearance results if all required surface data objects are placed in _Appearance_ objects and the latter are stored either
+
+. in the &#95;__CityObject__ containing the original _ImplicitGeometry_ with XLinks referencing the same _Appearance_ objects in all &#95;__CityObject__s that refer to the _ImplicitGeometry_ or 
+. in the global _CityModel_.
+
+
+[[scls_9-2]]
+=== Appearance and SurfaceData
+
+The feature class _Appearance_ defines a container for surface data objects. It provides the _theme_ that all contained surface data objects are related to. All appearance objects with the same theme in a CityGML file are considered a group. Surface data objects are stored in the _surfaceDataMember_ property. They can be used in multiple themes simultaneously as remote properties.
+
+The feature class &#95;__SurfaceData__ is the base class for materials and textures. Its only element is the boolean flag _isFront_, which determines the side a surface data object applies to. Please note, that all classes of the appearance model support CityGML's ADE mechanism (cf. <<scls_6-12>> and <<scls_10-13>>). The hooks for application specific extensions are realized by the elements "&#95;__GenericApplicationPropertyOf...__"&#x200c;.
+
+
+.AppearanceType, Appearance, AppearancePropertyType
+[source%unnumbered,xml]
+----
+<xs:complexType name="AppearanceType">
+    <xs:complexContent>
+        <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+                <xs:element name="theme" type="xs:string" minOccurs="0"/>
+                <xs:element name="surfaceDataMember" type="SurfaceDataPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfAppearance" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="Appearance" type="AppearanceType" substitutionGroup="gml:_Feature"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfAppearance" type="xs:anyType" abstract="true"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="AppearancePropertyType">
+    <xs:sequence minOccurs="0">
+        <xs:element ref="Appearance"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xs:complexType>
+----
+
+.appearanceMember, appearance
+[source%unnumbered,xml]
+----
+<xs:element name="appearanceMember" type="gml:FeaturePropertyType" substitutionGroup="gml:featureMember"/>
+<!-- ========================================================================================= -->
+<xs:element name="appearance" type="AppearancePropertyType" substitutionGroup="core:_GenericApplicationPropertyOfCityObject"/>
+----
+
+The definition of _appearanceMember_ allows for an arbitrary or even mixed sequence of &#95;__CityObject__ features and _Appearance_ features within a _CityModel_ feature collection (cf. <<scls_10-1>>).
+
+In order to store appearance information within a single &#95;__CityObject__ feature, the corresponding abstract class &#95;__CityObject__ of the core module is augmented by the property element _appearance_. The additional property _appearance_ is injected into &#95;__CityObject__ using CityGML's _Application Domain Extension_ mechanism (cf. <<scls_10-13>>). By this means, each thematic subclass of &#95;__CityObject__ inherits this property. Thus, the _Appearance_ module has a deliberate impact on each extension module defining thematic subclasses of &#95;__CityObject__.
+
+
+
+.AbstractSurfaceDataType, _SurfaceData, SurfaceDataPropertyType
+[source%unnumbered,xml]
+----
+<xs:complexType name="AbstractSurfaceDataType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+                <xs:element name="isFront" type="xs:boolean" default="true" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfSurfaceData" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="_SurfaceData" type="AbstractSurfaceDataType" abstract="true" substitutionGroup="gml:_Feature"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfSurfaceData" type="xs:anyType" abstract="true"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="SurfaceDataPropertyType">
+<xs:sequence minOccurs="0">
+<xs:element ref="_SurfaceData" minOccurs="0"/>
+</xs:sequence>
+<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xs:complexType>
+----
+
+
+[[scls_9-3]]
+=== Material
+
+Materials define light reflection properties being constant for a whole surface geometry object. The definition of the class _X3DMaterial_ is adopted from the X3D and COLLADA specification (cf. X3D, COLLADA specification). _diffuseColor_ defines the color of diffusely reflected light. _specularColor_ defines the color of a directed reflection. _emissiveColor_ is the color of light generated by the surface. All colors use RGB values with red, green, and blue between 0 and 1. Transparency is defined separately using the _transparency_ element where 0 stands for fully opaque and 1 for fully transparent. _ambientIntensity_ defines the minimum percentage of _diffuseColor_ that is visible regardless of light sources. _shininess_ controls the sharpness of the specular highlight. 0 produces a soft glow while 1 results in a sharp highlight. _isSmooth_ gives a hint for normal interpolation. If this boolean flag is set to true, vertex normals should be used for shading (Gouraud shading). Otherwise, normals should be constant for a surface patch (flat shading).
+
+Target surfaces are specified using _target_ elements. Each element contains the URI of one target surface geometry object (of type _gml:AbstractSurfaceType_ or _gml:MultiSurface_).
+
+
+
+.X3DMaterialType, X3DMaterial
+[source%unnumbered,xml]
+----
+<xs:complexType name="X3DMaterialType">
+    <xs:complexContent>
+        <xs:extension base="AbstractSurfaceDataType">
+            <xs:sequence>
+                <xs:element name="ambientIntensity" type="core:doubleBetween0and1" default="0.2" minOccurs="0"/>
+                <xs:element name="diffuseColor" type="Color" default="0.8 0.8 0.8" minOccurs="0"/>
+                <xs:element name="emissiveColor" type="Color" default="0.0 0.0 0.0" minOccurs="0"/>
+                <xs:element name="specularColor" type="Color" default="1.0 1.0 1.0" minOccurs="0"/>
+                <xs:element name="shininess" type="core:doubleBetween0and1" default="0.2" minOccurs="0"/>
+                <xs:element name="transparency" type="core:doubleBetween0and1" default="0.0" minOccurs="0"/>
+                <xs:element name="isSmooth" type="xs:boolean" default="false" minOccurs="0"/>
+                <xs:element name="target" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfX3DMaterial" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="X3DMaterial" type="X3DMaterialType" substitutionGroup="_SurfaceData"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfX3DMaterial" type="xs:anyType" abstract="true"/>
+----
+
+
+[[scls_9-4]]
+=== Texture and texture mapping
+
+The abstract base class for textures is remote &#95;__Texture__. Textures in CityGML are always raster-based 2D textures. The raster image is specified by _imageURI_ using a URI and can be an arbitrary image data resource, even a preformatted request for a web service. The image data format can be defined using standard MIME types in the _mimeType_ element.
+
+Textures can be qualified by the attribute _textureType_. The _textureType_ differentiates between textures, which are specific for a certain object (_specific_) and prototypic textures being typical for that object surface (_typical)_. Textures may also be classified as _unknown_.
+
+The specification of texture wrapping is adopted from the COLLADA standard. Texture wrapping is required when accessing a texture outside the underlying image raster. _wrapMode_ can have one of five values (<<fig_15>> illustrates the effect of these wrap modes):
+
+. _none_ -- the resulting color is fully transparent
+. _wrap_ -- the texture is repeated
+. _mirror_ -- the texture is repeated and mirrored
+. _clamp_ -- the texture is clamped to its edges
+. _border_ -- the resulting color is specified by the _borderColor_ element (RGBA)
+
+In wrap mode _mirror_, the texture image is repeated both in horizontal and in vertical direction to fill the texture space similar to wrap mode _wrap_. Unlike _wrap_, each repetition results from flipping the previous texture part along the repetition direction. This behaviour removes the edge correspondence constraint for wrapped textures and always results in a seamless texture.
+
+
+[[fig_15]]
+.A texture (a) applied to a facade using different wrap modes: (b) none, (c) wrap, (d) mirror, (e) clamp and (f) border. The border color is red. The numbers denote texture coordinates (image: Hasso-Plattner-Institute).
+image::023.png["",756,149]
+
+
+.AbstractTextureType, _Texture, WrapModeType, TextureTypeType
+[source%unnumbered,xml]
+----
+<xs:complexType name="AbstractTextureType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="AbstractSurfaceDataType">
+            <xs:sequence>
+                <xs:element name="imageURI" type="xs:anyURI"/>
+                <xs:element name="mimeType" type="gml:CodeType" minOccurs="0"/>
+                <xs:element name="textureType" type="TextureTypeType" minOccurs="0"/>
+                <xs:element name="wrapMode" type="WrapModeType" minOccurs="0"/>
+                <xs:element name="borderColor" type="ColorPlusOpacity" minOccurs="0"/>
+                <xs:element ref="_GenericApplicationPropertyOfTexture" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="_Texture" type="AbstractTextureType" abstract="true" substitutionGroup="_SurfaceData"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfTexture" type="xs:anyType" abstract="true"/>
+<!-- ========================================================================================= -->
+<xs:simpleType name="WrapModeType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="none"/>
+        <xs:enumeration value="wrap"/>
+        <xs:enumeration value="mirror"/>
+        <xs:enumeration value="clamp"/>
+        <xs:enumeration value="border"/>
+    </xs:restriction>
+</xs:simpleType>
+<!-- ========================================================================================= -->
+<xs:simpleType name="TextureTypeType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="specific"/>
+        <xs:enumeration value="typical"/>
+        <xs:enumeration value="unknown"/>
+    </xs:restriction>
+</xs:simpleType>
+----
+
+remote &#95;__Texture__ is further specialised according to the texture parameterisation, i.e. the mapping function from a location on the surface to a location in the texture image. CityGML uses the notion of texture space, where the texture image always occupies the region [0,1]² regardless of the actual image size or aspect ratio. The lower left image corner is located at the origin (some graphics APIs may use other conventions and require texture coordinate conversion). The mapping function must be known for each surface geometry object to receive texture.
+
+[[fig_16]]
+.A georeferenced texture applied to ground and roof surfaces (source: Senate of Berlin, Hasso-Plattner-Institute).
+image::024.jpg["",650,384]
+
+
+The class _GeoreferencedTexture_ describes a texture that uses a planimetric projection. Consequently, it does not make sense to texture vertical surfaces using a _GeoreferencedTexture_. Such a texture has a unique mapping function which is usually provided with the image file (e.g. georeferenced TIFF) or as a separate ESRI world file footnote:[Further information about the ESRI world file format is provided at http://en.wikipedia.org/wiki/World_file.]. The search order for an external georeference is determined by the boolean flag _preferWorldFile_. If this flag is set to true (its default value), a world file is looked for first and only if it is not found the georeference from the image data is used. If _preferWorldFile_ is false, the world file is used only if no georeference from the image data is available.
+
+Alternatively, CityGML allows for inline specification of a georeference similar to a world file. This internal georeference specification always takes precedence over any external georeference. _referencePoint_ defines the location of the center of the upper left image pixel in world space and corresponds to values 5 and 6 in an ESRI world file. Since _GeoreferencedTexture_ uses a planimetric projection, _referencePoint_ is two-dimensional. _orientation_ defines the rotation and scaling of the image in form of a 2x2 matrix (a list of 4 doubles in row-major order corresponding to values 1, 3, 2, and 4 in an ESRI world file). The CRS of this transformation is identical to the _referencePoint_'s CRS. A planimetric point stem:[(x,y)^T] in that CRS is transformed to a point stem:[(s,t)^T] in texture space using the formula:
+
+[stem%unnumbered]
+++++
+((s),(t)) = ((1//W,0),(0,-1//h)) cdot M^{-1} cdot (((x),(y)) - P_R ) + ((0),(1))
+++++
+
+with stem:[M] denoting _orientation_, stem:[P_R] denoting _referencePoint_., stem:[w] the image's width in pixels, and stem:[h] the image's height in pixels. This transformation compensates for the difference between the image coordinate system used in ESRI world files (origin in upper left corner, positive x-axis rightwards, and positive y-axis downwards) and texture space in CityGML (origin in lower left corner, positive x-axis rightwards, and positive y-axis upwards).
+
+If neither an internal nor an external georeference is given the _GeoreferencedTexture_ is invalid. Each target surface geometry object is specified by an URI in a _target_ element. All target surface geometry objects share the mapping function defined by the georeference. No other mapping function is allowed. Please note, that the _gml:boundedBy_ property inherited from _gml:AbstractFeatureType_ could be set to the bounding box of valid image data to allow for spatial queries. <<fig_16>> shows a georeferenced texture applied to the ground and all roof surfaces.
+
+
+.GeoreferencedTextureType, GeoreferencedTexture
+[source%unnumbered,xml]
+----
+<xs:complexType name="GeoreferencedTextureType">
+    <xs:complexContent>
+        <xs:extension base="AbstractTextureType">
+            <xs:sequence>
+                <xs:element name="preferWorldFile" type="xs:boolean" default="true" minOccurs="0"/>
+                <xs:element name="referencePoint" type="gml:PointPropertyType" minOccurs="0"/>
+                <xs:element name="orientation" type="core:TransformationMatrix2x2Type" minOccurs="0"/>
+                <xs:element name="target" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfGeoreferencedTexture" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="GeoreferencedTexture" type="GeoreferencedTextureType" substitutionGroup="_Texture"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfGeoreferencedTexture" type="xs:anyType" abstract="true"/>
+----
+
+
+The class _ParameterizedTexture_ describes a texture with target-dependent mapping function. The mapping is defined by subclasses of class remote &#95;__TextureParameterization__ as a property of the link to the target surface geometry object. Each target surface geometry object is specified as URI in the _uri_ attribute of a separate _target_ element. Since _target_ implements _gml:AssociationAttributeGroup_, it allows referencing to a remote &#95;__TextureParameterization__ object (using the _xlink:href_ attribute), e.g. for sharing a mapping function between targets or textures in different themes. The mapping function can either use the concept of texture coordinates (through class _TexCoordList_) or a transformation matrix from world space to texture space (through class _TexCoordGen_).
+
+[[fig_17]]
+.Positioning of textures using texture coordinates (image: IGG Uni Bonn).
+image::028.jpg["",656,246]
+
+
+
+Texture coordinates are applicable only to polygonal surfaces, whose boundaries are described by _gml:LinearRing_ (e.g., _gml:Triangle_, _gml:Polygon_, or a _gml:MultiSurface_ consisting of __gml:Polygon__s). They define an explicit mapping of a surface's vertices to points in texture space, i.e. each vertex including interior ring vertices must receive a corresponding coordinate pair in texture space (for the notion of coordinates, refer to ISO 19111). These coordinates are not restricted to the [0,1] interval. Texture coordinates for interior surface points are planarly interpolated from the vertices' texture coordinates. <<fig_16>> shows an example.
+
+Texture coordinates for a target surface geometry object are specified using class _TexCoordList_ as a texture parameterization object in the texture's _target_ property. Each exterior and interior _gml:LinearRing_ composing the boundary of the target surface geometry object (which also might be a _gml:CompositeSurface_, _gml:MultiSurface_, or _gml:TriangulatedSurface_) requires its own set of texture coordinates. A set of texture coordinates is specified using the _textureCoordinates_ element of class _TexCoordList_. Thus, a _TexCoordList_ contains as many _textureCoordinate_ elements as the target surface geometry object contains _gml:LinearRing_s. _textureCoordinate_'s mandatory attribute _ring_ provides the _gml:id_ of the respective ring. The content is an ordered list of double values where each two values define a stem:[(s,t)^T] texture coordinate pair with stem:[s] denoting the horizontal and stem:[t] the vertical texture axis. The list contains one pair per ring point with the pairs' order corresponding to the ring points' order in the CityGML document (regardless of a possibly flipped surface orientation). If any ring point of a target surface geometry object has no texture coordinates assigned, the mapping is incomplete and the respective surface cannot be textured. In case of aggregated target geometry objects, mapping completeness is determined only for leaf geometry objects.
+
+
+[[fig_18]]
+.Projecting a photograph (<<fig_18-a>>) onto multiple facades (<<fig_18-b>>) using the _worldToTexture_ transformation. The photograph does not cover the left facade completely. Thus, the texture appears to be clipped. Texture wrapping is set to "_none_" (source: Senate of Berlin, Hasso-Plattner-Institute).
+====
+[[fig_18-a]]
+image::030.jpg["",314,236]
+
+[[fig_18-b]]
+image::031.jpg["",353,236]
+====
+
+
+Alternatively, the mapping function can comprise a 3x4 transformation matrix specified by class _TexCoordGen_. The transformation matrix, specified by the _worldToTexture_ element, defines a linear transformation from a spatial location in homogeneous coordinates to texture space. The use of homogeneous coordinates facilitates perspective projections as transformation, e.g. for projecting a photograph into a city model (cf. <<fig_18>>). Texture coordinates stem:[(s,t)^T] are calculated from a space location stem:[(x,y,z)^T] as stem:[(s,t)^T = (s' // q, t' // q')^T] with stem:[(s',t',q')^T = M cdot (x,y,z,1)^T]. stem:[M] denotes the stem:[3 xx 4] transformation matrix. Compared to a general 4x4 transformation, the resulting stem:[z] component is ignored. Thus, the respective matrix row is omitted. Additionally, the _worldToTexture_ element uses the _gml:SRSReferenceGroup_ attributes to define its CRS. A location in world space has to be first transformed into this CRS before the transformation matrix can be applied.
+
+The following construction results in a _worldToTexture_ transformation that mimics the process of taking a photograph by projecting a location in world space (in the city model) to a location in texture space:
+
+[stem%unnumbered]
+++++
+M = ubrace(((0.5, 0, 0.5),(0, 0.5, 0.5),(0, 0, 1)))_("Adjustment to texture space") cdot ubrace(((2f//w, 0, 0, 0),(0, 2f//h, 0, 0),(0, 0, 1, 0)))_("Perspective projection") cdot ubrace(((r_x, r_y, r_z,0),(u_x, u_y, u_z, 0),(d_x, d_y, d_z, 0),(0, 0, 0, 1)))_("Camera orientation") cdot ubrace(((1, 0, 0, -P_x),(0, 1, 0, -P_y),(0, 0, 1, -P_z),(0, 0, 0, 1)))_("Camera location")
+++++
+
+In this formula, stem:[f] denotes the focal length; stem:[w] and stem:[h] represent the image sensor's physical dimensions; stem:[vec r], stem:[vec u], and stem:[vec d] define the camera's frame of reference as right, up and directional unit vectors expressed in world coordinates; and stem:[P] stands for the camera's location in world space. <<fig_19>> sketches this setting.
+
+[[fig_19]]
+.Projective texture mapping. All points on a ray stem:[R] starting from the projection center stem:[P] are mapped to the same point stem:[T] in texture space (image: Hasso-Plattner-Institute, IGG TU Berlin).
+image::040.png["",664,293]
+
+
+Alternatively, if the stem:[3 xx 4] camera matrix stem:[M_P] is known (e.g. through a calibration and registration process), it can easily be adopted for use in _worldToTexture_. stem:[M_P] is derived from intrinsic and extrinsic camera parameters (interior and exterior orientation) and transforms a location in world space to a pixel location in the image. Assuming the upper left image corner has pixel coordinates (0,0), the complete transformation to texture space coordinates can be written as (stem:["width"_{"image"}] and stem:["height"_{"image"}] denote the image size in pixels):
+
+
+[stem%unnumbered]
+++++
+M = ((1//"width"_"image", 0, 0),(0, -1//"height"_"image", 1),(0, 0, 1)) cdot M_p
+++++
+
+Please note, that _worldToTexture_ cannot compensate for radial or other non-linear distortions introduced by a real camera lens.
+
+Another use of _worldToTexture_ is texturing a facade with complex geometry without specifying texture coordinates for each _gml:LinearRing_. Instead, only the facade's aggregated surface becomes the texture target using a _TexCoordGen_ as parameterization. Then, _worldToTexture_ effectively encodes an orthographic projection of world space into texture space. For the special case of a vertical facade this transformation is given by:
+
+[stem%unnumbered]
+++++
+M = ubrace(((1//"width"_f, 0, 0 , 0),(0, 1//"height"_f, 0, 0),(0, 0, 0, 1)))_("Scaling to texturespace") cdot ubrace(((-n_y, n_x, 0, 0),(0, 0, 1, 0),(n_x, n_y, 0, 0),(0, 0, 0, 1)))_("Facadeorientation") cdot ubrace(((1, 0, 0, -F_x),(0, 1, 0, -F_y),(0, 0, 1, -F_z),(0, 0, 0, 1)))_("Facadelocation")
+++++
+
+This equation assumes stem:[vec n] denoting the facade's overall normal vector (normalized, pointing outward, and being parallel to the ground), stem:[F] denoting the facade's lower left point, and stem:["width"_f] and stem:["height"_f] specifying the facade's dimensions in world units. For the general case of an arbitrary normal vector the facade orientation matrix assumes a form similar to the camera orientation matrix:
+
+[stem%unnumbered]
+++++
+M = ((1//"width"_f, 0, 0 , 0),(0, 1//"height"_f, 0, 0),(0, 0, 0, 1)) cdot ((r_x, r_y, r_z, 0),(u_x, u_y, u_z, 0),(n_x, n_y, n_z, 0),(0, 0, 0, 1)) cdot ((1, 0, 0, -F_x),(0, 1, 0, -F_y),(0, 0, 1, -F_z),(0, 0, 0, 1))
+++++
+
+with
+
+[stem%unnumbered]
+++++
+vec r = {((0,0,1))^T xx vec n}/{norm{((0,0,1))^T xx vec n}} " ", " " vec u = vec n xx vec r
+++++
+
+
+.ParameterizedTextureType, ParameterizedTexture, TextureAssociationType
+[source%unnumbered,xml]
+----
+<xs:complexType name="ParameterizedTextureType">
+    <xs:complexContent>
+        <xs:extension base="AbstractTextureType">
+            <xs:sequence>
+                <xs:element name="target" type="TextureAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="_GenericApplicationPropertyOfParameterizedTexture" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="ParameterizedTexture" type="ParameterizedTextureType" substitutionGroup="_Texture"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfParameterizedTexture" type="xs:anyType" abstract="true"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="TextureAssociationType">
+    <xs:sequence minOccurs="0">
+        <xs:element ref="_TextureParameterization"/>
+    </xs:sequence>
+    <xs:attribute name="uri" type="xs:anyURI" use="required"/>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xs:complexType>
+----
+
+
+
+.AbstractTextureParameterizationType, TexCoordListType, TexCoordGenType
+[source%unnumbered,xml]
+----
+<xs:complexType name="AbstractTextureParameterizationType" abstract="true">
+    <xs:complexContent>
+        <xs:extension base="gml:AbstractGMLType">
+            <xs:sequence>
+                <xs:element ref="_GenericApplicationPropertyOfTextureParameterization" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="_TextureParameterization" type="AbstractTextureParameterizationType" abstract="true"
+            substitutionGroup="gml:_GML"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfTextureParameterization" type="xs:anyType" abstract="true"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="TexCoordListType">
+    <xs:complexContent>
+        <xs:extension base="AbstractTextureParameterizationType">
+            <xs:sequence>
+                <xs:element name="textureCoordinates" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="gml:doubleList">
+                                <xs:attribute name="ring" type="xs:anyURI" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="_GenericApplicationPropertyOfTexCoordList" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="TexCoordList" type="TexCoordListType" substitutionGroup="_TextureParameterization"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfTexCoordList" type="xs:anyType" abstract="true"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="TexCoordGenType">
+    <xs:complexContent>
+        <xs:extension base="AbstractTextureParameterizationType">
+            <xs:sequence>
+                <xs:element name="worldToTexture">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="core:TransformationMatrix3x4Type">
+                                <xs:attributeGroup ref="gml:SRSReferenceGroup"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="_GenericApplicationPropertyOfTexCoordGen" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="TexCoordGen" type="TexCoordGenType" substitutionGroup="_TextureParameterization"/>
+<!-- ========================================================================================= -->
+<xs:element name="_GenericApplicationPropertyOfTexCoordGen" type="xs:anyType" abstract="true"/>
+----
+
+[[scls_9-5]]
+=== Related concepts
+
+The notion of appearance clearly relates to the generic coverage approach (cf. ISO 19123 and OGC Abstract specification, Topic 6). Surface data can be described as discrete or continuous coverage over a surface as two-dimensional domain with a specific mapping function. Such an implementation requires the extension of GML coverages (as of version 3.1) by suitable mapping functions and specialisation for valid domain and range sets. For reasons of simplicity and comprehensibility both in implementation and usage, CityGML does not follow this approach, but relies on textures and materials as well-known surface property descriptions from the field of computer graphics (cf. X3D, COLLADA specification, Foley et al.). Textures and materials store data as color using an appropriate mapping. If such a mapping is impractical, data storage can be customised using ADEs. A review of coverages for appearance modelling is considered for CityGML beyond version 2.0.0.
+
+Appearance is also related to portrayal. Portrayal describes the composition and symbolisation of a digital model's image, i.e. presentation, while appearance encodes observations of the real object's surface, i.e. data. Even though being based on graphical terms such as textures and materials, surface data is not limited to being input for portrayal, but similarly serves as input or output for analyses on a feature's surface. Consequently, CityGML does not define mixing or composition of themes for portrayal purposes. Portrayal is left to viewer applications or styling specification languages such as OGC Styled Layer Descriptors (SLD) or OGC Symbology Encoding (SE).
+
+[[scls_9-6]]
+=== Code lists
+
+The _mimeType_ attribute of the feature remote &#95;__Texture__ is specified as _gml:CodeType_. The values of this property can be enumerated in a code list. A proposal for this code list can be found in <<a_C-6>>.
+
+[[scls_9-7]]
+=== Conformance requirements
+
+===== Base requirements
+
+. A surface geometry object may be the target of at most two textures and two materials (one for front and back respectively) per theme. 
+. The _referencePoint_ property (type: _gml:PointPropertyType_) of the element _GeoreferencedTexture_ may only contain or reference a point geometry object with 2D coordinate values.
+. Texture coordinates given by the _textureCoordinates_ property of the element _TexCoordList_ define an explicit mapping of a surface's boundary points to points in texture space. Each boundary point of the surface must receive a corresponding coordinate pair in texture space. The coordinate pair in texture space shall be given as two doubles per boundary point. The order of the coordinate pairs must follow the order of the boundary points in the CityGML document (regardless of a possibly flipped surface orientation). Each _gml:LinearRing_ composing the boundary of the target surface geometry object requires its own set of texture coordinates.
+. A _GeoreferencedTexture_ element must provide either internal or external georeference, otherwise it is invalid. Internal georeference shall be declared by the _referencePoint_ property (type: _gml:PointPropertyType_) and the _orientation_ property (type: _core:TransformationMatrix2x2Type_) of the element _GeoreferencedTexture_. External georeference may be provided by the texture image file itself (e.g. GeoTIFF) or by an accompanying world file. 
+
+*Referential integrity*
+
+[start=5]
+. The _appearanceMember_ element (type: _AppearancePropertyType_) may contain an _Appearance_ element inline or an XLink reference to a remote _Appearance_ element using the XLink concept of GML 3.1.1. In the latter case, the _xlink:href_ attribute of the _appearanceMember_ element may only point to a remote _Appearance_ element (where remote _Appearance_ elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.
+. The _appearance_ property (type: _AppearancePropertyType_) of the element _core:_CityObject_ may contain an _Appearance_ element inline or an XLink reference to a remote _Appearance_ element using the XLink concept of GML 3.1.1. In the latter case, the _xlink:href_ attribute of the _appearance_ property may only point to a remote _Appearance_ element (where remote _Appearance_ elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none. 
+. The _surfaceDataMember_ property (type: _SurfaceDataPropertyType_) of the element _Appearance_ may contain a remote &#95;__SurfaceData__ element inline or an XLink reference to a remote &#95;__SurfaceData__ element using the XLink concept of GML 3.1.1. In the latter case, the _xlink:href_ attribute of the _surfaceDataMember_ property may only point to a remote &#95;__SurfaceData__ element (where remote &#95;__SurfaceData__ elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none. 
+. The _target_ property (type: _TextureAssociationType_) of the element _ParameterizedTexture_ may contain a &#95;__TextureParameterization__ element inline or an XLink reference to a remote &#95;__TextureParameterization__ element using the XLink concept of GML 3.1.1. In the latter case, the _xlink:href_ attribute of the _target_ property may only point to a remote &#95;__TextureParameterization__ element (where remote &#95;__TextureParameterization__ elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.
+. The _target_ property (type _xs:anyURI_) of the element _GeoreferencedTexture_ shall specify the _gml:id_ of the target surface geometry object which may only be of type _gml:AbstractSurfaceType_ or _gml:MultiSurface_. 
+. The _uri_ attribute of the complex type _TextureAssociationType_ shall specify the _gml:id_ of the target surface geometry object which may only be of type _gml:AbstractSurfaceType_ or _gml:MultiSurface_.
+. The _ring_ attribute of the _textureCoordinates_ property of the element _TexCoordList_ shall specify the _gml:id_ of the target surface geometry object which may only be of type _gml:LinearRing_.
+. The _target_ property (type _xs:anyURI_) of the element _X3DMaterial_ shall specify the _gml:id_ of the target surface geometry object which may only be of type _gml:AbstractSurfaceType_ or _gml:MultiSurface_.
+
+
+
+[[scls_9-8]]
+=== Material model of previous CityGML versions [deprecated]
+
+Since GML3 has no built-in concept for the representation of surface materials, previous versions of CityGML extend the GML3 geometry model by the class _TexturedSurface_, which allows for assigning appearance properties (colors, shininess, transparency) and textures to 3D surfaces. The definition of the appearance properties is adopted from the X3D specification. This approach for appearance modelling has been _deprecated_ due to inherent limitations. However, in order to provide a certain degree of backwards compatibility for already existing CityGML implementations, the approach has been incorporated into CityGML version 1.0 and version 2.0 as a separate extension module called _TexturedSurface_. By this means, implementations may employ the old material model by supporting this module. Please note, that appearance information modelled according to the _TexturedSurface_ module can be converted without information loss to the concepts provided by CityGML's _Appearance_ module that has been introduced in the previous clauses of this chapter. Thus, the use of the _TexturedSurface_ module is _strongly discouraged_ and implementations should only stick to the _Appearance_ module instead. Moreover, the _TexturedSurface_ module is expected to be removed in future versions of CityGML.
+
+For the _TexturedSurface_ module, each surface or composite surface can be specialized to a _TexturedSurface_, which can be assigned _Materials_ (_colors, shininess, transparency_) or _SimpleTextures_. <<fig_20>> depicts the UML diagram, for XML schema definition see <<a_A-14>>.
+
+[[fig_20]]
+.UML diagram of CityGML's material model. Please note, that this approach for appearance modelling has been marked as deprecated and is expected to be removed in future CityGML versions. Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _TexturedSurface_ module.
+image::046.png["",755,429]
+
+
+The concept of positioning textures on surfaces complies with the 3D computer graphics standard X3D (web 3D 2004), a successor of VRML97. CityGML adds the class _TexturedSurface_ to the geometry model of GML3 because there has been no appropriate texturing concept in ISO 19107 and in GML3.
+
+A texture is specified as a raster image referenced by an _URI_ (_Uniform Resource Identifier_) and can be an arbitrary resource, even on the internet. Textures are positioned by employing the concept of _texture coordinates_, i.e. each texture coordinate matches with exactly one 3D coordinate of the _TexturedSurface_ (<<fig_17>>). The use of texture coordinates allows an exact positioning and trimming of the texture on the surface geometry.
+
+The color of a surface is defined by RGB values. These have to be in the range of 0 to 1. The _frontOpacity_ and the _backOpacity_ define the level of _transparency_ of each surface. Their values have also to be in the range of 0 to 1, where 1 means completely covering and 0 denotes a completely transparent surface. The colors can be differentiated in _diffuseColor_ (color when illuminated by a source of light), _emissiveColor_ (color when self-illuminating) and _specularColor_/_shininess_ (color for shiny surfaces).
+
+Textures can be qualified by the attribute _textureType_. The _textureType_ differentiates between textures which are specific for a certain object (_specific_) and prototypic textures being typical for that object surface (_typical)_. Textures may also be classified as _unknown_.
+
+&#95;__Appearance__is derived from _gml:AbstractGMLType_ to be referenced in an _appearance_ property. The attribute _gml:id_ is inherited, whose value may be referenced by a XLink. &#95;__Appearance__ is the parent class of _Material_ and _SimpleTexture_.
+
+
+*XML namespace*
+
+The XML namespace of the CityGML _TexturedSurface_ module is identified by the Uniform Resource Identifier (URI) http://www.opengis.net/citygml/texturedsurface/2.0. Within the XML Schema definition of the _TexturedSurface_ module, this URI is also used to identify the default namespace.
+
+
+[[scls_9-8-1]]
+==== Textured surfaces
+
+.TexturedSurfaceType, TexturedSurface, AppearancePropertyType
+[source%unnumbered,xml]
+----
+<xs:complexType name="TexturedSurfaceType">
+    <xs:complexContent>
+        <xs:extension base="gml:OrientableSurfaceType">
+            <xs:sequence>
+                <xs:element ref="appearance" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<!-- ========================================================================================= -->
+<xs:element name="TexturedSurface" type="TexturedSurfaceType" substitutionGroup="gml:OrientableSurface"/>
+<!-- ========================================================================================= -->
+<xs:element name="appearance" type="AppearancePropertyType"/>
+<!-- ========================================================================================= -->
+<xs:complexType name="AppearancePropertyType">
+    <xs:sequence minOccurs="0">
+        <xs:element ref="_Appearance"/>
+    </xs:sequence>
+    <xs:attribute name="orientation" type="gml:SignType" default="+"/>
+    <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+</xs:complexType>
+----
+
+_TexturedSurface_ may have one or more appearance properties, which can either be a _Material_ (Color,...) or a _SimpleTexture_. The &#95;__Appearance__ element can either be represented inline as an element of this type or by an XLink reference to a remote &#95;__ Appearance__ element. Either the reference or the contained element must be given, but neither both nor none. The side of the surface the &#95;__Appearance__ refers to is given by the _orientation_ attribute (type _gml:SignType_) of the appearance property element, which refers to the corresponding _orientation_ attribute of the orientable surface: + means the side with positive orientation and - the side with negative orientation.
+
+
+
+.AbstractAppearanceType, _Appearance
+[source%unnumbered,xml]
+----
+<xs:complexType name="AbstractAppearanceType" abstract="true">>
+    <xs:complexContent>>
+        <xs:extension base="gml:AbstractGMLType"/>>
+    </xs:complexContent>>
+</xs:complexType>>
+<!-- ========================================================================================= -->>
+<xs:element name="_Appearance" type="AbstractAppearanceType" abstract="true" substitutionGroup="gml:_GML"/>>
+----
+
+
+.MaterialType, Material
+[source%unnumbered,xml]
+----
+<xs:complexType name="MaterialType">>
+    <xs:complexContent>>
+        <xs:extension base="AbstractAppearanceType">>
+            <xs:sequence>>
+                <xs:element name="shininess" type="core:doubleBetween0and1" minOccurs="0"/>>
+                <xs:element name="transparency" type="core:doubleBetween0and1" minOccurs="0"/>>
+                <xs:element name="ambientIntensity" type="core:doubleBetween0and1" minOccurs="0"/>>
+                <xs:element name="specularColor" type="Color" minOccurs="0"/>>
+                <xs:element name="diffuseColor" type="Color" minOccurs="0"/>>
+                <xs:element name="emissiveColor" type="Color" minOccurs="0"/>>
+            </xs:sequence>>
+        </xs:extension>>
+    </xs:complexContent>>
+</xs:complexType>>
+<!-- ========================================================================================= -->>
+<xs:element name="Material" type="MaterialType" substitutionGroup="_Appearance"/>>
+----
+
+
+.SimpleTextureType, SimpleTexture, TextureTypeType
+[source%unnumbered,xml]
+----
+<xs:complexType name="SimpleTextureType">>
+    <xs:complexContent>>
+        <xs:extension base="AbstractAppearanceType">>
+            <xs:sequence>>
+                <xs:element name="textureMap" type="xs:anyURI"/>>
+                <xs:element name="textureCoordinates" type="gml:doubleList"/>>
+                <xs:element name="textureType" type="TextureTypeType" minOccurs="0"/>>
+                <xs:element name="repeat" type="xs:boolean" minOccurs="0"/>>
+            </xs:sequence>>
+        </xs:extension>>
+    </xs:complexContent>>
+</xs:complexType>>
+<!-- ========================================================================================= -->>
+<xs:element name="SimpleTexture" type="SimpleTextureType" substitutionGroup="_Appearance"/>>
+<!-- ========================================================================================= -->>
+<xs:simpleType name="TextureTypeType">>
+    <xs:restriction base="xs:string">>
+        <xs:enumeration value="specific"/>>
+        <xs:enumeration value="typical"/>>
+        <xs:enumeration value="unknown"/>>
+    </xs:restriction>>
+</xs:simpleType>>
+----
+
+
+[[scls_9-8-2]]
+==== Conformance requirements
+
+===== Referential integrity
+
+* The _appearance_ property (type: _AppearancePropertyType_) of the element _TexturedSurface_ may contain an &#95;__Appearance__ element inline or an XLink reference to a remote &#95;__Appearance__ element using the XLink concept of GML 3.1.1. In the latter case, the _xlink:href_ attribute of the _appearance_ property may only point to a remote &#95;__Appearance__ element (where remote &#95;__Appearance__ elements are located in another document or elsewhere in the same document). Either the contained element or the reference must be given, but neither both nor none.
