@@ -98,7 +98,7 @@ _out:_ frontMaterial, frontTexture, backMaterial, backTexture
 55: }
 ----
 
-The evaluation of the _isFront_ property of a &#95;__SurfaceData__ object needs to take _gml:OrientableSurface_s into account, as those can flip the orientation of a surface. Assume a _gml:OrientableSurface__ os_, which flips its base surface _bs_. A front side texture stem:[t] targeting _bs_ will appear on the actual front side of _bs_. If stem:[t] targets _os_, it will appear on the back side of _bs_. If stem:[t] targets both _os_ and _bs_, it appears on both sides of _bs_ since it becomes the front and back side texture.
+The evaluation of the _isFront_ property of a &#95;__SurfaceData__ object needs to take _gml:OrientableSurface_s into account, as those can flip the orientation of a surface. Assume a _gml:OrientableSurface_ _os_, which flips its base surface _bs_. A front side texture stem:[t] targeting _bs_ will appear on the actual front side of _bs_. If stem:[t] targets _os_, it will appear on the back side of _bs_. If stem:[t] targets both _os_ and _bs_, it appears on both sides of _bs_ since it becomes the front and back side texture.
 
 XLinks influence the hierarchy traversal in the pseudocode. In general, the separation of surface data and geometry objects requires the reevaluation of the surface data assignment for each occurrence of a geometry object in the context of the respective &#95;__CityObject__. Stepping up the (geometry or &#95;__CityObject__) hierarchy in the algorithm takes XLinks into account, i.e., for the purpose of this algorithm, referenced objects are conceptually copied to the location of the referring XLink. In particular, this applies to _ImplicitGeometry_ objects. If an _ImplicitGeometry_ object contains GML geometry (in the _relativeGMLGeometry_ property), the surface data assignment needs to be reevaluated in the context of each referring &#95;__CityObject__. Thus, the appearance (but not the relative geometry) of a given _ImplicitGeometry_ can differ between its occurrences. A consistent appearance results if all required surface data objects are placed in _Appearance_ objects and the latter are stored either
 
@@ -237,7 +237,7 @@ In wrap mode _mirror_, the texture image is repeated both in horizontal and in v
 
 
 [[fig_15]]
-.A texture (a) applied to a facade using different wrap modes: (b) none, (c) wrap, (d) mirror, (e) clamp and (f) border. The border color is red. The numbers denote texture coordinates (image: Hasso-Plattner-Institute).
+.A texture (a) applied to a facade using different wrap modes: (b) none, (&#99;) wrap, (d) mirror, (e) clamp and (f) border. The border color is red. The numbers denote texture coordinates (image: Hasso-Plattner-Institute).
 image::023.png["",756,149]
 
 
@@ -295,10 +295,10 @@ Alternatively, CityGML allows for inline specification of a georeference similar
 
 [stem%unnumbered]
 ++++
-((s),(t)) = ((1//W,0),(0,-1//h)) cdot M^{-1} cdot (((x),(y)) - P_R ) + ((0),(1))
+((s),(t)) = ((1//w,0),(0,-1//h)) cdot M^{-1} cdot (((x),(y)) - P_R ) + ((0),(1))
 ++++
 
-with stem:[M] denoting _orientation_, stem:[P_R] denoting _referencePoint_., stem:[w] the image's width in pixels, and stem:[h] the image's height in pixels. This transformation compensates for the difference between the image coordinate system used in ESRI world files (origin in upper left corner, positive x-axis rightwards, and positive y-axis downwards) and texture space in CityGML (origin in lower left corner, positive x-axis rightwards, and positive y-axis upwards).
+with stem:[M] denoting _orientation_, stem:[P_R] denoting _referencePoint_, stem:[w] the image's width in pixels, and stem:[h] the image's height in pixels. This transformation compensates for the difference between the image coordinate system used in ESRI world files (origin in upper left corner, positive x-axis rightwards, and positive y-axis downwards) and texture space in CityGML (origin in lower left corner, positive x-axis rightwards, and positive y-axis upwards).
 
 If neither an internal nor an external georeference is given the _GeoreferencedTexture_ is invalid. Each target surface geometry object is specified by an URI in a _target_ element. All target surface geometry objects share the mapping function defined by the georeference. No other mapping function is allowed. Please note, that the _gml:boundedBy_ property inherited from _gml:AbstractFeatureType_ could be set to the bounding box of valid image data to allow for spatial queries. <<fig_16>> shows a georeferenced texture applied to the ground and all roof surfaces.
 
@@ -336,7 +336,7 @@ image::028.jpg["",656,246]
 
 Texture coordinates are applicable only to polygonal surfaces, whose boundaries are described by _gml:LinearRing_ (e.g., _gml:Triangle_, _gml:Polygon_, or a _gml:MultiSurface_ consisting of __gml:Polygon__s). They define an explicit mapping of a surface's vertices to points in texture space, i.e. each vertex including interior ring vertices must receive a corresponding coordinate pair in texture space (for the notion of coordinates, refer to ISO 19111). These coordinates are not restricted to the [0,1] interval. Texture coordinates for interior surface points are planarly interpolated from the vertices' texture coordinates. <<fig_16>> shows an example.
 
-Texture coordinates for a target surface geometry object are specified using class _TexCoordList_ as a texture parameterization object in the texture's _target_ property. Each exterior and interior _gml:LinearRing_ composing the boundary of the target surface geometry object (which also might be a _gml:CompositeSurface_, _gml:MultiSurface_, or _gml:TriangulatedSurface_) requires its own set of texture coordinates. A set of texture coordinates is specified using the _textureCoordinates_ element of class _TexCoordList_. Thus, a _TexCoordList_ contains as many _textureCoordinate_ elements as the target surface geometry object contains _gml:LinearRing_s. _textureCoordinate_'s mandatory attribute _ring_ provides the _gml:id_ of the respective ring. The content is an ordered list of double values where each two values define a stem:[(s,t)^T] texture coordinate pair with stem:[s] denoting the horizontal and stem:[t] the vertical texture axis. The list contains one pair per ring point with the pairs' order corresponding to the ring points' order in the CityGML document (regardless of a possibly flipped surface orientation). If any ring point of a target surface geometry object has no texture coordinates assigned, the mapping is incomplete and the respective surface cannot be textured. In case of aggregated target geometry objects, mapping completeness is determined only for leaf geometry objects.
+Texture coordinates for a target surface geometry object are specified using class _TexCoordList_ as a texture parameterization object in the texture's _target_ property. Each exterior and interior _gml:LinearRing_ composing the boundary of the target surface geometry object (which also might be a _gml:CompositeSurface_, _gml:MultiSurface_, or _gml:TriangulatedSurface_) requires its own set of texture coordinates. A set of texture coordinates is specified using the _textureCoordinates_ element of class _TexCoordList_. Thus, a _TexCoordList_ contains as many _textureCoordinate_ elements as the target surface geometry object contains __gml:LinearRing__s. _textureCoordinate_'s mandatory attribute _ring_ provides the _gml:id_ of the respective ring. The content is an ordered list of double values where each two values define a stem:[(s,t)^T] texture coordinate pair with stem:[s] denoting the horizontal and stem:[t] the vertical texture axis. The list contains one pair per ring point with the pairs' order corresponding to the ring points' order in the CityGML document (regardless of a possibly flipped surface orientation). If any ring point of a target surface geometry object has no texture coordinates assigned, the mapping is incomplete and the respective surface cannot be textured. In case of aggregated target geometry objects, mapping completeness is determined only for leaf geometry objects.
 
 
 [[fig_18]]
@@ -380,7 +380,7 @@ Another use of _worldToTexture_ is texturing a facade with complex geometry with
 
 [stem%unnumbered]
 ++++
-M = ubrace(((1//"width"_f, 0, 0 , 0),(0, 1//"height"_f, 0, 0),(0, 0, 0, 1)))_("Scaling to texturespace") cdot ubrace(((-n_y, n_x, 0, 0),(0, 0, 1, 0),(n_x, n_y, 0, 0),(0, 0, 0, 1)))_("Facadeorientation") cdot ubrace(((1, 0, 0, -F_x),(0, 1, 0, -F_y),(0, 0, 1, -F_z),(0, 0, 0, 1)))_("Facadelocation")
+M = ubrace(((1//"width"_f, 0, 0 , 0),(0, 1//"height"_f, 0, 0),(0, 0, 0, 1)))_("Scaling to texture space") cdot ubrace(((-n_y, n_x, 0, 0),(0, 0, 1, 0),(n_x, n_y, 0, 0),(0, 0, 0, 1)))_("Facade orientation") cdot ubrace(((1, 0, 0, -F_x),(0, 1, 0, -F_y),(0, 0, 1, -F_z),(0, 0, 0, 1)))_("Facade location")
 ++++
 
 This equation assumes stem:[vec n] denoting the facade's overall normal vector (normalized, pointing outward, and being parallel to the ground), stem:[F] denoting the facade's lower left point, and stem:["width"_f] and stem:["height"_f] specifying the facade's dimensions in world units. For the general case of an arbitrary normal vector the facade orientation matrix assumes a form similar to the camera orientation matrix:

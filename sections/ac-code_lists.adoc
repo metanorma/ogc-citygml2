@@ -15,7 +15,7 @@ http://www.sig3d.org/codelists/standard/
 <moduleName>/<version>/<FeatureTypeName>_<propertyName>.xml
 ----
 
-The placeholder `<moduleName>` has to be replaced with the name of the CityGML module in which the feature and the attribute are defined. The module name has to be given in small letters (e.g., _building_ or _cityfurniture_). The `<version>` field defines the CityGML version for which the code list is specified. Finally, <FeatureTypeName>` denotes the name of the feature type for which the attribute is modeled and `<propertyName>` is to be replaced with the attribute name itself. For both placeholders, the XML element name given in the CityGML schema document where the feature is specified has to be chosen.
+The placeholder `<moduleName>` has to be replaced with the name of the CityGML module in which the feature and the attribute are defined. The module name has to be given in small letters (e.g., _building_ or _cityfurniture_). The `<version>` field defines the CityGML version for which the code list is specified. Finally, `<FeatureTypeName>` denotes the name of the feature type for which the attribute is modeled and `<propertyName>` is to be replaced with the attribute name itself. For both placeholders, the XML element name given in the CityGML schema document where the feature is specified has to be chosen.
 
 For example, the _codeSpace_ value identifying the SIG 3D code list for the enumerative attribute _roofType_ of the feature &#95;__AbstractBuilding__ (_Building_ module, cf. <<scls_10-3>>) is:
 
@@ -163,7 +163,9 @@ The entire code list for building roof types is given as example below, while th
 [width=755,options="unnumbered"]
 |===
 4+.>h| *Code list of the &#95;__AbstractBuilding__ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml]
+
+http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml]
 | 1000 | residential building | 1840 | rubbish bunker
 | 1010 | tenement | 1850 | building for rubbish incineration
 | 1020 | hostel | 1860 | building for rubbish disposal
@@ -277,7 +279,9 @@ The entire code list for building roof types is given as example below, while th
 [width=759,options="unnumbered"]
 |===
 4+.>h| *Code list of the _BuildingFurniture_ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml]
+
+http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml]
 | 1000 | cupboard | 2010 | sink, hand-basin
 | 1010 | wardrobe | 2020 | water tap
 | 1020 | cabinet | 2030 | toilet bowl
@@ -367,7 +371,7 @@ The entire code list for building roof types is given as example below, while th
 [width=759,options="unnumbered"]
 |===
 4+.>h| *Code list of the _BuildingInstallation_ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml]
 | 1000 | balcony | 1040 | tower (part of a building)
 | 1010 | winter garden | 1050 | column
 | 1020 | arcade | 1060 | stairs
@@ -396,7 +400,9 @@ The entire code list for building roof types is given as example below, while th
 [width=759,options="unnumbered"]
 |===
 4+.>h| *Code list of the _IntBuildingInstallation_ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml]
+
+http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usage.xml]
 | 1010 | Radiator | 3020 | Light switch
 | 1020 | Oven | 5030 | Power point
 | 1030 | Fireside | 5020 | Cable
@@ -448,7 +454,9 @@ The entire code list for building roof types is given as example below, while th
 [width=759,options="unnumbered"]
 |===
 4+.>h| *Code list of the _Room_ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml]
+
+http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml]
 | 1000 | living room | 2170 | showers
 | 1010 | bedroom | 2200 | tribune
 | 1020 | kitchen | 2210 | seating / standing capacity
@@ -558,7 +566,9 @@ The entire code list for building roof types is given as example below, while th
 [width=755,options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractTunnel_ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml] http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml]
+
+http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml]
 | 1000 | railway tunnel | 1020 | canal tunnel
 | 1010 | roadway tunnel | 1030 | pedestrian tunnel
 
@@ -585,7 +595,9 @@ The entire code list for building roof types is given as example below, while th
 [width=755,options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractBridge_ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml] http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml]
+
+http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml]
 | 1000 | railway bridge | 1040 | canal bridge
 | 1010 | roadway bridge | 1050 | aqueduct
 | 1030 | cable link | 1060 | foot bridge
@@ -609,7 +621,9 @@ The entire code list for building roof types is given as example below, while th
 [width=761,options="unnumbered"]
 |===
 4+.>h| *Code list of the _CityFurniture_ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml] http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml]
+
+http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xml]
 | 1000 | communication fixture | 1270 | pole
 | 1010 | telephone box | 1280 | radio mast
 | 1020 | postbox | 1290 | aerial
@@ -658,7 +672,9 @@ The entire code list for building roof types is given as example below, while th
 [width=761,options="unnumbered"]
 |===
 4+.>h| *Code list of the _LandUse_ attributes _function_ and _usage_*
-4+.>| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml] http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml]
+
+http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml]
 | 1010 | Residential | 2050 | Track
 | 1020 | Industry and Business | 2060 | Square
 | 1030 | Mixed use | 3010 | Grassland
@@ -684,7 +700,9 @@ The entire code list for building roof types is given as example below, while th
 [width=755,options="unnumbered"]
 |===
 4+.>h| *Codelist of the _ImplicitGeometry_ (_Core_ module) / &#95;__Texture__ (_Appearance_ module) attribute _mimeType_*
-4+.>| http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml[http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml] http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml[http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml]
+4+.>a| http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml[http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml]
+
+http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml[http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml]
 4+.<| The MIME types given in this table are defined by the Internet Assigned Numbers Authority (IANA), see http://www.iana.org/. Generally, the MIME format is standardized by the Internet Engineering Task Force (IETF), see http://www.ietf.org/. Unlike the other code lists the MIME types are not represented by numbers, but instead use their given identifier. This code list is not exhaustive. It contains a selection of frequently used MIME types.
 | model/vrml | VRML97 | model/x3d+xml | X3D
 | application/x-3ds | 3ds max | model/x3d+binary | X3D
@@ -717,7 +735,9 @@ The entire code list for building roof types is given as example below, while th
 [width=759,options="unnumbered"]
 |===
 .>h| *Code list of the _SolitaryVegetationObject_ attributes _function_ and _usage_*
-.<| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml] http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_usage.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_usage.xml]
+.<a| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml]
+
+http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_usage.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_usage.xml]
 .>| Code lists are identically with _SolitaryVegetationObjectclass_
 
 |===
@@ -763,7 +783,9 @@ The entire code list for building roof types is given as example below, while th
 [width=759,options="unnumbered"]
 |===
 .>h| *Code list of the _PlantCover_ attributes _function_ and _usage_*
-.<| http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml] http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml]
+.<a| http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml]
+
+http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml]
 .>| Code lists are identically with _PlantCover class_
 
 |===

@@ -38,7 +38,7 @@ Compared to CityGML versions before 1.0, the aforementioned namespace convention
 
 As for version 2.0 of the CityGML standard, there are no two thematic extension modules related by dependency. Thus, all extension modules are truly independent from each other and may be separately supported by implementations. However, the CityGML core module is a dependency for any extension module. This means that the XML schema file of the core module is imported by each XML schema file defining an extension.
 
-The dependency relations between CityGML's modules are illustrated in <<fig_8>> using an UML package diagram. Each module is represented by a package. The package names correspond to the module names. A dashed arrow in the figure indicates that the schema at the tail of the arrow depends upon the schema at the head of the arrow. For CityGML modules, a dependency occurs where one schema \<import\>s another schema and accordingly the corresponding XML namespace. For example, the extension module _Building_ imports the schema of the _CityGML Core_ module. A short description of each module is given in <<tab_4>>.
+The dependency relations between CityGML's modules are illustrated in <<fig_8>> using an UML package diagram. Each module is represented by a package. The package names correspond to the module names. A dashed arrow in the figure indicates that the schema at the tail of the arrow depends upon the schema at the head of the arrow. For CityGML modules, a dependency occurs where one schema &lt;import&gt;s another schema and accordingly the corresponding XML namespace. For example, the extension module _Building_ imports the schema of the _CityGML Core_ module. A short description of each module is given in <<tab_4>>.
 
 
 
@@ -56,7 +56,9 @@ image::016.png["",747,366]
 | *XML namespace identifier* | http://www.opengis.net/citygml/2.0
 | *XML Schema file* | cityGMLBase.xsd
 | *Recommended namespace prefix* | core
-| *Module description* | The _CityGML Core_ module defines the basic components of the CityGML data model. Primarily, this comprises abstract base classes from which all thematic classes are (transitively) derived. But also non-abstract content common to more than one extension module, for example basic data types, is defined within the core module.The core module itself imports the XML schema definition files of GML version 3.1.1 and the OASIS extensible Address Language xAL.
+| *Module description* a| The _CityGML Core_ module defines the basic components of the CityGML data model. Primarily, this comprises abstract base classes from which all thematic classes are (transitively) derived. But also non-abstract content common to more than one extension module, for example basic data types, is defined within the core module.
+
+The core module itself imports the XML schema definition files of GML version 3.1.1 and the OASIS extensible Address Language xAL.
 
 | |
 

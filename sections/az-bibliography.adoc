@@ -73,7 +73,7 @@
 
 * [[[Web_2004,Web 2004]]], Web 3D, Information technology - Computer graphics and image processing - Extensible 3D (X3D). ISO/IEC 19775:2004. http://www.web3d.org/x3d/specifications/, 2004.
 
-* [[[Whiteside_2009,Whiteside 2009]]], Whiteside, A. (ed.) (2009): Definition identifier URNs in OGC namespace, Version: 1.3, OGC(R) Best Practices, OGC Doc. No. 07-092r3.
+* [[[Whiteside_2009,Whiteside 2009]]], Whiteside, A. (ed.) (2009): Definition identifier URNs in OGC namespace, Version: 1.3, OGC^(R)^ Best Practices, OGC Doc. No. 07-092r3.
 
-* [[[Whiteside_2005,Whiteside 2005]]], Whiteside, A. (ed.) (2005): GML 3.1.1 Simple Dictionary Profile, Version: 1.0.0, OpenGIS(R) Implementation Specification, OGC Doc. No. 05-099r2.
+* [[[Whiteside_2005,Whiteside 2005]]], Whiteside, A. (ed.) (2005): GML 3.1.1 Simple Dictionary Profile, Version: 1.0.0, OpenGIS^(R)^ Implementation Specification, OGC Doc. No. 05-099r2.
 
