@@ -183,9 +183,9 @@ a| Ordnance Survey, Great Britain
 
 
 [.preface]
-== Changes to the OGC(R) Abstract Specification
+== Changes to the OGC^(R)^ Abstract Specification
 
-The OGC(R) Abstract Specification does not require changes to accommodate this OGC(R) standard.
+The OGC^(R)^ Abstract Specification does not require changes to accommodate this OGC^(R)^ standard.
 
 
 [.preface]
@@ -263,7 +263,7 @@ Bridges and tunnels can be represented in LOD 1 – 4 and the underlying data mo
 ===== Additions to existing thematic modules
 
 * _CityGML Core module (cf. <<scls_10-1>>)_ +
-Two new optional attributes have been added to the abstract base class _core:___CityObject_ within the _CityGML Core_ module: _relativeToTerrain_ and _relativeToWater._ These attributesdenote the feature's location with respect to the terrain and water surface in a qualitative way, and thus facilitate simple and efficient queries (e.g., for the number of subsurface buildings) without the need for an additional digital terrain model or a model of the water body.
+Two new optional attributes have been added to the abstract base class _core:_CityObject_ within the _CityGML Core_ module: _relativeToTerrain_ and _relativeToWater._ These attributesdenote the feature's location with respect to the terrain and water surface in a qualitative way, and thus facilitate simple and efficient queries (e.g., for the number of subsurface buildings) without the need for an additional digital terrain model or a model of the water body.
 
 
 * _Building module (cf. <<scls_10-3>>)_ 

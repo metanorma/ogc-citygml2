@@ -8,7 +8,7 @@
 
 The CityGML data model consists of class definitions for the most important types of objects within virtual 3D city models. These classes have been identified to be either required or important in many different application areas. However, implementations are not required to support the overall CityGML data model in order to be conformant to the standard, but may employ a subset of constructs according to their specific information needs. For this purpose, modularisation is applied to the CityGML data model (cf. <<cls_7>>).
 
-The CityGML data model is thematically decomposed into a _core module_ and thematic _extension modules_. The core module comprises the basic concepts and components of the CityGML data model and, thus, must be implemented by any conformant system. Based on the core module, each extension covers a specific thematic field of virtual 3D city models. CityGML introduces the following thirteen thematic extension modules: _Appearance_, _Bridge,__ Building_, _CityFurniture_, _CityObjectGroup_, _Generics_, _LandUse_, _Relief_, _Transportation_, _Tunnel, _Vegetation_, _WaterBody_, and _TexturedSurface [deprecated]_.
+The CityGML data model is thematically decomposed into a _core module_ and thematic _extension modules_. The core module comprises the basic concepts and components of the CityGML data model and, thus, must be implemented by any conformant system. Based on the core module, each extension covers a specific thematic field of virtual 3D city models. CityGML introduces the following thirteen thematic extension modules: _Appearance_, _Bridge_, _Building_, _CityFurniture_, _CityObjectGroup_, _Generics_, _LandUse_, _Relief_, _Transportation_, _Tunnel_, _Vegetation_, _WaterBody_, and _TexturedSurface [deprecated]_.
 
 CityGML compliant implementations may support any combination of extension modules in conjunction with the core module. Such combinations of modules are called CityGML profiles. Therefore, CityGML profiles allow for valid partial implementations of the overall CityGML data model.
 
@@ -80,13 +80,15 @@ image::010.jpg["",312,243]
 [[scls_6-5]]
 === Terrain Intersection Curve (TIC)
 
-A crucial issue in city modelling is the integration of 3D objects and the terrain. Problems arise if 3D objects float over or sink into the terrain. This is particularly the case if terrains and 3D objects in different LOD are combined, or if they come from different providers (Kolbe and Gröger 2003). To overcome this problem, the _TerrainIntersectionC __urve__ (TIC)_ of a 3D object is introduced. These curves denote the exact position, where the terrain touches the 3D object (see <<fig_5>>). TICs can be applied to buildings and building parts (cf. <<scls_10-3>>), bridge, bridge parts and bridge construction elements (cf. <<scls_10-5>>), tunnel and tunnel parts (cf. <<scls_10-4>>), city furniture objects (cf. <<scls_10-9>>), and generic city objects (cf. <<scls_10-12>>). If, for example, a building has a courtyard, the TIC consists of two closed rings: one ring representing the courtyard boundary, and one which describes the building's outer boundary. This information can be used to integrate the building and a terrain by 'pulling up' or 'pulling down' the surrounding terrain to fit the _TerrainIntersectionC __urve_. The DTM may be locally warped to fit the TIC. By this means, the TIC also ensures the correct positioning of textures or the matching of object textures with the DTM. Since the intersection with the terrain may differ depending on the LOD, a 3D object may have different _TerrainIntersectionCurves_ for all LOD.
+A crucial issue in city modelling is the integration of 3D objects and the terrain. Problems arise if 3D objects float over or sink into the terrain. This is particularly the case if terrains and 3D objects in different LOD are combined, or if they come from different providers (Kolbe and Gröger 2003). To overcome this problem, the _TerrainIntersectionCurve_ _(TIC)_ of a 3D object is introduced. These curves denote the exact position, where the terrain touches the 3D object (see <<fig_5>>). TICs can be applied to buildings and building parts (cf. <<scls_10-3>>), bridge, bridge parts and bridge construction elements (cf. <<scls_10-5>>), tunnel and tunnel parts (cf. <<scls_10-4>>), city furniture objects (cf. <<scls_10-9>>), and generic city objects (cf. <<scls_10-12>>). If, for example, a building has a courtyard, the TIC consists of two closed rings: one ring representing the courtyard boundary, and one which describes the building's outer boundary. This information can be used to integrate the building and a terrain by 'pulling up' or 'pulling down' the surrounding terrain to fit the _TerrainIntersectionCurve_. The DTM may be locally warped to fit the TIC. By this means, the TIC also ensures the correct positioning of textures or the matching of object textures with the DTM. Since the intersection with the terrain may differ depending on the LOD, a 3D object may have different _TerrainIntersectionCurves_ for all LOD.
 
 [[fig_5]]
-._TerrainIntersectionCurve_ for a building (top, black) and a tunnel object (bottom, white). The tunnel's hollow space is sealed by a triangulated _ClosureSurface_ (graphic: IGG Uni Bonn).
+._TerrainIntersectionCurve_ (graphic: IGG Uni Bonn).
 ====
+._TerrainIntersectionCurve_ for a building
 image::011.png["",367,249]
 
+._TerrainIntersectionCurve_ for a tunnel object. The tunnel's hollow space is sealed by a triangulated _ClosureSurface_
 image::012.jpg["",342,253]
 ====
 
@@ -105,7 +107,7 @@ Code lists can have references to existing models. For example, room codes defin
 [[scls_6-7]]
 === External references
 
-3D objects are often derived from or have relations to objects in other databases or data sets. For example, a 3D building model may have been constructed from a two-dimensional footprint in a cadastre data set, or may be derived from an architectural model (<<fig_6>>). The reference of a 3D object to its corresponding object in an external data set is essential, if an update must be propagated or if additional data is required, for example the name and address of a building's owner in a cadastral information system or information on antennas and doors in a facility management system. In order to supply such information, each &#95;__CityObject__ may refer to external data sets (for the UML diagram see <<fig_21>>; and for XML schema definition see <<a_A-1>>) using the concept of _ExternalReference_. Such a reference denotes the external information system and the unique identifier of the object in this system. Both are specified as a Uniform Resource Identifier (URI), which is a generic format for references to any kind of resources on the internet. The generic concept of external references allows for any__CityObject_ an arbitrary number of links to corresponding objects in external information systems (e.g. ALKIS, ATKIS, OS MasterMap(R), GDF, etc.).
+3D objects are often derived from or have relations to objects in other databases or data sets. For example, a 3D building model may have been constructed from a two-dimensional footprint in a cadastre data set, or may be derived from an architectural model (<<fig_6>>). The reference of a 3D object to its corresponding object in an external data set is essential, if an update must be propagated or if additional data is required, for example the name and address of a building's owner in a cadastral information system or information on antennas and doors in a facility management system. In order to supply such information, each &#95;__CityObject__ may refer to external data sets (for the UML diagram see <<fig_21>>; and for XML schema definition see <<a_A-1>>) using the concept of _ExternalReference_. Such a reference denotes the external information system and the unique identifier of the object in this system. Both are specified as a Uniform Resource Identifier (URI), which is a generic format for references to any kind of resources on the internet. The generic concept of external references allows for any ___CityObject__ an arbitrary number of links to corresponding objects in external information systems (e.g. ALKIS, ATKIS, OS MasterMap^(R)^, GDF, etc.).
 
 [[fig_6]]
 .External references (graphic: IGG Uni Bonn).
@@ -134,7 +136,7 @@ In CityGML, objects of equal shape like trees and other vegetation objects, traf
 
 [[fig_7]]
 .Examples of prototypic shapes (source: Rheinmetall Defence Electronics).
-image::014.png["",575,173]
+image::014a.png["",575,173]
 
 
 

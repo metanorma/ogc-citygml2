@@ -3550,7 +3550,7 @@ The following excerpt of _referentialIntegrity.sch_ illustrates the abstract bas
 ----
 
 
-For each CityGML property element being subject to referential integrity requirements,_referentialIntegrity.sch_contains further concrete rules based on the abstract rule _hrefOrContent_. For example, the following schema snippet applies the _hrefOrContent_ ruleto the property element _bldg:__consistsOfBuildingPart_&nbsp;defined within the CityGML _Building_ module (cf. <<scls_10-3>>). The _bldg:__consistsOfBuildingPart_&nbsp;element denotes the relation of a _bldg:_AbstractBuilding_ to its building part objects which may only be given inline or by reference.
+For each CityGML property element being subject to referential integrity requirements, _referentialIntegrity.sch_ contains further concrete rules based on the abstract rule __hrefOrContent__. For example, the following schema snippet applies the _hrefOrContent_ ruleto the property element _bldg:__consistsOfBuildingPart_&nbsp;defined within the CityGML _Building_ module (cf. <<scls_10-3>>). The _bldg:__consistsOfBuildingPart_&nbsp;element denotes the relation of a _bldg:_AbstractBuilding_ to its building part objects which may only be given inline or by reference.
 
 
 [source%unnumbered,xml]

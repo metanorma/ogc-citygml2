@@ -30,17 +30,17 @@ The following documents are indispensable for the application of the CityGML sta
 
 * [[[ISO_IEC_19775_2004,ISO/IEC 19775:2004]]], _X3D Abstract Specification_
 
-* [[[ogc_04-084,OGC 04-084]]], OpenGIS(R) Abstract Specification Topic 0, _Overview, OGC document_ _04-084_
+* [[[ogc_04-084,OGC 04-084]]], OpenGIS^(R)^ Abstract Specification Topic 0, _Overview, OGC document_ _04-084_
 
-* [[[ogc_99-105r2,OGC 99-105r2]]], OpenGIS(R) Abstract Specification Topic 5, _The OpenGIS Feature, OGC document 99-105r2_
+* [[[ogc_99-105r2,OGC 99-105r2]]], OpenGIS^(R)^ Abstract Specification Topic 5, _The OpenGIS Feature, OGC document 99-105r2_
 
-* [[[ogc_99-108r2,OGC 99-108r2]]], OpenGIS(R) Abstract Specification Topic 8, _Relations between Features, OGC document 99-108r2_
+* [[[ogc_99-108r2,OGC 99-108r2]]], OpenGIS^(R)^ Abstract Specification Topic 8, _Relations between Features, OGC document 99-108r2_
 
-* [[[ogc_99-110,OGC 99-110]]], OpenGIS(R) Abstract Specification Topic 10, _Feature Collections, OGC document 99-110_
+* [[[ogc_99-110,OGC 99-110]]], OpenGIS^(R)^ Abstract Specification Topic 10, _Feature Collections, OGC document 99-110_
 
-* [[[ogc_03-105r1,OGC 03-105r1]]], OpenGIS(R) Geography Markup Language Implementation Specification, _Version 3.1.1__, OGC document 03-105r1_
+* [[[ogc_03-105r1,OGC 03-105r1]]], OpenGIS^(R)^ Geography Markup Language Implementation Specification, _Version 3.1.1__, OGC document 03-105r1_
 
-* [[[ogc_05-099r2,OGC 05-099r2]]], OpenGIS(R) GML 3.1.1 Simple Dictionary Profile, _Version 1.0.0, OGC document 05-099r2_
+* [[[ogc_05-099r2,OGC 05-099r2]]], OpenGIS^(R)^ GML 3.1.1 Simple Dictionary Profile, _Version 1.0.0, OGC document 05-099r2_
 
 * [[[IETF_RFC_2045,IETF RFC 2045]]], IETF RFC 2045 & 2046, _Multipurpose Internet Mail Extensions (MIME). (November 1996)_
 

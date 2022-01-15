@@ -6,7 +6,7 @@ Spatial properties of CityGML features are represented by objects of GML3's geom
 [[scls_8-1]]
 === Geometric-topological model
 
-The geometry model of GML3 consists of primitives, which may be combined to form complexes, composite geometries or aggregates. For each dimension, there is a geometrical primitive: a zero-dimensional object is a _Point_, a one-dimensional a __Curve_, a two-dimensional a __Surface_, and a three-dimensional a __Solid_ (<<fig_9>>). Each geometry can have its own coordinate reference system. A solid is bounded by surfaces and a surface by curves. In CityGML, a curve is restricted to be a straight line, thus only the GML3 class _LineString_ is used. Surfaces in CityGML are represented by _Polygons_, which define a planar geometry, i.e. the boundary and all interior points are required to be located in one single plane.
+The geometry model of GML3 consists of primitives, which may be combined to form complexes, composite geometries or aggregates. For each dimension, there is a geometrical primitive: a zero-dimensional object is a _Point_, a one-dimensional a ___Curve__, a two-dimensional a ___Surface__, and a three-dimensional a ___Solid__ (<<fig_9>>). Each geometry can have its own coordinate reference system. A solid is bounded by surfaces and a surface by curves. In CityGML, a curve is restricted to be a straight line, thus only the GML3 class _LineString_ is used. Surfaces in CityGML are represented by _Polygons_, which define a planar geometry, i.e. the boundary and all interior points are required to be located in one single plane.
 
 [[fig_9]]
 .UML diagram of CityGML's geometry model (subset and profile of GML3): Primitives and Composites.
@@ -99,16 +99,16 @@ An implicit geometry is a geometric object, where the shape is stored only once 
 image::021.png["",756,104]
 
 
-The reason for using the concept of implicit geometries in CityGML is space efficiency. Since the shape of, for example, trees of the same species can be treated as identical, it would be inefficient to model the detailed geometry of each of the large number of trees explicitly. The concept of implicit geometries is similar to the well known concept of _primitive instancing_ used for the representation of_scene graphs_ in the field of computer graphics (Foley et al. 1995).
+The reason for using the concept of implicit geometries in CityGML is space efficiency. Since the shape of, for example, trees of the same species can be treated as identical, it would be inefficient to model the detailed geometry of each of the large number of trees explicitly. The concept of implicit geometries is similar to the well known concept of _primitive instancing_ used for the representation of _scene graphs_ in the field of computer graphics (Foley et al. 1995).
 
 The term _implicit geometry_ refers to the principle that a geometry object with a complex shape can be simply represented by a base point and a transformation, implicitly unfolding the object's shape at a specific location in the world coordinate system.
 
 The shape of an _ImplicitGeometry_ can be represented in an external file with a proprietary format, e.g. a VRML file, a DXF file, or a 3D Studio MAX file. The reference to the implicit geometry can be specified by an URI pointing to a local or remote file, or even to an appropriate web service. Alternatively, the shape can be defined by a GML3 geometry object. This has the advantage that it can be stored or exchanged inline within the CityGML dataset. Typically, the shape of the geometry is defined in a local coordinate system where the origin lies within or near to the object's extent. If the shape is referenced by an URI, also the MIME type of the denoted object has to be specified (e.g. "model/vrml" for VRML models or "model/x3d+xml" for X3D models).
 
-The implicit representation of 3D object geometry has some advantages compared to the explicit modelling, which represents the objects using absolute world coordinates. It is more space-efficient, and thus more extensive scenes can be stored or handled by a system. The visualisation is accelerated since 3D graphics cards support the scene graph concept. Furthermore, the usage of different shape versions of objects is facilitated, e.g. different seasons, since only the library objects have to be exchanged (see example in <<fig_65>>).
+The implicit representation of 3D object geometry has some advantages compared to the explicit modelling, which represents the objects using absolute world coordinates. It is more space-efficient, and thus more extensive scenes can be stored or handled by a system. The visualisation is accelerated since 3D graphics cards support the scene graph concept. Furthermore, the usage of different shape versions of objects is facilitated, e.g. different seasons, since only the library objects have to be exchanged (see example in <<fig_66>>).
 
 
-===== XML namespace
+*XML namespace*
 
 The XML namespace of the _CityGML Core_ module defining the concept of implicit geometries is identified by the Uniform Resource Identifier (URI) http://www.opengis.net/citygml/2.0. Within the XML Schema definition of the core module, this URI is also used to identify the default namespace.
 
