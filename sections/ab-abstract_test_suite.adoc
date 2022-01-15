@@ -1,0 +1,454 @@
+
+[[annex_b]]
+[appendix,obligation="normative"]
+== Abstract test suite for CityGML instance documents
+
+[[a_B-1]]
+=== Test cases for mandatory conformance requirements
+
+==== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of each CityGML module that is part of the CityGML profile employed by the instance document. This may be any combination of CityGML extension modules in conjunction with the CityGML core module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definitions of all employed CityGML modules. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the respective XML Schema specification of the employed CityGML modules.
+| *c) Reference* | <<annex_a>>.
+| *d) Test type* | Basic Test.
+
+|===
+
+
+==== Valid CityGML profile
+
+===== CityGML profile definition embedded inline the CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that a profile employed by a CityGML instance document is a valid CityGML profile in accordance with the rules and guidelines stated in <<scls_7-2>>. For CityGML profile definitions embedded inline the CityGML instance document (referenced as first approach in <<scls_7-2>>), verify that the CityGML instance document denotes all schema definitions and corresponding XML namespaces of CityGML modules that are used to represent the data within the instance document and, thus, are part of the employed CityGML profile.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules for employing CityGML profiles described in <<scls_7-2>> (first approach).
+| *c) Reference* | <<annex_a>>, <<scls_7-2>> (first approach).
+| *d) Test type* | Basic Test.
+
+|===
+
+===== CityGML profile definition provided by a separate XML Schema definition file
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that a profile employed by a CityGML instance document is a valid CityGML profile in accordance with the rules and guidelines stated in <<scls_7-2>>. For CityGML profile definitions provided by a separate XML Schema definition file (referenced as second approach in <<scls_7-2>>), verify that the profile's XML Schema definition file itself is valid and imports all schema definitions of CityGML modules that are used to represent the data within the instance document and, thus, are part of the employed CityGML profile. The target namespace of the profile's XML Schema definition must differ from the namespaces of the imported CityGML modules and must be given as previously unused and globally unique URI. The profile's XML Schema definition must not contain any further content.
+| *b) Test method* | Validate the XML Schema definition of the CityGML profile. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the respective XML Schema specification of the CityGML profile. Inspect the instance document and check that it satifies the rules for employing CityGML profiles described in <<scls_7-2>> (second approach).
+| *c) Reference* | <<annex_a>>, <<scls_7-2>> (second approach).
+| *d) Test type* | Basic Test.
+
+|===
+
+
+==== Conformance classes related to CityGML modules
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the conformance classes of each CityGML module that is part of the CityGML profile employed by the instance document. This may be any combination of CityGML extension modules in conjunction with the CityGML core module.
+| *b) Test method* | Follow the test cases provided by the conformace classes for each CityGML module in <<a_B-2>>.
+| *c) Reference* | <<a_B-2>>.
+| *d) Test type* | Basic Test.
+
+|===
+
+
+==== Spatial geometry objects
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that all spatial geometry objects within a CityGML instance document adhere to the XML Schema definition of the Geography Markup Language version 3.1.1 and to the CityGML spatial model.
+| *b) Test method* | Inspect the instance document and check that spatial geometry objects are valid with respect to the XML Schema definition of GML version 3.1.1 and satisfy the rules of to the CityGML spatial model described in chapter 8.
+| *c) Reference* | OGC Document No. 03-105r1, Annex A, chapter 8.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+==== Spatial topology relations
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that all spatial topology relations between spatial geometry objects are expressed using the XML concept of _XLinks_ provided by GML version 3.1.1.
+| *b) Test method* | Inspect the instance document and check that spatial topology relations between spatial geometry objects are valid with respect to the _XLinks_ concept introduced by GML version 3.1.1 and satisfy the rules of to the CityGML spatial model described in chapter 8.
+| *c) Reference* | OGC Document No. 03-105r1, Annex A, chapter 8.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+==== Address objects
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that all thematic objects representing address information within a CityGML instance document adhere to the XML Schema definition of the Extensible Address Language (xAL) issued by OASIS and to the rules for representing address information in CityGML.
+| *b) Test method* | Inspect the instance document and check that thematic objects representing address information are valid with respect to the XML Schema definition of the OASIS Extensible Address Language and satisfy the rules for representing address information within CityGML described in chapter 10.1.4.
+| *c) Reference* | OASIS 2003, Annex A, chapter 10.1.4.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+[[a_B-2]]
+=== Conformance classes related to CityGML modules
+
+==== CityGML Core module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _CityGML Core_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _CityGML Core_ module described in <<scls_10-1>> and <<scls_8-2>>, and especially the conformance requirements stated in <<scls_10-1-6>> and <<scls_8-3-3>>. Conformance requirements on referential integrity of CityGML property elements defined within the _CityGML Core_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *c) Reference* | <<scls_10-1>>, <<scls_10-1-6>>, <<scls_8-2>>, <<scls_8-3-3>>, <<a_A-15>>.
+| *d) Test type* | Basic Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _CityGML Core_ module. This test case is mandatory for all CityGML instance documents.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _CityGML Core_ module in <<a_A-1>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _CityGML Core_ module.
+| *c) Reference* | <<a_A-1>>.
+| *d) Test type* | Basic Test.
+
+|===
+
+
+
+==== Appearance module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _Appearance_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _Appearance_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _Appearance_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _Appearance_ module described in chapter 9, and especially the conformance requirements stated in <<scls_9-7>>.
+| *c) Reference* | <<cls_9>>, <<scls_9-7>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _Appearance_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _Appearance_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _Appearance_ module in <<a_A-2>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _Appearance_ module.
+| *c) Reference* | <<a_A-2>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== Bridge module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _Bridge_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _Bridge_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _Bridge_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _Bridge_ module described in <<scls_10-5>>, and especially the conformance requirements stated in <<scls_10-5-8>>.
+| *c) Reference* | <<scls_10-5>>, <<scls_10-5-8>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _Bridge_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _Bridge_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _Bridge_ module in <<a_A-3>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _Bridge_ module.
+| *c) Reference* | <<a_A-3>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== Building module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _Building_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _Building_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _Building_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _Building_ module described in <<scls_10-3>>, and especially the conformance requirements stated in <<scls_10-3-9>>.
+| *c) Reference* | Chapter <<scls_10-3>>, <<scls_10-3-9>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _Building_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _Building_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _Building_ module in <<a_A-3>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _Building_ module.
+| *c) Reference* | <<a_A-4>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== CityFurniture module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _CityFurniture_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _CityFurniture_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _CityFurniture_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _CityFurniture_ module described in <<scls_10-9>>, and especially the conformance requirements stated in <<scls_10-9-4>>.
+| *c) Reference* | Chapter <<scls_10-9>>, <<scls_10-9-4>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _CityFurniture_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _CityFurniture_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _CityFurniture_ module in <<a_A-5>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _CityFurniture_ module.
+| *c) Reference* | <<a_A-5>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== CityObjectGroup module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _CityObjectGroup_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _CityObjectGroup_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _CityObjectGroup_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _CityObjectGroup_ module described in <<scls_10-11>>, and especially the conformance requirements stated in <<scls_10-11-2>>.
+| *c) Reference* | Chapter <<scls_10-11>>, <<scls_10-11-2>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _CityObjectGroup_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _CityObjectGroup_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _CityObjectGroup_ module in <<a_A-6>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _CityObjectGroup_ module.
+| *c) Reference* | <<a_A-6>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== Generics module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _Generics_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _Generics_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _Generics_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _Generics_ module described in <<scls_10-12>>, and especially the conformance requirements stated in <<scls_10-12-2>>.
+| *c) Reference* | Chapter <<scls_10-12>>, <<scls_10-12-2>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _Generics_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _Generics_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _Generics_ module in <<a_A-7>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _Generics_ module.
+| *c) Reference* | <<a_A-7>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+==== LandUse module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _LandUse_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _LandUse_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _LandUse_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _LandUse_ module described in <<scls_10-10>>, and especially the conformance requirements stated in <<scls_10-10-3>>.
+| *c) Reference* | Chapter <<scls_10-10>>, <<scls_10-10-3>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _LandUse_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _LandUse_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _LandUse_ module in <<a_A-8>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _LandUse_ module.
+| *c) Reference* | <<a_A-8>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+==== Relief module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _Relief_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _Relief_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _Relief_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _Relief_ module described in <<scls_10-2>>, and especially the conformance requirements stated in <<scls_10-2-6>>.
+| *c) Reference* | Chapter <<scls_10-2>>, <<scls_10-2-6>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _Relief_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _Relief_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _Relief_ module in <<a_A-9>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _Relief_ module.
+| *c) Reference* | <<a_A-9>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== Transportation module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _Transportation_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _Transportation_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _Transportation_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _Transportation_ module described in <<scls_10-7>>, and especially the conformance requirements stated in <<scls_10-7-5>>.
+| *c) Reference* | Chapter <<scls_10-7>>, <<scls_10-7-5>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _Transportation_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _Transportation_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _Transportation_ module in <<a_A-10>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _Transportation_ module.
+| *c) Reference* | <<a_A-10>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== Tunnel module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _Tunnel_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _Tunnel_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _Tunnel_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _Tunnel_ module described in <<scls_10-4>>, and especially the conformance requirements stated in <<scls_10-4-8>>.
+| *c) Reference* | Chapter <<scls_10-4>>, <<scls_10-4-8>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _Tunnel_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _Tunnel_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _Tunnel_ module in <<a_A-3>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _Tunnel_ module.
+| *c) Reference* | <<a_A-11>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== Vegetation module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _Vegetation_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _Vegetation_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _Vegetation_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _Vegetation_ module described in <<scls_10-8>>, and especially the conformance requirements stated in <<scls_10-8-6>>.
+| *c) Reference* | Chapter <<scls_10-8>>, <<scls_10-8-6>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _Vegetation_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _Vegetation_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _Vegetation_ module in <<a_A-12>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _Vegetation_ module.
+| *c) Reference* | <<a_A-12>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+==== WaterBody module
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _WaterBody_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _WaterBody_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _WaterBody_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _WaterBody_ module described in <<scls_10-6>>, and especially the conformance requirements stated in <<scls_10-6-4>>.
+| *c) Reference* | Chapter <<scls_10-6>>, <<scls_10-6-4>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance document
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _WaterBody_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _WaterBody_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _WaterBody_ module in <<a_A-13>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _WaterBody_ module.
+| *c) Reference* | <<a_A-13>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+
+
+==== TexturedSurface module [deprecated]
+
+===== Mandatory conformance requirements
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify that the CityGML instance document follows the _TexturedSurface_ module's rules for encoding of objects and properties and adheres to all its conformance requirements. This test case is mandatory for all CityGML instance documents employing elements defined within the _TexturedSurface_ module. Conformance requirements on referential integrity of CityGML property elements defined within the _TexturedSurface_ module may be additionally validated using the constraints provided by the Schematron schema _referentialIntegrity.sch_ in accordance with the rules and guidelines stated in <<a_A-15>>.
+| *b) Test method* | Inspect the instance document and check that it satifies the rules of the _TexturedSurface_ module described in <<scls_9-8>>, and especially the conformance requirements stated in <<scls_9-8-2>>.
+| *c) Reference* | Chapter <<scls_9-8>>, <<scls_9-8-2>>, <<a_A-15>>.
+| *d) Test type* | Capability Test.
+
+|===
+
+===== Valid CityGML instance documents
+
+[width=768,options="unnumbered"]
+|===
+| *a) Test purpose* | Verify the validity of the CityGML instance document against the XML Schema definition of the _TexturedSurface_ module. This test case is mandatory for all CityGML instance documents employing elements defined within the _TexturedSurface_ module.
+| *b) Test method* | Validate the CityGML XML instance document against the XML Schema definition of the _TexturedSurface_ module in <<a_A-14>>. The process may be using an appropriate software tool for validation or be a manual process that checks all relevant definitions from the _TexturedSurface_ module.
+| *c) Reference* | <<a_A-14>>.
+| *d) Test type* | Capability Test.
+
+|===

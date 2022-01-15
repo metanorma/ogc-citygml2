@@ -1,0 +1,22 @@
+
+
+[[annex_k]]
+[appendix,obligation="informative"]
+== Revision history
+
+[width=754,options="unnumbered"]
+|===
+h| Date h| Release h| Editor h| Description
+| 2006-02-01 | 0.1.0 | Czerwinski, Kolbe, Gröger | Initialisation of the document.
+| 2006-02-22 | 0.1.0 | Gröger, Gruber | Additions to UML diagrams.
+| 2006-04-26 | 0.2.0 | Kolbe, Gröger, Czerwi­nski | Release of CityGML draft standard to EuroSDR.
+| 2006-03-06 | 0.3.0 | Kolbe, Gröger, Czerwi­nski | Changes on property names, some attributes added. Release of CityGML standard document to OGC.
+| 2007-05-30 | 0.4.0 | Kolbe, Gröger, Nagel, Lorenz, Benner,Czerwinski,Gruber, Schlüter,Bildstein, Drees, Löwner | Introduction of a new appearance model. Introduction of Application Domain Extensions (ADE). Minor changes to the building model. Minor changes to city object groups. The concept of TerrainIntersectionCurves (TIC) added to CityFurniture. Adapation of code lists. Release of CityGML standard document to OGC.
+| 2008-02-04 | 1.0.0 | Kolbe, Gröger, Nagel, Stadler, Lorenz | Introduction of modularisation of the CityGML data model. Minor changes to the appearance model. Minor changes to city object groups and transportation objects. Encoding of external code lists changed to GML 3.1.1 Simple Dictionary Profile. Revision of UML diagrams. Release of draft CityGML standard document to CityGML 1.0 SWG.
+| 2008-05-19 | 1.0.0 | Kolbe, Gröger, Nagel, Stadler, Lorenz | Incorporation of changes and editorial corrections based on comments and recommendations during the OGC RFC public comment phase and corresponding actions agreed on by the CityGML 1.0 SWG. Final release of draft CityGML standard document to CityGML 1.0 SWG.
+| 2008-8-18 | 1.0.0 | Carl Reed | Prepare for posting as OGC™ standard and make final edits.
+| 2011-7-19 | 1.1.0 | Nagel, Häfele, Benner, Gröger, Gruber, Schlüter | First release of draft CityGML standard document to CityGML SWG.
+| 2011-11-21 | 1.1.0 | Nagel, Häfele, Gröger, Kolbe | Incorporation of changes and editorial corrections based on comments and recommendations during the OGC RFC public comment phase and corresponding actions agreed on by the CityGML SWG. Release of draft CityGML standard document to CityGML SWG.
+| 2012-02-27 | 2.0.0 | Nagel, Häfele, Gröger, Kolbe | Version changed from 1.1.0 to 2.0.0 in order to conform to OGC versioning policy as defined in 135r11. Reference number of this document changed to 12-019 to reflect the major version number change. Release of draft CityGML standard document to CityGML SWG.
+| 2012-03-14 | 2.0.0 | Carl Reed | Make final edits for publication as an OGC standard
+|===
