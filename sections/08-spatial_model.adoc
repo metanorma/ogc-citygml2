@@ -6,7 +6,7 @@ Spatial properties of CityGML features are represented by objects of GML3's geom
 [[scls_8-1]]
 === Geometric-topological model
 
-The geometry model of GML3 consists of primitives, which may be combined to form complexes, composite geometries or aggregates. For each dimension, there is a geometrical primitive: a zero-dimensional object is a _Point_, a one-dimensional a ___Curve__, a two-dimensional a ___Surface__, and a three-dimensional a ___Solid__ (<<fig_9>>). Each geometry can have its own coordinate reference system. A solid is bounded by surfaces and a surface by curves. In CityGML, a curve is restricted to be a straight line, thus only the GML3 class _LineString_ is used. Surfaces in CityGML are represented by _Polygons_, which define a planar geometry, i.e. the boundary and all interior points are required to be located in one single plane.
+The geometry model of GML3 consists of primitives, which may be combined to form complexes, composite geometries or aggregates. For each dimension, there is a geometrical primitive: a zero-dimensional object is a _Point_, a one-dimensional a &#95;__Curve__, a two-dimensional a &#95;__Surface__, and a three-dimensional a &#95;__Solid__ (<<fig_9>>). Each geometry can have its own coordinate reference system. A solid is bounded by surfaces and a surface by curves. In CityGML, a curve is restricted to be a straight line, thus only the GML3 class _LineString_ is used. Surfaces in CityGML are represented by _Polygons_, which define a planar geometry, i.e. the boundary and all interior points are required to be located in one single plane.
 
 [[fig_9]]
 .UML diagram of CityGML's geometry model (subset and profile of GML3): Primitives and Composites.

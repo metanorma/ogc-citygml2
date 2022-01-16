@@ -6,6 +6,7 @@
 This annex illustrates the usage of CityGML within Robotics services. The definition of the corresponding _Application Domain Extension_ (ADE) is included as an example.
 
 
+[[a_I-1]]
 === Overview of Ubiquitous Network Robots
 
 In the field of robotics, there is a concept which originated in Japan called _network robots_, which aims to achieve advanced robot services by connecting multiple robots. The goal is to go beyond the capacity limits of a single robot. Sensors embedded in the environment and agents on the internet are also broadly regarded as robots, and the research and development of network robot technology that connects robots through a network has been promoted. Connecting multiple robots provides improved cognitive ability and interactive capability compared to a single robot, and it is thought that advanced robot services are achievable.
@@ -41,7 +42,7 @@ This section gives an overview of the spatial master databases used for network 
 
 When the data model for a spatial master database is constructed, the compatibility with CityGML LOD4 is taken into consideration. Moreover, the concepts of flooring materials (_materialType_), _Storey_, and door attributes (_doorOperationType_), which are essential for mobile robots, are added. Section I.3 provides more details.
 
-<<fig_104>> shows the configuration of a spatial master database management system used in the demonstration experiment described in section I.1. This system imports information of a building, such as CAD data or CityGML data, and stores it in spatial master database. And when converting it into a grid map, this system searches the targeted 3D objects and projects them onto a 2D floor surface. The next step is to divide it into grid, designating floor number, floor area (Boundary Box) and grid size (width and height) that the floor surface is divided into. Finally, it generates PNG images whose pixel values are related to each grid information, such as flooring materials or whether some obstacles exist or not. After converting the 3D model to this grid map, this system provides it to the Area management gateway server.
+<<fig_104>> shows the configuration of a spatial master database management system used in the demonstration experiment described in section <<a_I-1>>. This system imports information of a building, such as CAD data or CityGML data, and stores it in spatial master database. And when converting it into a grid map, this system searches the targeted 3D objects and projects them onto a 2D floor surface. The next step is to divide it into grid, designating floor number, floor area (Boundary Box) and grid size (width and height) that the floor surface is divided into. Finally, it generates PNG images whose pixel values are related to each grid information, such as flooring materials or whether some obstacles exist or not. After converting the 3D model to this grid map, this system provides it to the Area management gateway server.
 
 
 

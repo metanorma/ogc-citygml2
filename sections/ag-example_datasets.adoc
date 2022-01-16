@@ -568,7 +568,7 @@ image::196.png["",290,284]
 
 [[fig_79]]
 .The boundary surface where the garage touches the building. For the building, the geometry is split into a non-shared part ("Wall East", Polygon 1) and a shared part ("Wall East", Polygon 2). Only the latter is referenced by the garage using the XLink mechanism.
-image::197.png["",189,189]
+image::197.png[]
 
 
 [[listing_6]]
