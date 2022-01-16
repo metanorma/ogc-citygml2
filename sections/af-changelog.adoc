@@ -6,7 +6,7 @@ The following table lists all feature types, properties, and data types which ha
 
 
 
-[cols="<,<,^,^,^,<",width=97%]
+[cols="<,<,^,^,^,<",width=97%,options="unnumbered"]
 |===
 | *Feature Class / Data Type* | *Property* | *New* | *Changed* | *Deleted* | *Description of change*
 
