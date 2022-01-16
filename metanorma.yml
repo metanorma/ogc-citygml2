@@ -1,0 +1,9 @@
+---
+metanorma:
+  source:
+    files:
+      - sources/document.adoc
+
+  collection:
+    organization: "OGC"
+    name: "OGC CityGML 2.0"
