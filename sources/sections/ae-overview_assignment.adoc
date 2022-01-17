@@ -5,7 +5,7 @@
 The following table lists all feature types of CityGML. For each feature type, all non-spatial and spatial properties are given including their type. Each feature is assigned a range of LOD in which it may occur, and for each property the LOD in which it represents the feature is stated. Each feature type's name is preceded by a prefix indicating the CityGML module defining the feature type. For a list of prefixes and associated CityGML modules, please refer to <<scls_4-3>> and <<cls_7>>.
 
 
-[cols="15,45,30,10",options="unnumbered"]
+[cols="15a,45a,30a,10a",options="unnumbered"]
 |===
 h| Feature Class h| Property h| Type h| LOD
 4+.<| *CityGML Core module*

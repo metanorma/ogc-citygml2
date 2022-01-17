@@ -2,7 +2,7 @@
 [appendix,obligation="informative"]
 == Overview of employed GML3 geometry classes
 
-[width=756,options="unnumbered"]
+[options="unnumbered"]
 |===
 h| *Abstract GML classes referenced in CityGML* h| *GML subclass actually used in CityGML*
 | _Geometry a|

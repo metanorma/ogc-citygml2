@@ -5,8 +5,7 @@
 The following table lists all feature types, properties, and data types which have been added or changed for CityGML 2.0. In order to maintain backwards compatibility, none of the classes marked as being deprecated in CityGML 1.0 has been deleted.
 
 
-
-[cols="<,<,^,^,^,<",width=97%,options="unnumbered"]
+[cols="<,<,^,^,^,<",options="unnumbered"]
 |===
 | *Feature Class / Data Type* | *Property* | *New* | *Changed* | *Deleted* | *Description of change*
 

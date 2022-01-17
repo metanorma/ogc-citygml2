@@ -4,7 +4,7 @@
 [appendix,obligation="informative"]
 == Revision history
 
-[width=754,options="unnumbered"]
+[options="unnumbered"]
 |===
 h| Date h| Release h| Editor h| Description
 | 2006-02-01 | 0.1.0 | Czerwinski, Kolbe, Gröger | Initialisation of the document.

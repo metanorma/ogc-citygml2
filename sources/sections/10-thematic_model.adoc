@@ -733,10 +733,11 @@ In LOD2 and higher levels of detail, the exterior shell of a building is not onl
 
 [[tab_5]]
 .Semantic themes of the class __AbstractBuilding._
-[cols="<,<,^,^,^,^,^",width=769]
+[cols="<,<,^,^,^,^,^"]
 |===
 h| Geometric / semantic theme h| Property type h| LOD0 h| LOD1 h| LOD2 h| LOD3 h| LOD4
-| Building footprint and roof edge | _gml:MultiSurfaceType_ | • a| a| a| a| 
+
+| Building footprint and roof edge | _gml:MultiSurfaceType_ | • a| a| a| a|
 | Volume part of the building shell | _gml:SolidType_ a| | • | • | • | •
 | Surface part of the building shell | _gml:MultiSurfaceType_ a| | • | • | • | •
 | Terrain intersection curve | _gml:MultiCurveType_ a| | • | • | • | •
@@ -747,6 +748,7 @@ h| Geometric / semantic theme h| Property type h| LOD0 h| LOD1 h| LOD2 h| LOD3 h
 | Openings (<<scls_10-3-4>>) | _AbstractOpeningType_ a| a| a| | • | •
 | Rooms (<<scls_10-3-5>>) | _RoomType_ a| a| a| a| | •
 | Interior building installations (<<scls_10-3-5>>) | _IntBuildingInstallationType_ a| a| a| a| | •
+
 |===
 
 Apart from _BuildingParts_, smaller features of the building ("outer building installations") can also strongly affect the building characteristic. These features are modelled by the class _BuildingInstallation_ (cf. <<scls_10-3-2>>). Typical candidates for this class are chimneys (see. <<fig_30>>), dormers (see <<fig_28>>), balconies, outer stairs, or antennas. _BuildingInstallations_ may only be included in LOD2 models, if their extents exceed the proposed minimum dimensions as specified in <<scls_6-2>>. For the geometrical representation of the class _BuildingInstallation_, an arbitrary geometry object from the GML subset shown in <<fig_9>> can be used.
@@ -2919,7 +2921,7 @@ h| Example: h| Country road h| Motorway entry
 |===
 
 
-[width=752,options="unnumbered"]
+[options="unnumbered"]
 |===
 h| Example: h| Runway of an airport h| Apron of an airport
 | TransportationComplex – Function | road | apron

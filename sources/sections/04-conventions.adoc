@@ -155,7 +155,6 @@ Within this document the module namespaces are associated with recommended prefi
 
 [[tab_1]]
 .List of CityGML modules, their associated XML namespace identifiers, and example namespace prefixes.
-[width=774]
 |===
 h| *CityGML module* h| *Namespace identifier* h| *Namespace prefix*
 | CityGML Core | http://www.opengis.net/citygml/2.0 | core
@@ -180,7 +179,6 @@ Further XML Schema definitions relevant to this standard are shown in <<tab_2>> 
 
 [[tab_2]]
 .List of XML Schema definitions, their associated XML namespace identifiers, and example namespace prefixes used within this document.
-[width=774]
 |===
 h| *XML Schema definition* h| *Namespace identifier* h| *Namespace prefix*
 | Geography Markup Language version 3.1.1 (from OGC) | http://www.opengis.net/gml | gml
