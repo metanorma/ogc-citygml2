@@ -75,27 +75,27 @@ The purpose of this section is to provide an example showing how CityGML can be 
 
 
 [[fig_107]]
-.CityGML Robotics application schema – Standard Openings and UNR modelsincluding Door and Window (light yellow=CityGML modules, light blue=CityGML Standard Opening ADE, light orange=UNR ADE). Prefixes are used to indicate XML namespaces associated with model elements. The prefix _stdOp_ is associated with the CityGML Standard Opening ADE (source:Institute for Geodesy and Geoinformation Science, Technical University Berlin), and the prefix _unr_ is associated with the UNR ADE (source: Central Research Laboratory, Hitachi, Ltd.). The CityGML model elements are associated with the recommended CityGML prefixes.
+.CityGML Robotics application schema -- Standard Openings and UNR modelsincluding Door and Window (light yellow=CityGML modules, light blue=CityGML Standard Opening ADE, light orange=UNR ADE). Prefixes are used to indicate XML namespaces associated with model elements. The prefix _stdOp_ is associated with the CityGML Standard Opening ADE (source:Institute for Geodesy and Geoinformation Science, Technical University Berlin), and the prefix _unr_ is associated with the UNR ADE (source: Central Research Laboratory, Hitachi, Ltd.). The CityGML model elements are associated with the recommended CityGML prefixes.
 image::243.png["",742,527]
 
 
 [[fig_108]]
-.CityGML Robotics application schema – UNR Storey model (light yellow=CityGML module, light orange=UNR ADE). Prefixes are used to indicate XML namespaces associated with model elements. The prefix _unr_ is associated with the UNR ADE (source: Central Research Laboratory, Hitachi, Ltd.). The CityGML model elements are associated with the recommended CityGML prefixes.
+.CityGML Robotics application schema -- UNR Storey model (light yellow=CityGML module, light orange=UNR ADE). Prefixes are used to indicate XML namespaces associated with model elements. The prefix _unr_ is associated with the UNR ADE (source: Central Research Laboratory, Hitachi, Ltd.). The CityGML model elements are associated with the recommended CityGML prefixes.
 image::245.png["",643,347]
 
 
 .Header of the Standard Openings ADE Schema definition file
 [source%unnumbered,xml]
 ----
-<xsd:schema xmlns="http://unr.crl.hitachi.co.jp/ade/standard_opening" 
+<xsd:schema xmlns="http://unr.crl.hitachi.co.jp/ade/standard_opening"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	targetNamespace="http://unr.crl.hitachi.co.jp/ade/standard_opening" elementFormDefault="qualified"
 	attributeFormDefault="unqualified">
-	<xsd:import namespace="http://www.opengis.net/gml" 
+	<xsd:import namespace="http://www.opengis.net/gml"
 							schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xsd:import namespace="http://www.opengis.net/citygml/building/2.0" 
+	<xsd:import namespace="http://www.opengis.net/citygml/building/2.0"
 							schemaLocation="http://schemas.opengis.net/citygml/building/2.0/building.xsd"/>
 	...
 </xsd:schema>
@@ -105,7 +105,7 @@ image::245.png["",643,347]
 .Application specific attributes for Door
 [source%unnumbered,xml]
 ----
-<xsd:element name="doorOperationType" type="DoorOperationTypeType" 
+<xsd:element name="doorOperationType" type="DoorOperationTypeType"
 	substitutionGroup="bldg:_GenericApplicationPropertyOfDoor"/>
 <xsd:simpleType name="DoorOperationTypeType">
 	<xsd:restriction base="xsd:string">
@@ -152,18 +152,18 @@ image::245.png["",643,347]
 .Header of the UNR ADE Schema definition file
 [source%unnumbered,xml]
 ----
-<xsd:schema xmlns="http://unr.crl.hitachi.co.jp/ade/unr" 
+<xsd:schema xmlns="http://unr.crl.hitachi.co.jp/ade/unr"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:core="http://www.opengis.net/citygml/2.0"
-	xmlns:bldg="http://www.opengis.net/citygml/building/2.0" 
+	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/2.0"
 	targetNamespace="http://unr.crl.hitachi.co.jp/ade/unr" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xsd:import namespace="http://www.opengis.net/gml" 
+	<xsd:import namespace="http://www.opengis.net/gml"
 							schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xsd:import namespace="http://www.opengis.net/citygml/building/2.0" 
+	<xsd:import namespace="http://www.opengis.net/citygml/building/2.0"
 							schemaLocation="http://schemas.opengis.net/citygml/building/2.0/building.xsd"/>
-	<xsd:import namespace="http://www.opengis.net/citygml/cityobjectgroup/2.0" 
+	<xsd:import namespace="http://www.opengis.net/citygml/cityobjectgroup/2.0"
 							schemaLocation="http://schemas.citygml.org/citygml/cityobjectgroup/2.0/cityObjectGroup.xsd"/>
 	...
 </xsd:schema>
@@ -179,7 +179,7 @@ image::245.png["",643,347]
 	</xsd:sequence>
 	<xsd:attributeGroup ref="gml:AssociationAttributeGroup"/>
 </xsd:complexType>
-<xsd:element name="storeyProperty" type="StoreyPropertyType" 
+<xsd:element name="storeyProperty" type="StoreyPropertyType"
 	substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup"/>
 
 <xsd:complexType name="StoreyType">
@@ -199,7 +199,7 @@ image::245.png["",643,347]
 .Application specific attributes for _Opening
 [source%unnumbered,xml]
 ----
-<xsd:element name="openingMaterialType" type="PhysicalMaterialTypeType" 
+<xsd:element name="openingMaterialType" type="PhysicalMaterialTypeType"
 	substitutionGroup="bldg:_GenericApplicationPropertyOfOpening"/>
 <xsd:element name="openingRoofType" type="RoofTypeType" substitutionGroup="bldg:_GenericApplicationPropertyOfOpening"/>
 <xsd:element name="openingJointType" type="JointTypeType" substitutionGroup="bldg:_GenericApplicationPropertyOfOpening"/>
@@ -217,13 +217,13 @@ image::245.png["",643,347]
 .Application specific attributes for _BoundarySurface
 [source%unnumbered,xml]
 ----
-<xsd:element name="surfaceMaterialType" type="PhysicalMaterialTypeType" 
+<xsd:element name="surfaceMaterialType" type="PhysicalMaterialTypeType"
 	substitutionGroup="bldg:_GenericApplicationPropertyOfBoundarySurface"/>
-<xsd:element name="surfaceRoofType" type="RoofTypeType" 
+<xsd:element name="surfaceRoofType" type="RoofTypeType"
 	substitutionGroup="bldg:_GenericApplicationPropertyOfBoundarySurface"/>
-<xsd:element name="surfaceJointType" type="JointTypeType" 
+<xsd:element name="surfaceJointType" type="JointTypeType"
 	substitutionGroup="bldg:_GenericApplicationPropertyOfBoundarySurface"/>
-<xsd:element name="surfaceInOutdoorType" type="InOutdoorTypeType" 
+<xsd:element name="surfaceInOutdoorType" type="InOutdoorTypeType"
 	substitutionGroup="bldg:_GenericApplicationPropertyOfBoundarySurface"/>
 ----
 
@@ -240,13 +240,13 @@ In order to use multiple ADE files, it is necessary to follow the XML schema rul
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<CityModel xmlns="http://www.opengis.net/citygml/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<CityModel xmlns="http://www.opengis.net/citygml/2.0" xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
-	xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/2.0" 
+	xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/2.0"
 	xmlns:stdOp="http://unr.crl.hitachi.co.jp/ade/standard_opening"
-	xmlns:unr="http://unr.crl.hitachi.co.jp/ade/unr" 
+	xmlns:unr="http://unr.crl.hitachi.co.jp/ade/unr"
 	xsi:schemaLocation="http://unr.crl.hitachi.co.jp/ade/standard_opening http://unr.crl.hitachi.co.jp/ade/standard_opening/stdOp.xsd
 										 http://unr.crl.hitachi.co.jp/ade/unr http://unr.crl.hitachi.co.jp/ade/unr/unr.xsd">
 
@@ -316,7 +316,7 @@ In order to use multiple ADE files, it is necessary to follow the XML schema rul
 							<unr:openingMaterialType>2491</unr:openingMaterialType>
 							<unr:openingRoofType>2</unr:openingRoofType>
 							<unr:openingJointType>1</unr:openingJointType>
-							<stdOp:doorOperationType>swinging</stdOp:doorOperationType>							
+							<stdOp:doorOperationType>swinging</stdOp:doorOperationType>
 						</bldg:Door>
 					</bldg:opening>
 				</bldg:WallSurface>

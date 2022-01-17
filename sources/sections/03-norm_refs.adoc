@@ -10,23 +10,23 @@ The following normative documents contain provisions which, through reference in
 The following documents are indispensable for the application of the CityGML standard. The geometry model of GML 3.1.1 is used except for some added concepts like implicit geometries (cf. chapter <<scls_8-2>>). The appearance model (cf. <<cls_9>>) draws concepts from both _X3D_ and _COLLADA_. Addresses are represented using the OASIS extensible Address Language _xAL_.
 ====
 
-* [[[ISO_8601_2004,ISO 8601:2004]]], _Data elements and interchange formats – Information interchange – Representation of dates and times_
+* [[[ISO_8601_2004,ISO 8601:2004]]], _Data elements and interchange formats -- Information interchange -- Representation of dates and times_
 
-* [[[ISO_TS_19103_2005,ISO/TS 19103:2005]]], _Geographic Information – Conceptual Schema Language_
+* [[[ISO_TS_19103_2005,ISO/TS 19103:2005]]], _Geographic Information -- Conceptual Schema Language_
 
-* [[[ISO_19105_2000,ISO 19105:2000]]], _Geographic information – Conformance and testing_
+* [[[ISO_19105_2000,ISO 19105:2000]]], _Geographic information -- Conformance and testing_
 
-* [[[ISO_19107_2003,ISO 19107:2003]]], _Geographic Information – Spatial Schema_
+* [[[ISO_19107_2003,ISO 19107:2003]]], _Geographic Information -- Spatial Schema_
 
-* [[[ISO_19109_2005,ISO 19109:2005]]], _Geographic Information – Rules for Application Schemas_
+* [[[ISO_19109_2005,ISO 19109:2005]]], _Geographic Information -- Rules for Application Schemas_
 
 * [[[ISO_19111_2003,ISO 19111:2003]]], _Geographic information_ _–_ _Spatial referencing by coordinates_
 
-* [[[ISO_19115_2003,ISO 19115:2003]]], _Geographic Information – Metadata_
+* [[[ISO_19115_2003,ISO 19115:2003]]], _Geographic Information -- Metadata_
 
-* [[[ISO_19123_2005,ISO 19123:2005]]], _Geographic Information – Coverages_
+* [[[ISO_19123_2005,ISO 19123:2005]]], _Geographic Information -- Coverages_
 
-* [[[ISO_TS_19139_2007,ISO/TS 19139:2007]]], _Geographic Information – Metadata – XML schema implementation_
+* [[[ISO_TS_19139_2007,ISO/TS 19139:2007]]], _Geographic Information -- Metadata -- XML schema implementation_
 
 * [[[ISO_IEC_19775_2004,ISO/IEC 19775:2004]]], _X3D Abstract Specification_
 
@@ -62,6 +62,6 @@ The following documents are indispensable for the application of the CityGML sta
 
 * [[[OASIS,OASIS]]], OASIS (Organization for the Advancement of Structured Information Standards): extensible Address Language (xAL v2.0).
 
-* [[[Khronos,Khronos]]], Khronos Group Inc.: COLLADA – Digital Asset Schema Release 1.4.1
+* [[[Khronos,Khronos]]], Khronos Group Inc.: COLLADA -- Digital Asset Schema Release 1.4.1
 
 * [[[Schematron,Schematron]]], The Schematron Assertion Language 1.5. Rick Jelliffe 2002-10-01
