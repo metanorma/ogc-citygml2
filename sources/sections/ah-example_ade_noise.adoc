@@ -56,15 +56,15 @@ In this section the data models for the CityGML Noise ADE are given as UML diagr
 
 
 [[fig_99]]
-.CityGML noise application schema – transportation model (light yellow=CityGML _Transportation_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _Transportation_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
+.CityGML noise application schema -- transportation model (light yellow=CityGML _Transportation_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _Transportation_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
 image::228.png["",756,733]
 
 [[fig_100]]
-.CityGML noise application schema – excerpt of the building model (light yellow=CityGML _Building_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _Building_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
+.CityGML noise application schema -- excerpt of the building model (light yellow=CityGML _Building_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _Building_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
 image::229.png["",475,559]
 
 [[fig_101]]
-.CityGML noise application schema – city furniture model (light yellow=CityGML _CityFurniture_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _CityFurniture_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
+.CityGML noise application schema -- city furniture model (light yellow=CityGML _CityFurniture_ module, light orange=CityGML Noise ADE). Prefixes are used to indicate XML namespaces associated with model elements. Element names without a prefix are defined within the CityGML _CityFurniture_ module. The prefix _noise_ is associated with the CityGML Noise ADE (source: Institute of Geodesy and Geoinformation Uni Bonn).
 image::230.png["",755,370]
 
 
@@ -74,23 +74,23 @@ image::230.png["",755,370]
 [source%unnumbered,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.citygml.org/ade/noise_de/2.0" 
+<xsd:schema xmlns="http://www.citygml.org/ade/noise_de/2.0"
 	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:core="http://www.opengis.net/citygml/2.0"
-	xmlns:bldg="http://www.opengis.net/citygml/building/2.0" 
+	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	xmlns:frn="http://www.opengis.net/citygml/cityfurniture/2.0"
-	xmlns:tran="http://www.opengis.net/citygml/transportation/2.0" 
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema"targetNamespace="http://www.citygml.org/ade/noise_de/2.0" 
+	xmlns:tran="http://www.opengis.net/citygml/transportation/2.0"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"targetNamespace="http://www.citygml.org/ade/noise_de/2.0"
 	elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xsd:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xsd:import namespace="http://www.opengis.net/citygml/2.0"
 							schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
-	<xsd:import namespace="http://www.opengis.net/citygml/transportation/2.0" 
+	<xsd:import namespace="http://www.opengis.net/citygml/transportation/2.0"
 							schemaLocation="http://schemas.opengis.net/citygml/transportation/2.0/transportation.xsd"/>
-	<xsd:import namespace="http://www.opengis.net/citygml/building/2.0" 
+	<xsd:import namespace="http://www.opengis.net/citygml/building/2.0"
 							schemaLocation="http://schemas.opengis.net/citygml/building/2.0/building.xsd"/>
-	<xsd:import namespace="http://www.opengis.net/citygml/cityfurniture/2.0" 
-							schemaLocation="http://schemas.opengis.net/citygml/cityfurniture/2.0/cityFurniture.xsd"/>	
+	<xsd:import namespace="http://www.opengis.net/citygml/cityfurniture/2.0"
+							schemaLocation="http://schemas.opengis.net/citygml/cityfurniture/2.0/cityFurniture.xsd"/>
 	...
 </xsd:schema>
 ----
@@ -247,29 +247,29 @@ image::230.png["",755,370]
 .Application specific attributes for _AbstractBuilding
 [source%unnumbered,xml]
 ----
-<xsd:element name="buildingReflection" type="xsd:string" 
+<xsd:element name="buildingReflection" type="xsd:string"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingReflectionCorrection" type="gml:MeasureType" 
+<xsd:element name="buildingReflectionCorrection" type="gml:MeasureType"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingLDenMax" type="gml:MeasureType" 
+<xsd:element name="buildingLDenMax" type="gml:MeasureType"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingLDenMin" type="gml:MeasureType" 
+<xsd:element name="buildingLDenMin" type="gml:MeasureType"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingLDenEq" type="gml:MeasureType" 
+<xsd:element name="buildingLDenEq" type="gml:MeasureType"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingLNightMax" type="gml:MeasureType" 
+<xsd:element name="buildingLNightMax" type="gml:MeasureType"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingLNightMin" type="gml:MeasureType" 
+<xsd:element name="buildingLNightMin" type="gml:MeasureType"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingLNightEq" type="gml:MeasureType" 
+<xsd:element name="buildingLNightEq" type="gml:MeasureType"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingHabitants" type="xsd:positiveInteger" 
+<xsd:element name="buildingHabitants" type="xsd:positiveInteger"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingAppartments" type="xsd:positiveInteger" 
+<xsd:element name="buildingAppartments" type="xsd:positiveInteger"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="buildingImmissionPoints" type="gml:integerList" 
+<xsd:element name="buildingImmissionPoints" type="gml:integerList"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
-<xsd:element name="remark" type="xsd:string" 
+<xsd:element name="remark" type="xsd:string"
                             substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
 ----
 
@@ -285,10 +285,10 @@ The following dataset illustrates a CityGML instance document which uses the app
 [source,xml]
 ----
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<CityModel xmlns="http://www.opengis.net/citygml/2.0" 
+<CityModel xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:tran="http://www.opengis.net/citygml/transportation/2.0"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
-	xmlns:noise="http://www.citygml.org/ade/noise_de/2.0"    
+	xmlns:noise="http://www.citygml.org/ade/noise_de/2.0"
 	xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.citygml.org/ade/noise_de NoiseADE/CityGML-NoiseADE.xsd">

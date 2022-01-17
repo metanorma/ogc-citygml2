@@ -30,14 +30,14 @@ image::190.png["",293,213]
 [source,xml]
 ----
 <?xml version="1.0" encoding="utf-8"?>
-<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
-	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" 	
-	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd 
+	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
+	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd
 											    http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd ">
 	<gml:name>Simple 3D city model LOD0 without Appearance</gml:name>
 	<gml:boundedBy>
@@ -49,10 +49,10 @@ image::190.png["",293,213]
 	<cityObjectMember>
 		<bldg:Building gml:id="GML_7b1a5a6f-ddad-4c3d-a507-3eb9ee0a8e68">
 			<gml:name>Example Building LOD0 </gml:name>
-			<bldg:function 
+			<bldg:function
 					codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml">1000</bldg:function>
 			<bldg:yearOfConstruction>1985</bldg:yearOfConstruction>
-			<bldg:roofType 
+			<bldg:roofType
 					codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml">1030</bldg:roofType>
 			<bldg:measuredHeight uom="#m">5.0</bldg:measuredHeight>
 			<bldg:storeysAboveGround>1</bldg:storeysAboveGround>
@@ -170,14 +170,14 @@ image::192.png["",319,213]
 [source,xml]
 ----
 <?xml version="1.0" encoding="utf-8"?>
-<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
-	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" 	
-	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd 
+	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
+	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd
 											  http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd ">
 	<gml:name>Simple 3D city model LOD1 without Appearance</gml:name>
 	<gml:boundedBy>
@@ -189,10 +189,10 @@ image::192.png["",319,213]
 	<cityObjectMember>
 		<bldg:Building gml:id="GML_7b1a5a6f-ddad-4c3d-a507-3eb9ee0a8e68">
 			<gml:name>Example Building LOD1 </gml:name>
-			<bldg:function 
+			<bldg:function
 					codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml">1000</bldg:function>
 			<bldg:yearOfConstruction>1985</bldg:yearOfConstruction>
-			<bldg:roofType 
+			<bldg:roofType
 					codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml">1030</bldg:roofType>
 			<bldg:measuredHeight uom="#m">5.0</bldg:measuredHeight>
 			<bldg:storeysAboveGround>1</bldg:storeysAboveGround>
@@ -362,14 +362,14 @@ image::194.png["",306,213]
 [source,xml]
 ----
 <?xml version="1.0" encoding="utf-8"?>
-<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
-	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" 	
-	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd 
+	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
+	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd
 											  http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd ">
 	<gml:name>Simple 3D city model LOD2 without Appearance</gml:name>
 	<gml:boundedBy>
@@ -579,8 +579,8 @@ image::197.png[]
 <CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:gml="http://www.opengis.net/gml" xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
-	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"	
-	schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd 				
+	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
+	schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd
 									  http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd">
 	<gml:name>3D city model LOD2 without Appearance</gml:name>
 	<gml:boundedBy>
@@ -671,10 +671,10 @@ image::197.png[]
 			<bldg:consistsOfBuildingPart>
 				<bldg:BuildingPart gml:id="GMLID_BUI379228_1244_301">
 					<gml:name>Example BuildingPart LOD2</gml:name>
-					<bldg:function 
+					<bldg:function
 							codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml">1630</bldg:function>
 					<bldg:yearOfConstruction>1985</bldg:yearOfConstruction>
-					<bldg:roofType 			
+					<bldg:roofType
 							codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml">1010</bldg:roofType>
 					<bldg:measuredHeight uom="#m">2.5</bldg:measuredHeight>
 					<bldg:lod2Solid>
@@ -797,14 +797,14 @@ image::200.png["",284,236]
 [source,xml]
 ----
 <?xml version="1.0" encoding="utf-8"?>
-<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
-	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" 	
-	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd 
+	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
+	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd
 											  http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd ">
 	<gml:name>Simple 3D city model LOD3 without Appearance</gml:name>
 	<gml:boundedBy>
@@ -1047,14 +1047,14 @@ image::202.png["",250,260]
 [source,xml]
 ----
 <?xml version="1.0" encoding="utf-8"?>
-<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
-	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" 	
-	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd 
+	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
+	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd
 											  http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd ">
 	<gml:name>Simple 3D city model LOD4 without Appearance</gml:name>
 	<gml:boundedBy>
@@ -1361,7 +1361,7 @@ image::202.png["",250,260]
 [[a_G-7]]
 === Example of a CityGML dataset illustrating the appearance model
 
-The following CityGML dataset is based on the simple building model from <<a_G-2>> and <<a_G-3>> given in LOD1 and LOD2. Furthermore two separate appearance themes are defined – a summer theme and a winter theme – describing different visual appearances for the building and the surrounding terrain. Each LOD has an individual appearance for these specific themes.
+The following CityGML dataset is based on the simple building model from <<a_G-2>> and <<a_G-3>> given in LOD1 and LOD2. Furthermore two separate appearance themes are defined -- a summer theme and a winter theme -- describing different visual appearances for the building and the surrounding terrain. Each LOD has an individual appearance for these specific themes.
 
 Several concepts of CityGML's appearance model are used in this dataset. Regarding LOD1, an _X3DMaterial_ object defines the material of the whole building which is applied to all of its surfaces. In addition, a _GeoreferencedTexture_ is assigned both to the terrain and the roof surface of the building. In LOD2 the vertical surfaces of the building are texturised individually using _ParameterizedTexture_ objects whereas the roof surfaces and the terrain again are described by a _GeoreferencedTexture._ The texture mapping for the _GeoreferencedTexture_ objects is given inline (cf. <<listing_9>>) as wells as using an ESRI world file (cf. <<listing_11>>). The modelling approach results in four possible visualizations of the dataset that are represented in <<fig_82>> and <<fig_83>>.
 
@@ -1399,11 +1399,11 @@ image::206.png["",335,281]
 ----
 <?xml version="1.0" encoding="utf-8"?>
 <CityModel
-	xmlns="http://www.opengis.net/citygml/2.0" 
+	xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:app="http://www.opengis.net/citygml/appearance/2.0"
-	xmlns:dem="http://www.opengis.net/citygml/relief/2.0" 
+	xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd
@@ -1417,10 +1417,10 @@ xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.o
 	</gml:boundedBy>
 	<cityObjectMember>
 		<bldg:Building gml:id="GML_7b1a5a6f-ddad-4c3d-a507-3eb9ee0a8e68">
-			<bldg:function 
+			<bldg:function
 					codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml">1000</bldg:function>
 			<bldg:yearOfConstruction>1985</bldg:yearOfConstruction>
-			<bldg:roofType 
+			<bldg:roofType
 					codeSpace="http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml">1030</bldg:roofType>
 			<bldg:measuredHeight uom="#m">5.0</bldg:measuredHeight>
 			<bldg:storeysAboveGround>1</bldg:storeysAboveGround>
@@ -1785,9 +1785,9 @@ The entering dirt track requires a different texture. Even though its geometry (
 [source,xml]
 ----
 <?xml version="1.0" encoding="utf-8"?>
-<CityModel xmlns="http://www.opengis.net/citygml/2.0" 
+<CityModel xmlns="http://www.opengis.net/citygml/2.0"
 	xmlns:app="http://www.opengis.net/citygml/appearance/2.0"
-	xmlns:tran="http://www.opengis.net/citygml/transportation/2.0" 
+	xmlns:tran="http://www.opengis.net/citygml/transportation/2.0"
 	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.opengis.net/citygml/appearance/2.0 http://schemas.opengis.net/citygml/appearance/2.0/appearance.xsd
@@ -1886,14 +1886,14 @@ The following dataset demonstrates the use of local engineering coordinate refer
 [source,xml]
 ----
 <?xml version="1.0" encoding="utf-8"?>
-<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<CityModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.opengis.net/citygml/2.0"
-	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" 
+	xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:gml="http://www.opengis.net/gml"
 	xmlns:dem="http://www.opengis.net/citygml/relief/2.0"
 	xmlns:bldg="http://www.opengis.net/citygml/building/2.0"
-	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd 
+	xsi:schemaLocation="http://www.opengis.net/citygml/building/2.0 http://schemas.opengis.net/citygml/building/2.0/building.xsd
 											 http://www.opengis.net/citygml/relief/2.0 http://schemas.opengis.net/citygml/relief/2.0/relief.xsd ">
 	<gml:metaDataProperty>
 		<!-- Local EngineeringCRS definition contained specified inline as metadata in this XML instance. -->
@@ -1960,7 +1960,7 @@ The following dataset demonstrates the use of local engineering coordinate refer
 					<!-- The anchor point defines the origin of the local CS with respect to the world CRS -->
 					<!-- In this example, the anchor point references a point on the earth (in Germany) using a compound CRS -->
 					<!-- For planimetry, the reference system ETRS89 / UTM zone 32N (EPSG code 25832) is used -->
-					<!-- The vertical reference system is DHHN92 height (EPSG code 5783) --> 
+					<!-- The vertical reference system is DHHN92 height (EPSG code 5783) -->
 				</gml:EngineeringDatum>
 			</gml:usesEngineeringDatum>
 		</gml:EngineeringCRS>

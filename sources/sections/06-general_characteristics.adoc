@@ -58,7 +58,7 @@ One of the most important design principles for CityGML is the coherent modellin
 If both hierarchies exist for a specific object, they must be coherent (i.e. it must be ensured that they match and fit together). For example, if a wall of a building has two windows and a door on the semantic level, then the geometry representing the wall must contain also the geometry parts of both windows and the door.
 
 [[scls_6-4]]
-=== Closure surfaces 
+=== Closure surfaces
 
 Objects, which are not modelled by a volumetric geometry, must be virtually closed in order to compute their volume (e.g. pedestrian underpasses or airplane hangars). They can be sealed using a _ClosureSurface._ These are special surfaces, which are taken into account, when needed to compute volumes and are neglected, when they are irrelevant or not appropriate, for example in visualisations.
 
@@ -126,7 +126,7 @@ A group may contain other groups as members, allowing nested grouping of arbitra
 
 Information about a surface's appearance, i.e. observable properties of the surface, is considered an integral part of virtual 3D city models in addition to semantics and geometry. Appearance relates to any surface-based theme, e.g. infrared radiation or noise pollution, not just visual properties. Consequently, data provided by appearances can be used as input for both presentation of and analysis in virtual 3D city models.
 
-CityGML supports feature appearances for an arbitrary number of themes per city model. Each LOD of a feature can have an individual appearance. Appearances can represent – among others – textures and georeferenced textures. CityGML's appearance model is packaged within its own extension module _Appearance_ (cf. <<cls_9>>).
+CityGML supports feature appearances for an arbitrary number of themes per city model. Each LOD of a feature can have an individual appearance. Appearances can represent -- among others -- textures and georeferenced textures. CityGML's appearance model is packaged within its own extension module _Appearance_ (cf. <<cls_9>>).
 
 [[scls_6-10]]
 === Prototypic objects / scene graph concepts

@@ -19,11 +19,11 @@
 
 * [[[Cox_2004,Cox 2004]]], Cox, S., Daisy, P., Lake, R., Portele, C., Whiteside, A. (2004): OpenGIS Geography Markup Language (GML 3.1), Implementation Specification Version 3.1.0, Recommendation Paper, OGC Doc. No. 03-105r1.
 
-* [[[Czerwinski_2006,Czerwinski 2006]]], Czerwinski, A., Kolbe, T. H., Plümer, L., Stöcker-Meier, E. (2006): Interoperability and accuracy requirements for EU environmental noise mapping, In: Kremers, Horst (ed.): Proceedings, InterCarto – InterGIS 12. Berlin 2006.
+* [[[Czerwinski_2006,Czerwinski 2006]]], Czerwinski, A., Kolbe, T. H., Plümer, L., Stöcker-Meier, E. (2006): Interoperability and accuracy requirements for EU environmental noise mapping, In: Kremers, Horst (ed.): Proceedings, InterCarto -- InterGIS 12. Berlin 2006.
 
 * [[[Czerw_2006,Czerw 2006]]], Czerwinski, A., Kolbe, T. H., Plümer, L., Stöcker-Meier, E. (2006b): Spatial data infrastructure techniques for flexible noise mapping strategies, In: Tochtermann, K. / Scharl, A. (eds.): Proceedings of the 20th International Conference on Environmental Informatics - Managing Environmental Knowledge. Graz 2006.
 
-* [[[Czerwinski_2007,Czerwinski 2007]]], Czerwinski, A., Sandmann, S., Stöcker-Meier, E., Plümer, L. (2007): Sustainable SDI for EU noise mapping in NRW – best practice for INSPIRE, In: International Journal for Spatial Data Infrastructure Research (IJSDIR, http://ijsdir.jrc.it), 2007, vol. 1.
+* [[[Czerwinski_2007,Czerwinski 2007]]], Czerwinski, A., Sandmann, S., Stöcker-Meier, E., Plümer, L. (2007): Sustainable SDI for EU noise mapping in NRW -- best practice for INSPIRE, In: International Journal for Spatial Data Infrastructure Research (IJSDIR, http://ijsdir.jrc.it), 2007, vol. 1.
 
 * [[[D_2006,D 2006]]], Döllner, J., Kolbe, T. H., Liecke, F., Sgouros, T., Teichmann, K. (2006): The Virtual 3D City Model of Berlin - Managing, Integrating and Communicating Complex Urban Information. In: Proc. of the 25th Intern. Symposium on Urban Data Management UDMS 2006 in Aal-borg, Denmark, 15-17 May 2006.
 
@@ -35,25 +35,25 @@
 
 * [[[Gamma_1995,Gamma 1995]]], Gamma, E., Helm, R., Johnson, R., Vlissides, J. (1995). Design Patterns: Elements of Reusable Object-Oriented Software, Addison-Wesley.
 
-* [[[Groger,Groger 2005]]], Gröger, G., Plümer, L. (2005): How to get 3-D for the Price of 2-D – Topology and Consistency of 3-D Urban GIS. _Geoinformatica_, 9(2).
+* [[[Groger,Groger 2005]]], Gröger, G., Plümer, L. (2005): How to get 3-D for the Price of 2-D -- Topology and Consistency of 3-D Urban GIS. _Geoinformatica_, 9(2).
 
 * [[[Gr_2005,Gr 2005]]], Gröger, G., Benner, J., Dörschlag, D., Drees, R., Gruber U., Leinemann K., Löwner, M.-O.(2005): Das interoperable 3D-Stadtmodell der SIG 3D, in: Zeitschrift für Vermessungswesen (in German only).
 
 * [[[Herring_9107,Herring 9107]]], Herring, J. (2001): The OpenGIS Abstract Specification, Topic 1: Feature Geometry (ISO 19107 Spatial Schema), Version 5. OGC Document Number 01-101.
 
-* [[[IAI_2006,IAI 2006]]], IAI (2006): International Alliance for Interoperability: IFC 2x3 – Industry Foundation Classes. http://www.iai-international.org/Model/IFC(ifcXML)Specs.html, 2006.
+* [[[IAI_2006,IAI 2006]]], IAI (2006): International Alliance for Interoperability: IFC 2x3 -- Industry Foundation Classes. http://www.iai-international.org/Model/IFC(ifcXML)Specs.html, 2006.
 
-* [[[Khronos_2006,Khronos 2006]]], Khronos Group Inc., Sony Computer Inc. (June 2006): COLLADA – Digital Asset Schema Release 1.4.1 – Specification. http://www.khronos.org/files/collada_spec_1_4.pdf.
+* [[[Khronos_2006,Khronos 2006]]], Khronos Group Inc., Sony Computer Inc. (June 2006): COLLADA -- Digital Asset Schema Release 1.4.1 -- Specification. http://www.khronos.org/files/collada_spec_1_4.pdf.
 
 * [[[Kohlhaas_2007,Kohlhaas 2007]]], Kohlhaas, A., Mitchell, J. (2007): Modelling cities. In: Constructing the future: nD modelling, p. 372-392, Taylor & Francis
 
 * [[[Kolbe_2003,Kolbe 2003]]], Kolbe, T. H., Gröger, G. (2003): Towards unified 3D city models. In: Schiewe, J., Hahn, M., Madden, M., Sester, M. (eds): Challenges in Geospatial Analysis, Integration and Visualization II. Proc. of Joint ISPRS Workshop, Stuttgart.
 
-* [[[Kolbe_2005,Kolbe 2005]]], Kolbe, T. H., Gröger, G., Plümer, L. (2005): CityGML – Interoperable Access to 3D City Models, In: van Oosterom, Peter, Zlatanova, Sisi, Fendel, E.M. (eds.): Geo-information for Disaster Management. Proc. of the 1st International Symposium on Geo-information for Disaster Management, Delft, The Netherlands, March 21-23. Delft.
+* [[[Kolbe_2005,Kolbe 2005]]], Kolbe, T. H., Gröger, G., Plümer, L. (2005): CityGML -- Interoperable Access to 3D City Models, In: van Oosterom, Peter, Zlatanova, Sisi, Fendel, E.M. (eds.): Geo-information for Disaster Management. Proc. of the 1st International Symposium on Geo-information for Disaster Management, Delft, The Netherlands, March 21-23. Delft.
 
 * [[[Kolbe_2008,Kolbe 2008]]], Kolbe, T. H., Gröger, G., Plümer, L. (2008): CityGML - 3D City Models for Emergency Response, In: Zlatanova, Li (eds.): Geospatial Information Technology for Emergency Response, ISPRS book series, Taylor & Francis.
 
-* [[[Kolbe_2009,Kolbe 2009]]], Kolbe, T. H., Nagel, C., Lorenz, A. (2009): CityGML – OGC Standard for Photogrammetry?, In: Fritsch, D. (ed.): Photogrammetric Week, Wichmann, Heidelberg, pp. 265-277.
+* [[[Kolbe_2009,Kolbe 2009]]], Kolbe, T. H., Nagel, C., Lorenz, A. (2009): CityGML -- OGC Standard for Photogrammetry?, In: Fritsch, D. (ed.): Photogrammetric Week, Wichmann, Heidelberg, pp. 265-277.
 
 * [[[OASIS_2003,OASIS 2003]]], OASIS 2003: xNAL Name and Address Standard. Organization for the Advancement of Structured Information Standards. http://xml.coverpages.org/xnal.html
 
@@ -69,7 +69,7 @@
 
 * [[[VBUSch_2006,VBUSch 2006]]], VBUSch (2006): Federal Government of Germany (eds.): Vorläufige Berechnungsmethode für den Umgebungslärm an Schienenwegen vom 10.5.2006 (in German only).
 
-* [[[VRML97_1997,VRML97 1997]]], VRML97, Information technology - Computer graphics and image processing - The Virtual Reality Modeling Language (VRML) – Part 1: Functional specification and UTF-8 encoding. Part 1 of ISO/IEC Standard 14772-1:1997.
+* [[[VRML97_1997,VRML97 1997]]], VRML97, Information technology - Computer graphics and image processing - The Virtual Reality Modeling Language (VRML) -- Part 1: Functional specification and UTF-8 encoding. Part 1 of ISO/IEC Standard 14772-1:1997.
 
 * [[[Web_2004,Web 2004]]], Web 3D, Information technology - Computer graphics and image processing - Extensible 3D (X3D). ISO/IEC 19775:2004. http://www.web3d.org/x3d/specifications/, 2004.
 

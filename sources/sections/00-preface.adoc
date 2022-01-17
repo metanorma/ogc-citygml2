@@ -5,7 +5,7 @@
 
 CityGML is an open data model and XML-based format for the storage and exchange of virtual 3D city models. It is an application schema for the Geography Markup Language version 3.1.1 (GML3), the extendible international standard for spatial data exchange issued by the Open Geospatial Consortium (OGC) and the ISO TC211.
 
-The aim of the development of CityGML is to reach a common definition of the basic entities, attributes, and relations of a 3D city model. This is especially important with respect to the cost-effective sustainable maintenance of 3D city models, allowing the reuse of the same data in different application fields. 
+The aim of the development of CityGML is to reach a common definition of the basic entities, attributes, and relations of a 3D city model. This is especially important with respect to the cost-effective sustainable maintenance of 3D city models, allowing the reuse of the same data in different application fields.
 
 
 [.preface]
@@ -32,7 +32,7 @@ a| image::gdi-de.png[]
 a| For further information see http://www.sig3d.org/
 
 a| image::eurosdr.png[]
-a| The preparation of the English document version and the European discussion has been supported by the European Spatial Data Research Organization (EuroSDR; formerly known as OEEPE) in an EuroSDR Commission III project. 
+a| The preparation of the English document version and the European discussion has been supported by the European Spatial Data Research Organization (EuroSDR; formerly known as OEEPE) in an EuroSDR Commission III project.
 
 For further information see http://www.eurosdr.net
 |===
@@ -86,7 +86,7 @@ a| Ordnance Survey, Great Britain
 a| carsten.roensdorf<at>ordnancesurvey.co.uk
 
 a| Prof. Dr. Jürgen Döllner
-a| Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam 
+a| Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam
 a| juergen.doellner<at>hpi.uni-potsdam.de
 
 a| Dr. Joachim Benner +
@@ -129,7 +129,7 @@ a| Heinrich Geerling
 a| Architekturbüro Geerling, Germany
 
 a| Dr. Frank Knospe
-a| Cadastre and Mapping Department, City of Essen, 
+a| Cadastre and Mapping Department, City of Essen,
 
 a| Hardo Müller
 a| Snowflake Software Ltd., Great Britain
@@ -147,7 +147,7 @@ University of Applied Sciences, Karlsruhe, Germany
 
 a| Rolf Wegener +
 Stephan Heitmann
-a| State Cadastre and Mapping Agency of 
+a| State Cadastre and Mapping Agency of
 North-Rhine Westphalia, Germany
 
 a| Prof. Dr. Marc-O. Löwner
@@ -174,7 +174,7 @@ a| Galdos Systems Inc., Canada
 
 a| Marie-Lise Vautier +
 Emmanuel Devys
-a| Institut géographique national, France	
+a| Institut géographique national, France
 
 a| Mark Pendlington
 a| Ordnance Survey, Great Britain
@@ -205,7 +205,7 @@ Recipients of this document are requested to submit, with their comments, notifi
 Significant changes between CityGML version 2.0.0 and CityGML version 1.0.0 (OGC document no. 08-007r1):
 
 * New thematic modules for the representation of tunnels and bridges;
-* Additional boundary surfaces for the semantic classification of the outer shell of buildings and building parts (_OuterCeilingSurface_ and _OuterFloorSurface_); 
+* Additional boundary surfaces for the semantic classification of the outer shell of buildings and building parts (_OuterCeilingSurface_ and _OuterFloorSurface_);
 * LOD0 representation (footprint and roof egde representations) for buildings and building parts;
 * Additional attributes denoting a city object’s location with respect to the surrounding terrain and water surface (_relativeToTerrain_ and _relativeToWater_);
 * Additional generic attributes for measured values and attribute sets; and
@@ -256,7 +256,7 @@ The following clauses provide an overview of what is new in CityGML 2.0.
 
 Bridges and tunnels are important objects in city and landscape models. They are an essential part of the transportation infrastructure and are often easily recognizable landmarks of a city. CityGML 1.0 has been lacking thematic modules dedicated to bridges and tunnels, and thus such objects had to be modelled and exchanged using a _GenericCityObject_ as proxy (cf. <<scls_10-12>>). CityGML 2.0 now introduces two new thematic modules for the explicit representation of bridges and tunnels which complement the thematic model of CityGML: the _Bridge_ module (cf. <<scls_10-4>>) and the _Tunnel_ module (cf. <<scls_10-5>>).
 
-Bridges and tunnels can be represented in LOD 1 – 4 and the underlying data models have a coherent structure with the _Building_ model. For example, bridges and tunnels can be decomposed into parts, thematic boundary surfaces with openings are available to semantically classify parts of the shell, and installations as well as interior built structures can be represented. This coherent model structure facilitates the similar understanding of semantic entities and helps to reduce software implementation efforts. Both the _Bridge_ and the _Tunnel_ model introduce further concepts and model elements which are specific to bridges and tunnels respectively.
+Bridges and tunnels can be represented in LOD 1 - 4 and the underlying data models have a coherent structure with the _Building_ model. For example, bridges and tunnels can be decomposed into parts, thematic boundary surfaces with openings are available to semantically classify parts of the shell, and installations as well as interior built structures can be represented. This coherent model structure facilitates the similar understanding of semantic entities and helps to reduce software implementation efforts. Both the _Bridge_ and the _Tunnel_ model introduce further concepts and model elements which are specific to bridges and tunnels respectively.
 
 
 ===== Additions to existing thematic modules
@@ -265,12 +265,12 @@ Bridges and tunnels can be represented in LOD 1 – 4 and the underlying data mo
 Two new optional attributes have been added to the abstract base class _core:_CityObject_ within the _CityGML Core_ module: _relativeToTerrain_ and _relativeToWater._ These attributesdenote the feature's location with respect to the terrain and water surface in a qualitative way, and thus facilitate simple and efficient queries (e.g., for the number of subsurface buildings) without the need for an additional digital terrain model or a model of the water body.
 
 
-* _Building module (cf. <<scls_10-3>>)_ 
+* _Building module (cf. <<scls_10-3>>)_
 ** _LOD0 representation_ +
 Buildings can now be represented in LOD0 by footprint and/or roof edge polygons. This allows the easy integration of existing 2D data and of roof reconstructions from aerial and satellite imagery into a 3D city model. The representations are restricted to horizontal, 3-dimensional surfaces.
 ** _Additional thematic boundary surfaces_ +
 In order to semantically classify parts of the outer building shell which are neither horizontal wall surfaces nor parts of the roof, two additional boundary surfaces are introduced: +
-_OuterFloorSurface_ and _OuterCeilingSurface_. 
+_OuterFloorSurface_ and _OuterCeilingSurface_.
 ** _Additional relations to thematic boundary surfaces_ +
  In addition to &#95;__AbstractBuilding__ and _Room_, the surface geometries of _BuildingInstallation_ and _IntBuildingInstallation_ features can now be semantically classified using thematic boundary surfaces. For example, this facilitates the semantic differentiation between roof and wall surfaces of dormers which are modeled as _BuildingInstallation_.
 ** _Additional use of implicit geometries_ +
@@ -278,10 +278,10 @@ _OuterFloorSurface_ and _OuterCeilingSurface_.
 
 * _Generics module (cf. <<scls_10-12>>)_ +
 Two generic attributes have been added to the _Generics_ module: _MeasureAttribute_ and +
-_GenericAttributeSet_. A _MeasureAttribute_ facilitates the representation of measured values together with a reference to the employed unit. A _GenericAttributeSet_&nbsp;is a named collection of arbitrary generic attributes. It provides an optional _codeSpace_ attribute to denote the authority organization who defined the attribute set. 
+_GenericAttributeSet_. A _MeasureAttribute_ facilitates the representation of measured values together with a reference to the employed unit. A _GenericAttributeSet_&nbsp;is a named collection of arbitrary generic attributes. It provides an optional _codeSpace_ attribute to denote the authority organization who defined the attribute set.
 
 * _LandUse module (cf. <<scls_10-10>>)_ +
-The scope of the feature type _LandUse_ has been broadened to comprise both areas of the earth's surface dedicated to a specific land use and areas of the earth's surface having a specific land cover with or without vegetation. 
+The scope of the feature type _LandUse_ has been broadened to comprise both areas of the earth's surface dedicated to a specific land use and areas of the earth's surface having a specific land cover with or without vegetation.
 
 * _Attributes_ class, function, _and_ usage _(all modules)_ +
 In order to harmonize the use of the attributes _class_, _function_, and _usage_, this attribute triplet has been complemented for all feature classes that at least provided one of the attributes in CityGML 1.0.
@@ -300,10 +300,10 @@ Changes on the level of XML schema components are provided in <<annex_f>>.
 ===== Further edits to the specification document
 
 * _Accuracy requirements for Levels of Detail (LOD) (cf. <<scls_6-2>>)_ +
-The accuracy requirements for the different CityGML LODs proposed in <<scls_6-2>> are non-normative. The wording of <<scls_6-2>> in CityGML 1.0 is however inconsistent with regard to this fact and thus has been clarified for CityGML 2.0. 
+The accuracy requirements for the different CityGML LODs proposed in <<scls_6-2>> are non-normative. The wording of <<scls_6-2>> in CityGML 1.0 is however inconsistent with regard to this fact and thus has been clarified for CityGML 2.0.
 
 * _Rework of the CityGML example datasets (cf. <<annex_g>>)_ +
- The CityGML examples provided in <<annex_g>> have been reworked and extended. They now show a consistent building model in all five LODs and demonstrate, for example, the semantic and geometric refinement of the building throughout the different LODs as well as the usage of XLinks to share geometry elements between features. The datasets are shipped with the CityGML XML Schema package, and are available at http://schemas.opengis.net/citygml/examples/2.0/[http://schemas.opengis.net/citygml/examples/2.0/]. 
+ The CityGML examples provided in <<annex_g>> have been reworked and extended. They now show a consistent building model in all five LODs and demonstrate, for example, the semantic and geometric refinement of the building throughout the different LODs as well as the usage of XLinks to share geometry elements between features. The datasets are shipped with the CityGML XML Schema package, and are available at http://schemas.opengis.net/citygml/examples/2.0/[http://schemas.opengis.net/citygml/examples/2.0/].
 
 * _New example for the usage of Application Domain Extensions (cf. <<annex_i>>)_ +
 A second example for the usage of Application Domain Extensions in the field of Ubiquitous Network Robots Services has been added in <<annex_i>>.

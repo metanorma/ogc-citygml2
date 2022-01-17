@@ -29,11 +29,11 @@ Features of CityGML:
 ** User-definable (recursive) grouping
 
 * Multiscale model with 5 well-defined consecutive Levels of Detail (LOD):
-** LOD0 – regional, landscape
-** LOD1 – city, region
-** LOD2 – city districts, projects
-** LOD3 – architectural models (outside), landmarks
-** LOD4 – architectural models (interior)
+** LOD0 -- regional, landscape
+** LOD1 -- city, region
+** LOD2 -- city districts, projects
+** LOD3 -- architectural models (outside), landmarks
+** LOD4 -- architectural models (interior)
 
 * Multiple representations in different LODs simultaneously; generalisation relations between objects in different LODs
 * Optional topological connections between feature (sub)geometries
