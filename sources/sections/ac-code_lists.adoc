@@ -140,7 +140,7 @@ The entire code list for building roof types is given as example below, while th
 [[a_C-1]]
 === Building module
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the &#95;__AbstractBuilding__ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_class.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_class.xml]
@@ -160,7 +160,7 @@ The entire code list for building roof types is given as example below, while th
 
 
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the &#95;__AbstractBuilding__ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml]
@@ -256,7 +256,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _BuildingFurniture_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_class.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_class.xml]
@@ -276,7 +276,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _BuildingFurniture_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml]
@@ -354,7 +354,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 
 
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _BuildingInstallation_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_class.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_class.xml]
@@ -368,7 +368,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _BuildingInstallation_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml]
@@ -382,7 +382,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _IntBuildingInstallation_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_class.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_class.xml]
@@ -397,7 +397,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _IntBuildingInstallation_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml]
@@ -416,7 +416,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usa
 
 
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractBuilding_ attribute _roofType_*
 4+.>| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml]
@@ -433,7 +433,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usa
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _Room_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/building/2.0/Room_class.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_class.xml]
@@ -451,7 +451,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usa
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _Room_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml]
@@ -551,7 +551,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml[http://www.s
 [[a_C-2]]
 === Tunnel module
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractTunnel_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_class.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_class.xml]
@@ -563,7 +563,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml[http://www.s
 
 
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractTunnel_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml]
@@ -579,7 +579,7 @@ http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml[htt
 [[a_C-3]]
 === Bridge module
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractBridge_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_class.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_class.xml]
@@ -592,7 +592,7 @@ http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml[htt
 
 
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractBridge_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml]
@@ -608,7 +608,7 @@ http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml[htt
 [[a_C-4]]
 === CityFurniture module
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _CityFurniture_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_class.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_class.xml]
@@ -618,7 +618,7 @@ http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml[htt
 |===
 
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _CityFurniture_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml]
@@ -658,7 +658,7 @@ http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xm
 [[a_C-5]]
 === LandUse module
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _LandUse_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_class.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_class.xml]
@@ -669,7 +669,7 @@ http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xm
 |===
 
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _LandUse_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml]
@@ -697,7 +697,7 @@ http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml[http://www
 [[a_C-6]]
 === Mime types
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Codelist of the _ImplicitGeometry_ (_Core_ module) / &#95;__Texture__ (_Appearance_ module) attribute _mimeType_*
 4+.>a| http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml[http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml]
@@ -719,7 +719,7 @@ http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml[htt
 [[a_C-7]]
 === Vegetation module
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _SolitaryVegetationObject_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_class.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_class.xml]
@@ -732,7 +732,7 @@ http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml[htt
 
 |===
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 .>h| *Code list of the _SolitaryVegetationObject_ attributes _function_ and _usage_*
 .<a| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml]
@@ -743,7 +743,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_
 |===
 
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _PlantCover_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_class.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_class.xml]
@@ -780,7 +780,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 .>h| *Code list of the _PlantCover_ attributes _function_ and _usage_*
 .<a| http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml]
@@ -792,7 +792,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _SolitaryVegetationObject_ attribute _species_ (excerpt)*
 4+.>| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_species.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_species.xml]
@@ -818,7 +818,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 [[a_C-8]]
 === Transportation module
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _AuxiliaryTrafficArea_ attribute _function_*
 4+.>| http://www.sig3d.org/codelists/standard/transportation/2.0/AuxiliaryTrafficArea_function.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/AuxiliaryTrafficArea_function.xml]
@@ -840,7 +840,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _TrafficArea_ attribute _function_*
 4+.>| http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_function.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_function.xml]
@@ -869,7 +869,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _TrafficArea_ attribute _usage_*
 4+.>| http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_usage.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_usage.xml]
@@ -888,7 +888,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _TrafficArea_ and _AuxiliaryTrafficArea_ attribute _surfaceMaterial_*
 4+.>| http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_surfaceMaterial.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/TrafficArea_surfaceMaterial.xml]
@@ -904,7 +904,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _TransportationComplex_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_class.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_class.xml]
@@ -919,7 +919,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _TransportationComplex_ attributes _function_ and _usage_*
 4+.<a| http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_function.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_function.xml] +
@@ -970,7 +970,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 [[a_C-9]]
 === WaterBody module
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _WaterBody_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_class.xml[http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_class.xml]
@@ -992,7 +992,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 |===
 
 
-[width=761,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Codelist of the _WaterBody_ attribute _function_*
 4+.>| http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_function.xml[http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_function.xml]
@@ -1013,7 +1013,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Codelist of the _WaterBody_ attribute _usage_*
 4+.>| http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_usage.xml[http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterBody_usage.xml]
@@ -1034,7 +1034,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=759,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _WaterSurface_ attribute _waterLevel_*
 4+.>| http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterSurface_waterLevel.xml[http://www.sig3d.org/codelists/standard/waterbody/2.0/WaterSurface_waterLevel.xml]
@@ -1056,7 +1056,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 [[a_C-10]]
 === CityObjectGroup module
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _CityObjectGroup_ attribute _class_*
 4+.>| http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_class.xml[http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_class.xml]
@@ -1067,7 +1067,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 
 
 
-[width=755,options="unnumbered"]
+[options="unnumbered"]
 |===
 4+.>h| *Code list of the _CityObjectGroup_ attributes _function_ and _usage_*
 4+.>a| http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_function.xml[http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_function.xml] +

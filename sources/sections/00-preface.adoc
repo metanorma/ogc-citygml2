@@ -11,7 +11,7 @@ The aim of the development of CityGML is to reach a common definition of the bas
 [.preface]
 == Preface and Acknowledgements
 
-[cols="2",options="unnumbered"]
+[cols="a,a",options="unnumbered"]
 |===
 a| image::citygml.png[]
 a| This is the official CityGML logo. For current news on CityGML and information about ongoing projects and fields of research in the area of CityGML see
@@ -43,8 +43,7 @@ For further information see http://www.eurosdr.net
 
 All questions regarding this document should be directed to the editors or the contributors (including participants in development, cf. <<cls_v>>):
 
-
-[cols=3,options="header,unnumbered"]
+[cols="a,a,a",options="header,unnumbered"]
 |===
 | Name | Institution | Email
 
@@ -104,7 +103,7 @@ karl-heinz.haefele<at>kit.edu
 == Participants in development
 
 
-[cols="2",options="header,unnumbered"]
+[cols="a,a",options="header,unnumbered"]
 |===
 | Name | Institution
 

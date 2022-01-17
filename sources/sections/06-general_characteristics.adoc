@@ -30,7 +30,6 @@ LODs are also characterised by differing accuracies and minimal dimensions of ob
 
 [[tab_3]]
 .LOD 0-4 of CityGML with their proposed accuracy requirements (discussion proposal, based on: Albert et al. 2003).
-[width=761]
 |===
 | h| *LOD0* h| *LOD1* h| *LOD2* h| *LOD3* h| *LOD4*
 
