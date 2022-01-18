@@ -10,16 +10,16 @@ The following table lists all feature types of CityGML. For each feature type, a
 h| Feature Class h| Property h| Type h| LOD
 4+.<| *CityGML Core module*
 
-| core:CityModelType a| a| | 0 - 4
+| core:CityModelType | | | 0 - 4
 
-.3+a|
+.3+|
 | cityObjectMember | gml:FeaturePropertyType | 0 - 4
 | app:appearanceMember | app:AppearancePropertyType | 0 - 4
 | _GenericApplicationPropertyOfCityModel | xs:anyType | 0 - 4
 
-| core:AbstractCityObjectType a| a| | 0 - 4
+| core:AbstractCityObjectType | | | 0 - 4
 
-.9+a|
+.9+|
 | creationDate | xs:date | 0 - 4
 | terminationDate | xs:date | 0 - 4
 | externalReference | core:ExternalReferenceType | 0 - 4
@@ -30,35 +30,35 @@ h| Feature Class h| Property h| Type h| LOD
 | gen:_genericAttribute | gen:AbstractGenericAttributeType | 0 - 4
 | _GenericApplicationPropertyOfCityObject | xs:anyType | 0 - 4
 
-| core:AbstractSiteType a| a| | 0 - 4
+| core:AbstractSiteType | | | 0 - 4
 
-a| | _GenericApplicationPropertyOfSite | xs:anyType | 0 - 4
+| | _GenericApplicationPropertyOfSite | xs:anyType | 0 - 4
 
-| core:AddressType a| a| | 0 - 4
+| core:AddressType | | | 0 - 4
 
-.3+a|
+.3+|
 | xalAddress | core:xalAddressPropertyType | 0 - 4
 | multiPoint | gml:MultiPointPropertyType | 0 - 4
 | _GenericApplicationPropertyOfAddress | xs:anyType | 0 - 4
 
 4+.<| *Appearance module*
 
-| app:AppearanceType a| a| | 0 - 4
+| app:AppearanceType | | | 0 - 4
 
-.3+a|
+.3+|
 | theme | xs:string | 0 - 4
 | surfaceDataMember | app:SurfaceDataPropertyType | 0 - 4
 | _GenericApplicationPropertyOfAppearance | xs:anyType | 0 - 4
 
-| app:AbstractSurfaceDataType a| a| | 0 - 4
+| app:AbstractSurfaceDataType | | | 0 - 4
 
-.2+a|
+.2+|
 | isFront | xs:Boolean | 0 - 4
 | _GenericApplicationPropertyOfSurfaceData | xs:anyType | 0 - 4
 
-| app:AbstractTextureType a| a| | 0 - 4
+| app:AbstractTextureType | | | 0 - 4
 
-.6+a|
+.6+|
 | imageURI | xs:anyURI | 0 - 4
 | mimeType | gml:CodeType | 0 - 4
 | textureType | app:TextureTypeType | 0 - 4
@@ -66,24 +66,24 @@ a| | _GenericApplicationPropertyOfSite | xs:anyType | 0 - 4
 | borderColor | app:ColorPlusOpacity | 0 - 4
 | _GenericApplicationPropertyOfTexture | xs:anyType | 0 - 4
 
-| app:ParameterizedTextureType a| a| | 0 - 4
+| app:ParameterizedTextureType | | | 0 - 4
 
-.2+a|
+.2+|
 | target | app:TextureAssociationType | 0 - 4
 | _GenericApplicationPropertyOfParameterizedTexture | xs:anyType | 0 - 4
 
-| app:GeoreferencedTextureType a| a| | 0 - 4
+| app:GeoreferencedTextureType | | | 0 - 4
 
-.5+a|
+.5+|
 | preferWorldFile | xs:boolean | 0 - 4
 | referencePoint | gml:PointPropertyType | 0 - 4
 | orientation | core:TransformationMatrix2x2Type | 0 - 4
 | target | xs:anyURI | 0 - 4
 | _GenericApplicationPropertyOfGeoreferencedTexture | xs:anyType | 0 - 4
 
-| app:X3DMaterialType a| a| | 0 - 4
+| app:X3DMaterialType | | | 0 - 4
 
-.9+a|
+.9+|
 | ambientIntensity | core:doubleBetween0and1 | 0 - 4
 | diffuseColor | app:Color | 0 - 4
 | emissiveColor | app:Color | 0 - 4
@@ -96,9 +96,9 @@ a| | _GenericApplicationPropertyOfSite | xs:anyType | 0 - 4
 
 4+.<| *Building module*
 
-| bldg:AbstractBuildingType a| a| | 0 - 4
+| bldg:AbstractBuildingType | | | 0 - 4
 
-.35+a|
+.35+|
 | class | gml:CodeType | 0 - 4
 | function | gml:CodeType | 0 - 4
 | usage | gml:CodeType | 0 - 4
@@ -135,18 +135,18 @@ a| | _GenericApplicationPropertyOfSite | xs:anyType | 0 - 4
 | address | core:AddressPropertyType | 0 - 4
 | _GenericApplicationPropertyOfAbstractBuilding | xs:anyType | 0 - 4
 
-| bldg:BuildingType a| a| | 0 - 4
+| bldg:BuildingType | | | 0 - 4
 
-a| | _GenericApplicationPropertyOfBuiding | xs:anyType | 0 - 4
+| | _GenericApplicationPropertyOfBuiding | xs:anyType | 0 - 4
 
-| bldg:BuildingPartType a| a| | 0 - 4
+| bldg:BuildingPartType | | | 0 - 4
 
-a|
+|
 | _GenericApplicationPropertyOfBuidingPart | xs:anyType | 0 - 4
 
-| bldg:BuildingInstallationType a| a| | 2 - 4
+| bldg:BuildingInstallationType | | | 2 - 4
 
-.11+a|
+.11+|
 | class | gml:CodeType | 2 - 4
 | function | gml:CodeType | 2 - 4
 | usage | gml:CodeType | 2 - 4
@@ -159,9 +159,9 @@ a|
 | boundedBy | bldg:BoundarySurfacePropertyType | 2 - 4
 | _GenericApplicationPropertyOfBuidingInstallation | xs:anyType | 2 - 4
 
-| bldg:IntBuildingInstallationType a| a| | 4
+| bldg:IntBuildingInstallationType | | | 4
 
-.7+a|
+.7+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -170,74 +170,74 @@ a|
 | boundedBy | bldg:BoundarySurfacePropertyType | 4
 | _GenericApplicationPropertyOfIntBuidingInstallation | xs:anyType | 4
 
-a| bldg:AbstractBoundarySurface +
-Type a| a| | 2 - 4
+| bldg:AbstractBoundarySurface +
+Type | | | 2 - 4
 
-.5+a|
+.5+|
 | lod2MultiSurface | gml:MultiSurfacePropertyType | 2
 | lod3MultiSurface | gml:MultiSurfacePropertyType | 3
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | opening | bldg:OpeningPropertyType | 3 - 4
 | _GenericApplicationPropertyOfBoundarySurface | xs:anyType | 2 - 4
 
-| bldg:RoofSurfaceType a| a| | 2 - 4
+| bldg:RoofSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfRoofSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfRoofSurface | xs:anyType | 2 - 4
 
-| bldg:WallSurfaceType a| a| | 2 - 4
+| bldg:WallSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfWallSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfWallSurface | xs:anyType | 2 - 4
 
-| bldg:OuterCeilingSurfaceType a| a| | 2 - 4
+| bldg:OuterCeilingSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfOuterCeilingSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfOuterCeilingSurface | xs:anyType | 2 - 4
 
-| bldg:OuterFloorSurfaceType a| a| | 2 - 4
+| bldg:OuterFloorSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfOuterFloorSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfOuterFloorSurface | xs:anyType | 2 - 4
 
-| bldg:GroundSurfaceType a| a|  | 2 - 4
+| bldg:GroundSurfaceType | |  | 2 - 4
 
-a| | _GenericApplicationPropertyOfGroundSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfGroundSurface | xs:anyType | 2 - 4
 
-| bldg:ClosureSurfaceType a| a| | 2 - 4
+| bldg:ClosureSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfClosureSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfClosureSurface | xs:anyType | 2 - 4
 
-| bldg:FloorSurfaceType a| a| | 4
+| bldg:FloorSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfFloorSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfFloorSurface | xs:anyType | 4
 
-| bldg:InteriorWallSurfaceType a| a| | 4
+| bldg:InteriorWallSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfInteriorWallSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfInteriorWallSurface | xs:anyType | 4
 
-| bldg:CeilingSurfaceType a| a| | 4
+| bldg:CeilingSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfCeilingSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfCeilingSurface | xs:anyType | 4
 
-| bldg:AbstractOpeningType a| a| | 3 - 4
+| bldg:AbstractOpeningType | | | 3 - 4
 
-.5+a|
+.5+|
 | lod3MultiSurface | gml:MultiSurfacePropertyType | 3
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | lod3ImplicitRepresentation | core:ImplicitRepresentationPropertyType | 3
 | lod4ImplicitRepresentation | core:ImplicitRepresentationPropertyType | 4
 | _GenericApplicationPropertyOfOpening | xs:anyType | 3 - 4
 
-| bldg:WindowType a| a| | 3 - 4
+| bldg:WindowType | | | 3 - 4
 
-a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
+| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 
-| bldg:DoorType a| a| | 3 - 4
+| bldg:DoorType | | | 3 - 4
 
-.2+a|
+.2+|
 | address | core:AddressPropertyType | 3 - 4
 | _GenericApplicationPropertyOfDoor | xs:anyType | 3 - 4
 
-| bldg:RoomType a| a| | 4
+| bldg:RoomType | | | 4
 
-.9+a|
+.9+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -248,9 +248,9 @@ a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 | roomInstallation | bldg:IntBuildingInstallationPropertyType | 4
 | _GenericApplicationPropertyOfRoom | xs:anyType | 4
 
-| bldg:BuildingFurnitureType a| a| | 4
+| bldg:BuildingFurnitureType | | | 4
 
-.6+a|
+.6+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -260,9 +260,9 @@ a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 
 4+.<| *Bridge module*
 
-| brid:AbstractBridgeType a| a| | 1 - 4
+| brid:AbstractBridgeType | | | 1 - 4
 
-.29+a|
+.29+|
 | class | gml:CodeType | 1 - 4
 | function | gml:CodeType | 1 - 4
 | usage | gml:CodeType | 1 - 4
@@ -293,18 +293,18 @@ a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 | address | core:AddressPropertyType | 1 - 4
 | _GenericApplicationPropertyOfAbstractBridge | xs:anyType | 1 - 4
 
-| brid:BridgeType a| a| | 1 - 4
+| brid:BridgeType | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfBridge | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfBridge | xs:anyType | 1 - 4
 
-| brid:BridgePartType a| a| | 1 - 4
+| brid:BridgePartType | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfBridgePart | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfBridgePart | xs:anyType | 1 - 4
 
-a| brid:BridgeConstructionElement +
-Type a| a| | 2 - 4
+| brid:BridgeConstructionElement +
+Type | | | 2 - 4
 
-.17+a|
+.17+|
 | class | gml:CodeType | 1 - 4
 | function | gml:CodeType | 1 - 4
 | usage | gml:CodeType | 1 - 4
@@ -323,9 +323,9 @@ Type a| a| | 2 - 4
 | boundedBy | brid:BoundarySurfacePropertyType | 2 - 4
 | _GenericApplicationPropertyOfBridgeConstructionElement | xs:anyType | 2 - 4
 
-| brid:BridgeInstallationType a| a| | 2 - 4
+| brid:BridgeInstallationType | | | 2 - 4
 
-.11+a|
+.11+|
 | class | gml:CodeType | 2 - 4
 | function | gml:CodeType | 2 - 4
 | usage | gml:CodeType | 2 - 4
@@ -338,9 +338,9 @@ Type a| a| | 2 - 4
 | boundedBy | brid:BoundarySurfacePropertyType | 2 - 4
 | _GenericApplicationPropertyOfBridgeInstallation | xs:anyType | 2 - 4
 
-| brid:IntBridgeInstallationType a| a| | 4
+| brid:IntBridgeInstallationType | | | 4
 
-.7+a|
+.7+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -349,74 +349,74 @@ Type a| a| | 2 - 4
 | boundedBy | brid:BoundarySurfacePropertyType | 4
 | _GenericApplicationPropertyOfIntBridgeInstallation | xs:anyType | 4
 
-a| brid:AbstractBoundarySurface +
-Type a| a| | 2 - 4
+| brid:AbstractBoundarySurface +
+Type | | | 2 - 4
 
-.5+a|
+.5+|
 | lod2MultiSurface | gml:MultiSurfacePropertyType | 2
 | lod3MultiSurface | gml:MultiSurfacePropertyType | 3
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | opening | brid:OpeningPropertyType | 3 - 4
 | _GenericApplicationPropertyOfBoundarySurface | xs:anyType | 2 - 4
 
-| brid:RoofSurfaceType a| a| | 2 - 4
+| brid:RoofSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfRoofSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfRoofSurface | xs:anyType | 2 - 4
 
-| brid:WallSurfaceType a| a| | 2 - 4
+| brid:WallSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfWallSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfWallSurface | xs:anyType | 2 - 4
 
-| brid:OuterCeilingSurfaceType a| a| | 2 - 4
+| brid:OuterCeilingSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfOuterCeilingSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfOuterCeilingSurface | xs:anyType | 2 - 4
 
-| brid:OuterFloorSurfaceType a| a| | 2 - 4
+| brid:OuterFloorSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfOuterFloorSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfOuterFloorSurface | xs:anyType | 2 - 4
 
-| brid:GroundSurfaceType a| a| | 2 - 4
+| brid:GroundSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfGroundSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfGroundSurface | xs:anyType | 2 - 4
 
-| brid:ClosureSurfaceType a| a| | 2 - 4
+| brid:ClosureSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfClosureSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfClosureSurface | xs:anyType | 2 - 4
 
-| brid:FloorSurfaceType a| a| | 4
+| brid:FloorSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfFloorSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfFloorSurface | xs:anyType | 4
 
-| brid:InteriorWallSurfaceType a| a| | 4
+| brid:InteriorWallSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfInteriorWallSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfInteriorWallSurface | xs:anyType | 4
 
-| brid:CeilingSurfaceType a| a| | 4
+| brid:CeilingSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfCeilingSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfCeilingSurface | xs:anyType | 4
 
-| brid:AbstractOpeningType a| a| | 3 - 4
+| brid:AbstractOpeningType | | | 3 - 4
 
-.5+a|
+.5+|
 | lod3MultiSurface | gml:MultiSurfacePropertyType | 3
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | lod3ImplicitRepresentation | core:ImplicitRepresentationPropertyType | 3
 | lod4ImplicitRepresentation | core:ImplicitRepresentationPropertyType | 4
 | _GenericApplicationPropertyOfOpening | xs:anyType | 3 - 4
 
-| brid:WindowType a| a| | 3 - 4
+| brid:WindowType | | | 3 - 4
 
-a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
+| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 
-| brid:DoorType a| a| | 3 - 4
+| brid:DoorType | | | 3 - 4
 
-.2+a|
+.2+|
 | address | core:AddressPropertyType | 3 - 4
 | _GenericApplicationPropertyOfDoor | xs:anyType | 3 - 4
 
-| brid: BridgeRoomType a| a| | 4
+| brid: BridgeRoomType | | | 4
 
-.9+a|
+.9+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -427,9 +427,9 @@ a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 | bridgeRoomInstallation | brid:IntBridgeInstallationPropertyType | 4
 | _GenericApplicationPropertyOfBridgeRoom | xs:anyType | 4
 
-| brid: BridgeFurnitureType a| a| | 4
+| brid: BridgeFurnitureType | | | 4
 
-.6+a|
+.6+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -439,51 +439,51 @@ a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 
 4+.<| *Relief module*
 
-| dem:ReliefFeatureType a| a| | 0 - 4
+| dem:ReliefFeatureType | | | 0 - 4
 
-.3+a|
+.3+|
 | lod | core:integerBetween0and4 | 0 - 4
 | reliefComponent | dem:ReliefComponentPropertyType | 0 - 4
 | _GenericApplicationPropertyOfReliefFeature | xs:anyType | 0 - 4
-a| dem:AbstractReliefComponent +
+| dem:AbstractReliefComponent +
  Type
-a| a| | 0 - 4
+| | | 0 - 4
 
-.3+a|
+.3+|
 | lod | core:integerBetween0and4 | 0 - 4
 | extent | gml:PolygonPropertyType | 0 - 4
 | _GenericApplicationPropertyOfReliefComponent | xs:anyType | 0 - 4
 
-| dem:TINReliefType a| a| | 0 - 4
+| dem:TINReliefType | | | 0 - 4
 
-.2+a|
+.2+|
 | tin | dem:tinPropertyType | 0 - 4
 | _GenericApplicationPropertyOfTINRelief | xs:anyType | 0 - 4
 
-| dem:RasterReliefType a| a| | 0 - 4
+| dem:RasterReliefType | | | 0 - 4
 
-.2+a|
+.2+|
 | grid | dem:gridPropertyType | 0 - 4
 | _GenericApplicationPropertyOfRasterRelief | xs:anyType | 0 - 4
 
-| dem:MassPointReliefType a| a| | 0 - 4
+| dem:MassPointReliefType | | | 0 - 4
 
-.2+a|
+.2+|
 | reliefPoints | gml:MultiPointPropertyType | 0 - 4
 | _GenericApplicationPropertyOfMassPointRelief | xs:anyType | 0 - 4
 
-| dem:BreakLineReliefType a| a| | 0 - 4
+| dem:BreakLineReliefType | | | 0 - 4
 
-.3+a|
+.3+|
 | ridgeOrValleyLines | gml:MultiCurvePropertyType | 0 - 4
 | breaklines | gml:MultiCurvePropertyType | 0 - 4
 | _GenericApplicationPropertyOfBreakLineRelief | xs:anyType | 0 - 4
 
 4+.<| *CityFurniture module*
 
-| frn:CityFurnitureType a| a| | 1 - 4
+| frn:CityFurnitureType | | | 1 - 4
 
-.16+a|
+.16+|
 | class | gml:CodeType | 1 - 4
 | function | gml:CodeType | 1 - 4
 | usage | gml:CodeType | 1 - 4
@@ -503,9 +503,9 @@ a| a| | 0 - 4
 
 4+.<| *CityObjectGroup module*
 
-| grp:CityObjectGroupType a| a| | 0 - 4
+| grp:CityObjectGroupType | | | 0 - 4
 
-.7+a|
+.7+|
 | class | gml:CodeType | 0 - 4
 | function | gml:CodeType | 0 - 4
 | usage | gml:CodeType | 0 - 4
@@ -516,9 +516,9 @@ a| a| | 0 - 4
 
 4+.<| *Generics module*
 
-| gen:GenericCityObjectType a| a| | 0 - 4
+| gen:GenericCityObjectType | | | 0 - 4
 
-.18+a|
+.18+|
 | class | gml:CodeType | 0 - 4
 | function | gml:CodeType | 0 - 4
 | usage | gml:CodeType | 0 - 4
@@ -540,9 +540,9 @@ a| a| | 0 - 4
 
 4+.<| *LandUse module*
 
-| luse:LandUseType a| a| | 0 - 4
+| luse:LandUseType | | | 0 - 4
 
-.9+a|
+.9+|
 | class | gml:CodeType | 0 - 4
 | function | gml:CodeType | 0 - 4
 | usage | gml:CodeType | 0 - 4
@@ -554,14 +554,14 @@ a| a| | 0 - 4
 | _GenericApplicationPropertyOfLandUse | xs:anyType | 0 - 4
 
 4+.<| *Transportation module*
-a| tran:AbstractTransportationObject +
-Type a| a| | 0 - 4
+| tran:AbstractTransportationObject +
+Type | | | 0 - 4
 
-a| | _GenericApplicationPropertyOfTransportationObject | xs:anyType | 0 - 4
+| | _GenericApplicationPropertyOfTransportationObject | xs:anyType | 0 - 4
 
-| tran:TransportationComplexType a| a| | 0 - 4
+| tran:TransportationComplexType | | | 0 - 4
 
-.11+a|
+.11+|
 | class | gml:CodeType | 0 - 4
 | function | gml:CodeType | 0 - 4
 | usage | gml:CodeType | 0 - 4
@@ -574,9 +574,9 @@ a| | _GenericApplicationPropertyOfTransportationObject | xs:anyType | 0 - 4
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | _GenericApplicationPropertyOfTransportationComplex | xs:anyType | 0 - 4
 
-| tran:TrafficAreaType a| a| | 1 - 4
+| tran:TrafficAreaType | | | 1 - 4
 
-.9+a|
+.9+|
 | class | gml:CodeType | 1 - 4
 | function | gml:CodeType | 1 - 4
 | usage | gml:CodeType | 1 - 4
@@ -587,9 +587,9 @@ a| | _GenericApplicationPropertyOfTransportationObject | xs:anyType | 0 - 4
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | _GenericApplicationPropertyOfTrafficArea | xs:anyType | 1 - 4
 
-| tran:AuxillaryTrafficAreaType a| a| | 1 - 4
+| tran:AuxillaryTrafficAreaType | | | 1 - 4
 
-.9+a|
+.9+|
 | class | gml:CodeType | 1 - 4
 | function | gml:CodeType | 1 - 4
 | usage | gml:CodeType | 1 - 4
@@ -600,27 +600,27 @@ a| | _GenericApplicationPropertyOfTransportationObject | xs:anyType | 0 - 4
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | _GenericApplicationPropertyOfAuxiliaryTrafficArea | xs:anyType | 1 - 4
 
-| tran:TrackType a| a| | 1 - 4
+| tran:TrackType | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfTrack | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfTrack | xs:anyType | 1 - 4
 
-| tran:RoadType a| a| | 1 - 4
+| tran:RoadType | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfRoad | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfRoad | xs:anyType | 1 - 4
 
-| tran:RailwayType a| a| | 1 - 4
+| tran:RailwayType | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfRailway | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfRailway | xs:anyType | 1 - 4
 
-| tran:SquareType a| a| | 1 - 4
+| tran:SquareType | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfSquare | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfSquare | xs:anyType | 1 - 4
 
 4+.<| *Tunnel module*
 
-| tun:AbstractTunnelType a| a| | 1 - 4
+| tun:AbstractTunnelType | | | 1 - 4
 
-.26+a|
+.26+|
 | class | gml:CodeType | 1 - 4
 | function | gml:CodeType | 1 - 4
 | usage | gml:CodeType | 1 - 4
@@ -648,17 +648,17 @@ a| | _GenericApplicationPropertyOfSquare | xs:anyType | 1 - 4
 | consistsOfTunnelPart | tun:TunnelPartPropertyType | 1 - 4
 | _GenericApplicationPropertyOfAbstractTunnel | xs:anyType | 1 - 4
 
-| tun:TunnelType a| a| | 1 - 4
+| tun:TunnelType | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfTunnel | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfTunnel | xs:anyType | 1 - 4
 
-| tun:TunnelPartType a| a| | 1 - 4
+| tun:TunnelPartType | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfTunnelPart | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfTunnelPart | xs:anyType | 1 - 4
 
-| tun:TunnelInstallationType a| a| | 2 - 4
+| tun:TunnelInstallationType | | | 2 - 4
 
-.11+a|
+.11+|
 | class | gml:CodeType | 2 - 4
 | function | gml:CodeType | 2 - 4
 | usage | gml:CodeType | 2 - 4
@@ -671,9 +671,9 @@ a| | _GenericApplicationPropertyOfTunnelPart | xs:anyType | 1 - 4
 | boundedBy | tun:BoundarySurfacePropertyType | 2 - 4
 | _GenericApplicationPropertyOfTunnelInstallation | xs:anyType | 2 - 4
 
-| tun:IntTunnelInstallationType a| a| | 4
+| tun:IntTunnelInstallationType | | | 4
 
-.7+a|
+.7+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -682,74 +682,74 @@ a| | _GenericApplicationPropertyOfTunnelPart | xs:anyType | 1 - 4
 | boundedBy | tun:BoundarySurfacePropertyType | 4
 | _GenericApplicationPropertyOfIntTunnelInstallation | xs:anyType | 4
 
-a| tun:AbstractBoundarySurface +
-Type a| a| | 2 - 4
+| tun:AbstractBoundarySurface +
+Type | | | 2 - 4
 
-.5+a|
+.5+|
 | lod2MultiSurface | gml:MultiSurfacePropertyType | 2
 | lod3MultiSurface | gml:MultiSurfacePropertyType | 3
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | opening | tun:OpeningPropertyType | 3 - 4
 | _GenericApplicationPropertyOfBoundarySurface | xs:anyType | 2 - 4
 
-| tun:RoofSurfaceType a| a| | 2 - 4
+| tun:RoofSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfRoofSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfRoofSurface | xs:anyType | 2 - 4
 
-| tun:WallSurfaceType a| a| | 2 - 4
+| tun:WallSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfWallSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfWallSurface | xs:anyType | 2 - 4
 
-| tun:OuterCeilingSurfaceType a| a| | 2 - 4
+| tun:OuterCeilingSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfOuterCeilingSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfOuterCeilingSurface | xs:anyType | 2 - 4
 
-| tun:OuterFloorSurfaceType a| a| | 2 - 4
+| tun:OuterFloorSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfOuterFloorSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfOuterFloorSurface | xs:anyType | 2 - 4
 
-| tun:GroundSurfaceType a| a| | 2 - 4
+| tun:GroundSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfGroundSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfGroundSurface | xs:anyType | 2 - 4
 
-| tun:ClosureSurfaceType a| a| | 2 - 4
+| tun:ClosureSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfClosureSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfClosureSurface | xs:anyType | 2 - 4
 
-| tun:FloorSurfaceType a| a| | 4
+| tun:FloorSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfFloorSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfFloorSurface | xs:anyType | 4
 
-| tun:InteriorWallSurfaceType a| a| | 4
+| tun:InteriorWallSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfInteriorWallSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfInteriorWallSurface | xs:anyType | 4
 
-| tun:CeilingSurfaceType a| a| | 4
+| tun:CeilingSurfaceType | | | 4
 
-a| | _GenericApplicationPropertyOfCeilingSurface | xs:anyType | 4
+| | _GenericApplicationPropertyOfCeilingSurface | xs:anyType | 4
 
-| tun:AbstractOpeningType a| a| | 3 - 4
+| tun:AbstractOpeningType | | | 3 - 4
 
-.5+a|
+.5+|
 | lod3MultiSurface | gml:MultiSurfacePropertyType | 3
 | lod4MultiSurface | gml:MultiSurfacePropertyType | 4
 | lod3ImplicitRepresentation | core:ImplicitRepresentationPropertyType | 3
 | lod4ImplicitRepresentation | core:ImplicitRepresentationPropertyType | 4
 | _GenericApplicationPropertyOfOpening | xs:anyType | 3 - 4
 
-| tun:WindowType a| a| | 3 - 4
+| tun:WindowType | | | 3 - 4
 
-a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
+| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 
-| tun:DoorType a| a| | 3 - 4
+| tun:DoorType | | | 3 - 4
 
-.2+a|
+.2+|
 | address | core:AddressPropertyType | 3 - 4
 | _GenericApplicationPropertyOfDoor | xs:anyType | 3 - 4
 
-| tun:HollowSpaceType a| a| | 4
+| tun:HollowSpaceType | | | 4
 
-.9+a|
+.9+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -760,9 +760,9 @@ a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 | hollowSpaceInstallation | tun:IntTunnelInstallationPropertyType | 4
 | _GenericApplicationPropertyOfHollowSpace | xs:anyType | 4
 
-| tun:TunnelFurnitureType a| a| | 4
+| tun:TunnelFurnitureType | | | 4
 
-.6+a|
+.6+|
 | class | gml:CodeType | 4
 | function | gml:CodeType | 4
 | usage | gml:CodeType | 4
@@ -772,14 +772,14 @@ a| | _GenericApplicationPropertyOfWindow | xs:anyType | 3 - 4
 
 4+.<| *Vegetation module*
 
-a| veg:AbstractVegetationObject +
-Type a| a| | 1 - 4
+| veg:AbstractVegetationObject +
+Type | | | 1 - 4
 
-a| | _GenericApplicationPropertyOfVegetationObject | xs:anyType | 1 - 4
+| | _GenericApplicationPropertyOfVegetationObject | xs:anyType | 1 - 4
 
-| veg:PlantCoverType a| a| | 1 - 4
+| veg:PlantCoverType | | | 1 - 4
 
-.13+a|
+.13+|
 | class | gml:CodeType | 1 - 4
 | function | gml:CodeType | 1 - 4
 | usage | gml:CodeType | 1 - 4
@@ -794,10 +794,10 @@ a| | _GenericApplicationPropertyOfVegetationObject | xs:anyType | 1 - 4
 | Lod4MultiSolid | gml:MultiSolidPropertyType | 4
 | _GenericApplicationPropertyOfPlantCover | xs:anyType | 1 - 4
 
-a| veg:SolitaryVegetation +
-ObjectType a| a| | 1 - 4
+| veg:SolitaryVegetation +
+ObjectType | | | 1 - 4
 
-.16+a|
+.16+|
 | class | gml:CodeType | 1 - 4
 | function | gml:CodeType | 1 - 4
 | usage | gml:CodeType | 1 - 4
@@ -817,13 +817,13 @@ ObjectType a| a| | 1 - 4
 
 4+.<| *WaterObject module*
 
-| wtr:AbstractWaterObjectType a| a| | 0 - 4
+| wtr:AbstractWaterObjectType | | | 0 - 4
 
-a| | _GenericApplicationPropertyOfWaterObject | xs:anyType | 0 - 4
+| | _GenericApplicationPropertyOfWaterObject | xs:anyType | 0 - 4
 
-| wtr:WaterBodyType a| a| | 0 - 4
+| wtr:WaterBodyType | | | 0 - 4
 
-.13+a|
+.13+|
 | class | gml:CodeType | 0 - 4
 | function | gml:CodeType | 0 - 4
 | usage | gml:CodeType | 0 - 4
@@ -835,33 +835,33 @@ a| | _GenericApplicationPropertyOfWaterObject | xs:anyType | 0 - 4
 | lod2Solid | gml:SolidPropertyType | 2
 | lod3Solid | gml:SolidPropertyType | 3
 | lod4Solid | gml:SolidPropertyType | 4
-| boundedBy a| wtr:BoundedByWaterSurface +
+| boundedBy | wtr:BoundedByWaterSurface +
 PropertyType | 2 - 4
 | _GenericApplicationPropertyOfWaterBody | xs:anyType | 0 - 4
 
-a| wtr:AbstractWaterBoundary +
-SurfaceType a| a| | 2 - 4
+| wtr:AbstractWaterBoundary +
+SurfaceType | | | 2 - 4
 
-.3+a|
+.3+|
 | lod2Surface | gml:SurfacePropertyType | 2
 | lod3Surface | gml:SurfacePropertyType | 3
 | lod4Surface | gml:SurfacePropertyType | 4
 
-a| | _GenericApplicationPropertyOfWaterBoundarySurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfWaterBoundarySurface | xs:anyType | 2 - 4
 
-| wtr:WaterSurfaceType a| a| | 2 - 4
+| wtr:WaterSurfaceType | | | 2 - 4
 
-.2+a|
+.2+|
 | waterLevel | WaterLevelType | 2 - 4
 | _GenericApplicationPropertyOfWaterSurface | xs:anyType | 2 - 4
 
-| wtr:WaterGroundSurfaceType a| a| | 2 - 4
+| wtr:WaterGroundSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfWaterGroundSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfWaterGroundSurface | xs:anyType | 2 - 4
 
-| wtr:WaterClosureSurfaceType a| a| | 2 - 4
+| wtr:WaterClosureSurfaceType | | | 2 - 4
 
-a| | _GenericApplicationPropertyOfWaterClosureSurface | xs:anyType | 2 - 4
+| | _GenericApplicationPropertyOfWaterClosureSurface | xs:anyType | 2 - 4
 
 |===
 

@@ -733,21 +733,21 @@ In LOD2 and higher levels of detail, the exterior shell of a building is not onl
 
 [[tab_5]]
 .Semantic themes of the class __AbstractBuilding._
-[cols="<,<,^,^,^,^,^"]
+[cols="<a,<a,^a,^a,^a,^a,^a"]
 |===
 h| Geometric / semantic theme h| Property type h| LOD0 h| LOD1 h| LOD2 h| LOD3 h| LOD4
 
-| Building footprint and roof edge | _gml:MultiSurfaceType_ | • a| a| a| a|
-| Volume part of the building shell | _gml:SolidType_ a| | • | • | • | •
-| Surface part of the building shell | _gml:MultiSurfaceType_ a| | • | • | • | •
-| Terrain intersection curve | _gml:MultiCurveType_ a| | • | • | • | •
-| Curve part of the building shell | _gml:MultiCurveType_ a| a| | • | • | •
-| Building parts | _BuildingPartType_ a| | • | • | • | •
-| Boundary surfaces (<<scls_10-3-3>>) | _AbstractBoundarySurfaceType_ a| a| | • | • | •
-| Outer building installations (<<scls_10-3-2>>) | _BuildingInstallationType_ a| a| | • | • | •
-| Openings (<<scls_10-3-4>>) | _AbstractOpeningType_ a| a| a| | • | •
-| Rooms (<<scls_10-3-5>>) | _RoomType_ a| a| a| a| | •
-| Interior building installations (<<scls_10-3-5>>) | _IntBuildingInstallationType_ a| a| a| a| | •
+| Building footprint and roof edge | _gml:MultiSurfaceType_ | • | | | |
+| Volume part of the building shell | _gml:SolidType_ | | • | • | • | •
+| Surface part of the building shell | _gml:MultiSurfaceType_ | | • | • | • | •
+| Terrain intersection curve | _gml:MultiCurveType_ | | • | • | • | •
+| Curve part of the building shell | _gml:MultiCurveType_ | | | • | • | •
+| Building parts | _BuildingPartType_ | | • | • | • | •
+| Boundary surfaces (<<scls_10-3-3>>) | _AbstractBoundarySurfaceType_ | | | • | • | •
+| Outer building installations (<<scls_10-3-2>>) | _BuildingInstallationType_ | | | • | • | •
+| Openings (<<scls_10-3-4>>) | _AbstractOpeningType_ | | | | • | •
+| Rooms (<<scls_10-3-5>>) | _RoomType_ | | | | | •
+| Interior building installations (<<scls_10-3-5>>) | _IntBuildingInstallationType_ | | | | | •
 
 |===
 
@@ -1441,19 +1441,19 @@ image::094.png[]
 
 [[tab_6]]
 .Semantic themes of the class __AbstractTunnel._
-[cols="<,<,^,^,^,^"]
+[cols="<a,<a,^a,^a,^a,^a"]
 |===
 h| _Geometric / semantic theme_ h| Property type h| LOD1 h| LOD2 h| LOD3 h| LOD4
 | _Volume part of the tunnel shell_ | _gml:SolidType_ | • | • | • | •
 | _Surface part of the tunnel shell_ | _gml:MultiSurfaceType_ | • | • | • | •
 | _Terrain intersection curve_ | _gml:MultiCurveType_ | • | • | • | •
-| _Curve part of the tunnel shell_ | _gml:MultiCurveType_ a| | • | • | •
+| _Curve part of the tunnel shell_ | _gml:MultiCurveType_ | | • | • | •
 | _Tunnel parts_ | _TunnelPartType_ | • | • | • | •
-| _Boundary surfaces (<<scls_10-4-3>>)_ | _AbstractBoundarySurfaceType_ a| | • | • | •
-| _Outer tunnel installations (<<scls_10-4-2>>)_ | _TunnelInstallationType_ a| | • | • | •
-| _Openings_ | _AbstractOpeningType_ a| | | • | •
-| _Hollow spaces (<<scls_10-4-5>>)_ | _HollowSpaceType_ a| | | | •
-| _Interior tunnel installations_ | _IntTunnelInstallationType_ a| | | | •
+| _Boundary surfaces (<<scls_10-4-3>>)_ | _AbstractBoundarySurfaceType_ | | • | • | •
+| _Outer tunnel installations (<<scls_10-4-2>>)_ | _TunnelInstallationType_ | | • | • | •
+| _Openings_ | _AbstractOpeningType_ | | | • | •
+| _Hollow spaces (<<scls_10-4-5>>)_ | _HollowSpaceType_ | | | | •
+| _Interior tunnel installations_ | _IntTunnelInstallationType_ | | | | •
 |===
 
 
@@ -1956,20 +1956,20 @@ The semantic attributes of an &#95;__AbstractBridge__ are _class, function, usag
 
 [[tab_7]]
 .Semantic themes of the class &#95;__AbstractBridge__.
-[cols="<,<,^,^,^,^",options="unnumbered"]
+[cols="<a,<a,^a,^a,^a,^a",options="unnumbered"]
 |===
 h| Geometric / semantic theme h| Property type h| LOD1 h| LOD2 h| LOD3 h| LOD4
 | Volume part of the bridge shell | _gml:SolidType_ | • | • | • | •
 | Surface part of the bridge shell | _gml:MultiSurfaceType_ | • | • | • | •
 | Terrain intersection curve | _gml:MultiCurveType_ | • | • | • | •
-| Curve part of the bridge shell | _gml:MultiCurveType_ a| | • | • | •
+| Curve part of the bridge shell | _gml:MultiCurveType_ | | • | • | •
 | Bridge parts (<<scls_10-5-1>>) | _BridgePartType_ | • | • | • | •
-| Boundary surfaces (<<scls_10-5-3>>) | _AbstractBoundarySurfaceType_ a| | • | • | •
-| Outer bridge installations (<<scls_10-5-2>>) | _BridgeInstallationType_ a| | • | • | •
+| Boundary surfaces (<<scls_10-5-3>>) | _AbstractBoundarySurfaceType_ | | • | • | •
+| Outer bridge installations (<<scls_10-5-2>>) | _BridgeInstallationType_ | | • | • | •
 | Bridge construction elements (<<scls_10-5-2>>) | _BridgeConstruction-ElementType_ | • | • | • | •
-| Openings (<<scls_10-5-4>>) | _AbstractOpeningType_ a| a| | • | •
-| Bridge rooms(<<scls_10-5-5>>) | _BridgeRoomType_ a| | | | •
-| Interior bridge installations | _IntBridgeInstallationType_ a| | | | •
+| Openings (<<scls_10-5-4>>) | _AbstractOpeningType_ | | | • | •
+| Bridge rooms(<<scls_10-5-5>>) | _BridgeRoomType_ | | | | •
+| Interior bridge installations | _IntBridgeInstallationType_ | | | | •
 |===
 
 

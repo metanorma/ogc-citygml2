@@ -153,7 +153,7 @@ The entire code list for building roof types is given as example below, while th
 | 1060 | sport | 1160 | industry
 | 1070 | culture | 1170 | traffic
 | 1080 | church institution | 1180 | function
-.>| 1090 .>| agriculture, forestry .<a| |
+.>| 1090 .>| agriculture, forestry .<| |
 
 |===
 
@@ -163,7 +163,7 @@ The entire code list for building roof types is given as example below, while th
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the &#95;__AbstractBuilding__ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml]
+4+.>| http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_function.xml]
 
 http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml]
 | 1000 | residential building | 1840 | rubbish bunker
@@ -249,7 +249,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml
 | 1800 | building for disposal | 2640 | bothy
 | 1810 | building for effluent disposal | 2650 | tourist information centre
 | 1820 | building for filter plant | 2700 | others
-.>| 1830 .>| toilet .<a| |
+.>| 1830 .>| toilet .<| |
 
 |===
 
@@ -269,7 +269,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml
 | 1060 | sport | 1160 | industry
 | 1070 | culture | 1170 | traffic
 | 1080 | church institution | 1180 | function
-.>| 1090 .>| agriculture, forestry .<a| |
+.>| 1090 .>| agriculture, forestry .<| |
 
 |===
 
@@ -279,7 +279,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_usage.xml
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the _BuildingFurniture_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml]
+4+.>| http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_function.xml]
 
 http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml]
 | 1000 | cupboard | 2010 | sink, hand-basin
@@ -361,7 +361,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 | 1000 | outer characteristics | 1040 | communicating
 | 1010 | inner characteristics | 1050 | security
 | 1020 | waste management | 1060 | others
-| 1030 | maintenance a| |
+| 1030 | maintenance | |
 
 |===
 
@@ -371,7 +371,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the _BuildingInstallation_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml]
+4+.>| http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_function.xml] http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/BuildingInstallation_usage.xml]
 | 1000 | balcony | 1040 | tower (part of a building)
 | 1010 | winter garden | 1050 | column
 | 1020 | arcade | 1060 | stairs
@@ -390,7 +390,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 | 2000 | Safety | 7000 | Entertainmant
 | 3000 | Illumination | 8000 | Miscellaneous
 | 4000 | Communication | 9999 | Unknown
-.>| 5000 .>| Supply and Disposal .<a| |
+.>| 5000 .>| Supply and Disposal .<| |
 
 |===
 
@@ -400,7 +400,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the _IntBuildingInstallation_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml]
+4+.>| http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_function.xml]
 
 http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usage.xml]
 | 1010 | Radiator | 3020 | Light switch
@@ -454,7 +454,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/IntBuildingInstallation_usa
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the _Room_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml]
+4+.>| http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_function.xml]
 
 http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml[http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml]
 | 1000 | living room | 2170 | showers
@@ -566,7 +566,7 @@ http://www.sig3d.org/codelists/standard/building/2.0/Room_usage.xml[http://www.s
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractTunnel_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml]
+4+.>| http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_function.xml]
 
 http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml[http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml]
 | 1000 | railway tunnel | 1020 | canal tunnel
@@ -595,7 +595,7 @@ http://www.sig3d.org/codelists/standard/tunnel/2.0/_AbstractTunnel_usage.xml[htt
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the __AbstractBridge_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml]
+4+.>| http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_function.xml]
 
 http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml[http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml]
 | 1000 | railway bridge | 1040 | canal bridge
@@ -621,7 +621,7 @@ http://www.sig3d.org/codelists/standard/bridge/2.0/_AbstractBridge_usage.xml[htt
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the _CityFurniture_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml]
+4+.>| http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_function.xml]
 
 http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xml[http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xml]
 | 1000 | communication fixture | 1270 | pole
@@ -664,7 +664,7 @@ http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xm
 4+.>| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_class.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_class.xml]
 | 1000 | Settlement Area | 3000 | Vegetation
 | 1100 | Undeveloped Area | 4000 | Water
-.>| 2000 .>| Traffic .<a| |
+.>| 2000 .>| Traffic .<| |
 
 |===
 
@@ -672,7 +672,7 @@ http://www.sig3d.org/codelists/standard/cityfurniture/2.0/CityFurniture_usage.xm
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the _LandUse_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml]
+4+.>| http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_function.xml]
 
 http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml[http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml]
 | 1010 | Residential | 2050 | Track
@@ -689,7 +689,7 @@ http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml[http://www
 | 2010 | Road | 4020 | Standing Waterbody
 | 2020 | Railway | 4030 | Harbour
 | 2030 | Airfield | 4040 | Sea
-| 2040 | Shipping a| |
+| 2040 | Shipping | |
 
 |===
 
@@ -700,7 +700,7 @@ http://www.sig3d.org/codelists/standard/landuse/2.0/LandUse_usage.xml[http://www
 [options="unnumbered"]
 |===
 4+.>h| *Codelist of the _ImplicitGeometry_ (_Core_ module) / &#95;__Texture__ (_Appearance_ module) attribute _mimeType_*
-4+.>a| http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml[http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml]
+4+.>| http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml[http://www.sig3d.org/codelists/standard/core/2.0/ImplicitGeometry_mimeType.xml]
 
 http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml[http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml]
 4+.<| The MIME types given in this table are defined by the Internet Assigned Numbers Authority (IANA), see http://www.iana.org/. Generally, the MIME format is standardized by the Internet Engineering Task Force (IETF), see http://www.ietf.org/. Unlike the other code lists the MIME types are not represented by numbers, but instead use their given identifier. This code list is not exhaustive. It contains a selection of frequently used MIME types.
@@ -711,7 +711,7 @@ http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml[htt
 | application/x-dxf | AutoCad DXF | image/png | *.png images
 | application/acad | AutoCad DWG | image/tiff | *.tiff, *.tif images
 | application/x-shockwave-flash | Shockwave 3D | image/bmp | *.bmp images
-| model/x3d+vrml | X3D a| |
+| model/x3d+vrml | X3D | |
 
 |===
 
@@ -735,7 +735,7 @@ http://www.sig3d.org/codelists/standard/appearance/2.0/_Texture_mimeType.xml[htt
 [options="unnumbered"]
 |===
 .>h| *Code list of the _SolitaryVegetationObject_ attributes _function_ and _usage_*
-.<a| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml]
+.<| http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_function.xml]
 
 http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_usage.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_usage.xml]
 .>| Code lists are identically with _SolitaryVegetationObjectclass_
@@ -773,7 +773,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_
 | 1240 | Phragmitetea | 1510 | Quercetea ilicis
 | 1250 | Spartinetea | 1520 | Populetea albae
 | 1260 | Sedo-Scleranthetea | 9999 | unknown
-| 1270 | Salicetea herbaceae a| |
+| 1270 | Salicetea herbaceae | |
 
 |===
 
@@ -783,7 +783,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/SolitaryVegetationObject_
 [options="unnumbered"]
 |===
 .>h| *Code list of the _PlantCover_ attributes _function_ and _usage_*
-.<a| http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml]
+.<| http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_function.xml]
 
 http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml]
 .>| Code lists are identically with _PlantCover class_
@@ -831,7 +831,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 | 1200 | ditch | 1500 | noise guard bar
 | 1210 | drainage | 1600 | towpath
 | 1220 | kerbstone | 1700 | others
-| 1230 | flower tub a| |
+| 1230 | flower tub | |
 
 
 
@@ -880,7 +880,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 | 5 | train | 13 | taxi
 | 6 | bicycle | 14 | horse
 | 7 | motorcycle | 9999 | unknown
-| 8 | tram, streetcar a| |
+| 8 | tram, streetcar | |
 
 |===
 
@@ -922,7 +922,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the _TransportationComplex_ attributes _function_ and _usage_*
-4+.<a| http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_function.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_function.xml] +
+4+.<| http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_function.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_function.xml] +
  http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_usage.xml[http://www.sig3d.org/codelists/standard/transportation/2.0/TransportationComplex_usage.xml]
 | 1000 | road | 1855 | railway track
 | 1010 | freeway/motorway | 1860 | magnetic levitation train
@@ -962,7 +962,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 | 1835 | mountain railway | 2630 | maritime navigation
 | 1840 | chairlift | 2640 | navigable lake
 | 1845 | ski-lift/ski tow lift | 2700 | others
-| 1850 | suspension railway a| |
+| 1850 | suspension railway | |
 
 |===
 
@@ -1004,7 +1004,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 | 1050 | waterway | 1140 | industrial waterbody
 | 1060 | habor waterbody | 1150 | waterbody for fire-fighting
 | 1070 | sluice waterbody | 9999 | unknown
-.>| 1080 .>| sewage system .<a| |
+.>| 1080 .>| sewage system .<| |
 
 
 
@@ -1027,7 +1027,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 | 1070 | port | 1180 | water protection area
 | 1080 | anchorage | 1190 | abandoned
 | 1090 | public use | 9999 | unknown
-.>| 1100 .>| private use .<a| |
+.>| 1100 .>| private use .<| |
 
 |===
 
@@ -1046,7 +1046,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 | 1050 | Mean Low Tide (related to National Waterlevel) | 1140 | Minimum Limit of Navigability
 | 1060 | Extreme Low Tide (related to National Waterlevel) | 1150 | Maximum Limit of Navigability
 | 1070 | Mean Water Level (watercourse) | 9999 | unknown
-.>| 1080 .>| critical high-water level .<a| |
+.>| 1080 .>| critical high-water level .<| |
 
 |===
 
@@ -1070,7 +1070,7 @@ http://www.sig3d.org/codelists/standard/vegetation/2.0/PlantCover_usage.xml[http
 [options="unnumbered"]
 |===
 4+.>h| *Code list of the _CityObjectGroup_ attributes _function_ and _usage_*
-4+.>a| http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_function.xml[http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_function.xml] +
+4+.>| http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_function.xml[http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_function.xml] +
  http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_usage.xml[http://www.sig3d.org/codelists/standard/cityobjectgroup/2.0/CityObjectGroup_usage.xml]
 | 1000 | lod1Storey | 1020 | lod3Storey
 | 1010 | lod2Storey | 1030 | lod4Storey

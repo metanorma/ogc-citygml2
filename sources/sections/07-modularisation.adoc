@@ -55,7 +55,7 @@ image::016.png["",747,366]
 | *XML namespace identifier* | http://www.opengis.net/citygml/2.0
 | *XML Schema file* | cityGMLBase.xsd
 | *Recommended namespace prefix* | core
-| *Module description* a| The _CityGML Core_ module defines the basic components of the CityGML data model. Primarily, this comprises abstract base classes from which all thematic classes are (transitively) derived. But also non-abstract content common to more than one extension module, for example basic data types, is defined within the core module.
+| *Module description* | The _CityGML Core_ module defines the basic components of the CityGML data model. Primarily, this comprises abstract base classes from which all thematic classes are (transitively) derived. But also non-abstract content common to more than one extension module, for example basic data types, is defined within the core module.
 
 The core module itself imports the XML schema definition files of GML version 3.1.1 and the OASIS extensible Address Language xAL.
 
@@ -105,7 +105,7 @@ The core module itself imports the XML schema definition files of GML version 3.
 | *XML namespace identifier* | http://www.opengis.net/citygml/generics/2.0
 | *XML Schema file* | generics.xsd
 | *Recommended namespace prefix* | gen
-| *Module description* a| The _Generics_ module provides generic extensions to the CityGML data model that may be used to model and exchange additional attributes and features not covered by the predefined thematic classes of CityGML. However, generic extensions shall only be used if appropriate thematic classes or attributes are not provided by any other CityGML module
+| *Module description* | The _Generics_ module provides generic extensions to the CityGML data model that may be used to model and exchange additional attributes and features not covered by the predefined thematic classes of CityGML. However, generic extensions shall only be used if appropriate thematic classes or attributes are not provided by any other CityGML module
 
 In order to represent generic attributes, the _Generics_ module augments the abstract base class __CityObject_ defined within the core module by an additional property using CityGML's _Application Domain Extension_ mechanism. Thus, the _Generics_ module has a deliberate impact on all thematic extension modules.
 

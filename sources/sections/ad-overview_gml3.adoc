@@ -5,7 +5,7 @@
 [options="unnumbered"]
 |===
 h| *Abstract GML classes referenced in CityGML* h| *GML subclass actually used in CityGML*
-| _Geometry a|
+| _Geometry |
 | _Solid | Solid (boundary is restricted to OrientableSurfaces, TexturedSurfaces, Polygons or CompositeSurfaces)
 
 | | CompositeSolid
@@ -24,7 +24,7 @@ h| *Abstract GML classes referenced in CityGML* h| *GML subclass actually used i
 
 | _Curve | LineString
 
-| a| CompositeCurve (members are restricted to +
+| | CompositeCurve (members are restricted to +
 LineStrings or CompositeCurves)
 
 | |
@@ -37,7 +37,7 @@ LineStrings or CompositeCurves)
 
 | _AbstractGeometricAggregate | MultiSolid
 
-| a| MultiSurface (members are restricted to +
+| | MultiSurface (members are restricted to +
 OrientableSurfaces, TexturedSurfaces, Polygons or CompositeSurfaces)
 
 | | MultiCurve (members are restricted to LineStrings or CompositeCurves)

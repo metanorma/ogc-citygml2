@@ -5,2394 +5,2395 @@
 The following table lists all feature types, properties, and data types which have been added or changed for CityGML 2.0. In order to maintain backwards compatibility, none of the classes marked as being deprecated in CityGML 1.0 has been deleted.
 
 
-[cols="<,<,^,^,^,<",options="unnumbered"]
+[cols="<a,<a,^a,^a,^a,<a",options="unnumbered,header"]
 |===
-| *Feature Class / Data Type* | *Property* | *New* | *Changed* | *Deleted* | *Description of change*
+| Feature Class / Data Type | Property | New | Changed | Deleted | Description of change
 
 6+.<| *CityGML Core module*
 
-| core:AbstractCityObjectType a| a| a| a| a|
+| core:AbstractCityObjectType | | | | |
 
-a| | relativeToTerrain | x a| a| | new attribute
+| | relativeToTerrain | x | | | new attribute
 
-a| | relativeToWater | x a| a| | new attribute
+| | relativeToWater | x | | | new attribute
 
 6+.<| *Appearance module*
 
-| app:AbstractTextureType a| a| a| a| a|
+| app:AbstractTextureType | | | | |
 
-a| | mimeType a| | x a| | &#8594;gml:CodeType
+| | mimeType | | x | | &#8594;gml:CodeType
 
 6+.<| *Building module*
 
-| bldg:AbstractBuildingType a| a| a| a| a|
+| bldg:AbstractBuildingType | | | | |
 
-.6+a|
-| class a| | x a| | &#8594;gml:CodeType
+.6+|
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
-
-.<| &#8594;gml:CodeType
-
-.<| usage .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| roofType .<a|
+.<| usage .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| lod0FootPrint .<| x .<a|
+.<| roofType .<|
 
-.<a|
+.<| x .<|
+
+.<| &#8594;gml:CodeType
+
+.<| lod0FootPrint .<| x .<|
+
+.<|
 
 .<| new attribute
 
-.<| lod0RoofEdge .<| x .<a|
+.<| lod0RoofEdge .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| bldg:BuildingClassType a|
+| bldg:BuildingClassType |
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| bldg:BuildingFunctionType a|
+| bldg:BuildingFunctionType |
 
-a|
+|
 
-a|
-
-| x | replaced by gml:CodeType
-
-| bldg:BuildingUsageType a|
-
-a|
-
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| bldg:RoofTypeType a|
+| bldg:BuildingUsageType |
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| bldg:BuildingInstallationType a| a| a| a| a|
+| bldg:RoofTypeType |
 
-.7+a|
+|
 
-| class a| | x a| | &#8594;gml:CodeType
+|
 
-.<| function .<a|
+| x | replaced by gml:CodeType
 
-.<| x .<a|
+| bldg:BuildingInstallationType | | | | |
+
+.7+|
+
+| class | | x | | &#8594;gml:CodeType
+
+.<| function .<|
+
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| usage .<a|
+.<| usage .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| lod2ImplicitRepresentation .<| x .<a|
+.<| lod2ImplicitRepresentation .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod3ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4ImplicitRepresentation .<| x .<a|
+.<| lod3ImplicitRepresentation .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| boundedBy .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-a| bldg:BuildingInstallation +
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+| bldg:BuildingInstallation +
  ClassType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-a| bldg:BuildingInstallation +
+| bldg:BuildingInstallation +
  FunctionType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-a| bldg:BuildingInstallation +
+| bldg:BuildingInstallation +
  UsageType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| bldg:IntBuildingInstallationType a| a| a| a| a|
+| bldg:IntBuildingInstallationType | | | | |
 
-.5+a|
+.5+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
-
-.<| &#8594;gml:CodeType
-
-.<| usage .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| lod4ImplicitRepresentation .<a|
+.<| usage .<|
 
-.<| x .<a|
+.<| x .<|
+
+.<| &#8594;gml:CodeType
+
+.<| lod4ImplicitRepresentation .<|
+
+.<| x .<|
 
 .<| new attribute
 
-.<| boundedBy .<a|
+.<| boundedBy .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| new attribute
 
-a| bldg:IntBuildingInstallation +
+| bldg:IntBuildingInstallation +
  ClassType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-a| bldg:IntBuildingInstallation +
+| bldg:IntBuildingInstallation +
  FunctionType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-a| bldg:IntBuildingInstallation +
+| bldg:IntBuildingInstallation +
  UsageType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| bldg:OuterCeilingSurfaceType a|
+| bldg:OuterCeilingSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOfOuter +
+| _GenericApplicationPropertyOfOuter +
  CeilingSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| bldg:OuterFloorSurfaceType a|
+| bldg:OuterFloorSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOfOuter +
+| _GenericApplicationPropertyOfOuter +
  FloorSurface
-| x a|
+| x |
 
-a|
-
-| new attribute
-
-| bldg:AbstractOpeningType a| a| a| a| a|
-
-.2+a|
-
-| lod3ImplicitRepresentation | x a|
-
-a|
+|
 
 | new attribute
 
-.<| lod4ImplicitRepresentation .<| x .<a|
+| bldg:AbstractOpeningType | | | | |
 
-.<a|
+.2+|
+
+| lod3ImplicitRepresentation | x |
+
+|
+
+| new attribute
+
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
 
 .<| new attribute
 
-| bldg:RoomType a| a| a| a| a|
+| bldg:RoomType | | | | |
 
-.3+a|
+.3+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
-
-.<| &#8594;gml:CodeType
-
-.<| usage .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-| bldg:RoomClassType a|
+.<| usage .<|
 
-a|
-
-a|
-
-| x | replaced by gml:CodeType
-
-| bldg:RoomFunctionType a|
-
-a|
-
-a|
-
-| x | replaced by gml:CodeType
-
-| bldg:RoomUsageType a|
-
-a|
-
-a|
-
-| x | replaced by gml:CodeType
-
-| bldg:BuildingFurnitureType a| a| a| a| a|
-
-.3+a|
-
-| class a| | x a| | &#8594;gml:CodeType
-
-.<| function .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| usage .<a|
+| bldg:RoomClassType |
 
-.<| x .<a|
+|
 
-.<| &#8594;gml:CodeType
-
-| bldg:BuildingFurnitureClassType a|
-
-a|
-
-a|
+|
 
 | x | replaced by gml:CodeType
 
-a| bldg:BuildingFurnitureFunction +
+| bldg:RoomFunctionType |
+
+|
+
+|
+
+| x | replaced by gml:CodeType
+
+| bldg:RoomUsageType |
+
+|
+
+|
+
+| x | replaced by gml:CodeType
+
+| bldg:BuildingFurnitureType | | | | |
+
+.3+|
+
+| class | | x | | &#8594;gml:CodeType
+
+.<| function .<|
+
+.<| x .<|
+
+.<| &#8594;gml:CodeType
+
+.<| usage .<|
+
+.<| x .<|
+
+.<| &#8594;gml:CodeType
+
+| bldg:BuildingFurnitureClassType |
+
+|
+
+|
+
+| x | replaced by gml:CodeType
+
+| bldg:BuildingFurnitureFunction +
  Type
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-a| bldg:BuildingFurnitureUsage +
+| bldg:BuildingFurnitureUsage +
  Type
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-2+| *Bridge module* | x a|
+2+| *Bridge module* | x |
 
-a|
+|
 
 | New module
 
-| brid:AbstractBridgeType a|
+| brid:AbstractBridgeType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.29+a|
+.29+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| yearOfConstruction .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| yearOfDemolition .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| isMovable .<| x .<a|
+.<| yearOfConstruction .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod1Solid .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod1MultiSurface .<| x .<a|
+.<| yearOfDemolition .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod1TerrainIntersection .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod2Solid .<| x .<a|
+.<| isMovable .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod2MultiCurve .<| x .<a|
+.<| lod1Solid .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2TerrainIntersection .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| outerBridgeConstruction .<| x .<a|
+.<| lod1MultiSurface .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| outerBridgeInstallation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| interiorBridgeInstallation .<| x .<a|
+.<| lod1TerrainIntersection .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| boundedBy .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3Solid .<| x .<a|
+.<| lod2Solid .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod3MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3MultiCurve .<| x .<a|
+.<| lod2MultiSurface .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod3TerrainIntersection .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Solid .<| x .<a|
+.<| lod2MultiCurve .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4MultiCurve .<| x .<a|
+.<| lod2TerrainIntersection .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4TerrainIntersection .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| interiorBridgeRoom .<| x .<a|
+.<| outerBridgeConstruction .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| consistsOfBridgePart .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| address .<| x .<a|
+.<| outerBridgeInstallation .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOfAbstract +
+.<| interiorBridgeInstallation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3Solid .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3MultiSurface .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3MultiCurve .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3TerrainIntersection .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4Solid .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4MultiSurface .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4MultiCurve .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4TerrainIntersection .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| interiorBridgeRoom .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| consistsOfBridgePart .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| address .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfAbstract +
  Bridge
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| brid:BridgeType a|
+| brid:BridgeType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-| _GenericApplicationPropertyOfBridge | x a|
+| _GenericApplicationPropertyOfBridge | x |
 
-a|
+|
 
 | new attribute
 
-| brid:BridgePartType a|
+| brid:BridgePartType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOfBridge +
+| _GenericApplicationPropertyOfBridge +
  Part
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-a| brid:BridgeConstructionElement +
+| brid:BridgeConstructionElement +
  Type
-a|
+|
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.17+a|
+.17+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod1Geometry .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2Geometry .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3Geometry .<| x .<a|
+.<| lod1Geometry .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4Geometry .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod1TerrainIntersection .<| x .<a|
+.<| lod2Geometry .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2TerrainIntersection .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3TerrainIntersection .<| x .<a|
+.<| lod3Geometry .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4TerrainIntersection .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod1ImplicitRepresentation .<| x .<a|
+.<| lod4Geometry .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3ImplicitRepresentation .<| x .<a|
+.<| lod1TerrainIntersection .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| boundedBy .<| x .<a|
+.<| lod2TerrainIntersection .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOfBridge +
+.<| lod3TerrainIntersection .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4TerrainIntersection .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod1ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod2ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfBridge +
  ConstructionElement
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| brid:BridgeInstallationType a|
+| brid:BridgeInstallationType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.11+a|
+.11+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod2Geometry .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod3Geometry .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Geometry .<| x .<a|
+.<| lod2Geometry .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3ImplicitRepresentation .<| x .<a|
+.<| lod3Geometry .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| boundedBy .<| x .<a|
+.<| lod4Geometry .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOfBridge +
+.<| lod2ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfBridge +
  Installation
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| brid:IntBridgeInstallationType a|
+| brid:IntBridgeInstallationType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.7+a|
+.7+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Geometry .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| boundedBy .<| x .<a|
+.<| lod4Geometry .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOfInt +
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfInt +
  BridgeInstallation
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-a| brid:AbstractBoundarySurface +
+| brid:AbstractBoundarySurface +
  Type
-a|
+|
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.5+a|
+.5+|
 
-| lod2MultiSurface | x a|
+| lod2MultiSurface | x |
 
-a|
+|
 
 | new attribute
 
-.<| lod3MultiSurface .<| x .<a|
+.<| lod3MultiSurface .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| opening .<| x .<a|
+.<| lod4MultiSurface .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOf +
+.<| opening .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOf +
  BoundarySurface
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| brid:RoofSurfaceType a|
+| brid:RoofSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  RoofSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:WallSurfaceType a|
+| brid:WallSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  WallSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:OuterCeilingSurfaceType a|
+| brid:OuterCeilingSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  OuterCeilingSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:OuterFloorSurfaceType a|
+| brid:OuterFloorSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  OuterFloorSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:GroundSurfaceType a|
+| brid:GroundSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  GroundSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:ClosureSurfaceType a|
+| brid:ClosureSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  ClosureSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:FloorSurfaceType a|
+| brid:FloorSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  FloorSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:InteriorWallSurfaceType a|
+| brid:InteriorWallSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  InteriorWallSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:CeilingSurfaceType a|
+| brid:CeilingSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  CeilingSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| brid:AbstractOpeningType a|
+| brid:AbstractOpeningType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.5+a|
+.5+|
 
-| lod3MultiSurface | x a|
+| lod3MultiSurface | x |
 
-a|
+|
 
 | new attribute
 
-.<| lod4MultiSurface .<| x .<a|
+.<| lod4MultiSurface .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod3ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4ImplicitRepresentation .<| x .<a|
+.<| lod3ImplicitRepresentation .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| _GenericApplicationPropertyOfOpening .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-| brid:WindowType a|
+.<| lod4ImplicitRepresentation .<| x .<|
 
-| x a|
+.<|
 
-a|
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfOpening .<| x .<|
+
+.<|
+
+.<| new attribute
+
+| brid:WindowType |
+
+| x |
+
+|
 
 | new feature
 
-a|
+|
 
-| _GenericApplicationPropertyOfWindow | x a|
+| _GenericApplicationPropertyOfWindow | x |
 
-a|
+|
 
 | new attribute
 
-| brid:DoorType a|
+| brid:DoorType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.2+a|
+.2+|
 
-| address | x a|
+| address | x |
 
-a|
+|
 
 | new attribute
 
-.<| _GenericApplicationPropertyOfDoor .<| x .<a|
+.<| _GenericApplicationPropertyOfDoor .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| brid:BridgeRoomType a|
+| brid:BridgeRoomType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.9+a|
+.9+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Solid .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| boundedBy .<| x .<a|
+.<| lod4Solid .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| interiorFurniture .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| bridgeRoomInstallation .<| x .<a|
+.<| lod4MultiSurface .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOf +
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| interiorFurniture .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| bridgeRoomInstallation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOf +
  BridgeRoom
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| brid:BridgeFurnitureType a|
+| brid:BridgeFurnitureType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.6+a|
+.6+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Geometry .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOfBridge +
- Furniture
-.<| x .<a|
+.<| lod4Geometry .<| x .<|
 
-.<a|
+.<|
+
+.<| new attribute
+
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<|
+_GenericApplicationPropertyOfBridge +
+Furniture
+.<| x .<|
+
+.<|
 
 .<| new attribute
 
 6+.<| *CityFurniture module*
 
-| frn:CityFurnitureType a| a| a| a| a|
+| frn:CityFurnitureType | | | | |
 
-.3+a|
+.3+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| usage .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| frn:CityFurnitureClassType a|
+| frn:CityFurnitureClassType |
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| frn:CityFurnitureFunctionType a|
+| frn:CityFurnitureFunctionType |
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
 6+.<| *CityObjectGroup module*
 
-| grp:CityObjectGroupType a| a| a| a| a|
+| grp:CityObjectGroupType | | | | |
 
-.3+a|
+.3+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| usage .<a|
+.<| usage .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
 6+.<| *Generics module*
 
-| gen:GenericCityObjectType a| a| a| a| a|
+| gen:GenericCityObjectType | | | | |
 
-.3+a|
+.3+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
-
-.<| &#8594;gml:CodeType
-
-.<| usage .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-| gen:GenericAttributeSetType a|
+.<| usage .<|
 
-| x a|
+.<| x .<|
 
-a|
+.<| &#8594;gml:CodeType
+
+| gen:GenericAttributeSetType |
+
+| x |
+
+|
 
 | new data type
 
-| gen:MeasureAttributeType a|
+| gen:MeasureAttributeType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new data type
 
 6+.<| *LandUse module*
 
-| luse:LandUseType a| a| a| a| a|
+| luse:LandUseType | | | | |
 
-.3+a|
+.3+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
-
-.<| &#8594;gml:CodeType
-
-.<| usage .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-| luse:LandUseClassType a|
+.<| usage .<|
 
-a|
+.<| x .<|
 
-a|
+.<| &#8594;gml:CodeType
 
-| x | replaced by gml:CodeType
+| luse:LandUseClassType |
 
-| luse:LandUseFunctionType a|
+|
 
-a|
-
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| luse:LandUseUsageType a|
+| luse:LandUseFunctionType |
 
-a|
+|
 
-a|
+|
+
+| x | replaced by gml:CodeType
+
+| luse:LandUseUsageType |
+
+|
+
+|
 
 | x | replaced by gml:CodeType
 
 6+.<| *Transportation module*
 
-a| tran:TransportationComplex +
+| tran:TransportationComplex +
  Type
-a|
+|
 
-a|
+|
 
-a|
+|
 
-a|
+|
 
-a|
+|
 
-.3+a|
+.3+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
-
-.<| &#8594;gml:CodeType
-
-.<| usage .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-a| tran:TransportationComplex +
+.<| usage .<|
+
+.<| x .<|
+
+.<| &#8594;gml:CodeType
+
+| tran:TransportationComplex +
  FunctionType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-a| tran:TransportationComplex +
+| tran:TransportationComplex +
  UsageType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| tran:TrafficAreaType a| a| a| a| a|
+| tran:TrafficAreaType | | | | |
 
-.3+a|
+.3+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
-
-.<| &#8594;gml:CodeType
-.<| usage .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
-a|
+.<| usage .<|
 
-| surfaceMaterial a| | x a| | &#8594;gml:CodeType
-| tran:TrafficAreaFunctionType a|
+.<| x .<|
 
-a|
+.<| &#8594;gml:CodeType
+|
 
-a|
+| surfaceMaterial | | x | | &#8594;gml:CodeType
+| tran:TrafficAreaFunctionType |
 
-| x | replaced by gml:CodeType
+|
 
-| tran:TrafficAreaUsageType a|
-
-a|
-
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| tran:TrafficSurfaceMaterialType a|
+| tran:TrafficAreaUsageType |
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| tran:AuxillaryTrafficAreaType a| a| a| a| a|
+| tran:TrafficSurfaceMaterialType |
 
-.4+a|
+|
 
-| class | x a|
+|
 
-a|
+| x | replaced by gml:CodeType
+
+| tran:AuxillaryTrafficAreaType | | | | |
+
+.4+|
+
+| class | x |
+
+|
 
 | new attribute
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| usage .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<| surfaceMaterial .<a|
+.<| surfaceMaterial .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-a| tran:AuxiliaryTrafficArea +
+| tran:AuxiliaryTrafficArea +
  FunctionType
-a|
+|
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-2+| *Tunnel module* | x a|
+2+| *Tunnel module* | x |
 
-a|
+|
 
 | New module
 
-| tun:AbstractTunnelType a|
+| tun:AbstractTunnelType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.26+a|
+.26+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| yearOfConstruction .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| yearOfDemolition .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod1Solid .<| x .<a|
+.<| yearOfConstruction .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod1MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod1TerrainIntersection .<| x .<a|
+.<| yearOfDemolition .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2Solid .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod2MultiSurface .<| x .<a|
+.<| lod1Solid .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2MultiCurve .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod2TerrainIntersection .<| x .<a|
+.<| lod1MultiSurface .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| outerTunnelInstallation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| interiorTunnelInstallation .<| x .<a|
+.<| lod1TerrainIntersection .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| boundedBy .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3Solid .<| x .<a|
+.<| lod2Solid .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod3MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3MultiCurve .<| x .<a|
+.<| lod2MultiSurface .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod3TerrainIntersection .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Solid .<| x .<a|
+.<| lod2MultiCurve .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4MultiCurve .<| x .<a|
+.<| lod2TerrainIntersection .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4TerrainIntersection .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| interiorHollowSpace .<| x .<a|
+.<| outerTunnelInstallation .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| consistsOfTunnelPart .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOfAbstract +
+.<| interiorTunnelInstallation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3Solid .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3MultiSurface .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3MultiCurve .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3TerrainIntersection .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4Solid .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4MultiSurface .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4MultiCurve .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4TerrainIntersection .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| interiorHollowSpace .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| consistsOfTunnelPart .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfAbstract +
  Tunnel
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| tun:TunnelType a|
+| tun:TunnelType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-| _GenericApplicationPropertyOfTunnel | x a|
+| _GenericApplicationPropertyOfTunnel | x |
 
-a|
+|
 
 | new attribute
 
-| tun:TunnelPartType a|
+| tun:TunnelPartType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOfTunnel +
+| _GenericApplicationPropertyOfTunnel +
  Part
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:TunnelInstallationType a|
+| tun:TunnelInstallationType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.11+a|
+.11+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod2Geometry .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod3Geometry .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Geometry .<| x .<a|
+.<| lod2Geometry .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod2ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod3ImplicitRepresentation .<| x .<a|
+.<| lod3Geometry .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| boundedBy .<| x .<a|
+.<| lod4Geometry .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOfTunnel +
+.<| lod2ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod3ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfTunnel +
  Installation
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| tun:IntTunnelInstallationType a|
+| tun:IntTunnelInstallationType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.7+a|
+.7+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Geometry .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| boundedBy .<| x .<a|
+.<| lod4Geometry .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOfInt +
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfInt +
  TunnelInstallation
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-a| tun:AbstractBoundarySurface +
+| tun:AbstractBoundarySurface +
  Type
-a|
+|
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.5+a|
+.5+|
 
-| lod2MultiSurface | x a|
+| lod2MultiSurface | x |
 
-a|
+|
 
 | new attribute
 
-.<| lod3MultiSurface .<| x .<a|
+.<| lod3MultiSurface .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4MultiSurface .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| opening .<| x .<a|
+.<| lod4MultiSurface .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOf +
+.<| opening .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOf +
  BoundarySurface
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| tun:RoofSurfaceType a|
+| tun:RoofSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  RoofSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:WallSurfaceType a|
+| tun:WallSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  WallSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:OuterCeilingSurfaceType a|
+| tun:OuterCeilingSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  OuterCeilingSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:OuterFloorSurfaceType a|
+| tun:OuterFloorSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  OuterFloorSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:GroundSurfaceType a|
+| tun:GroundSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  GroundSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:ClosureSurfaceType a|
+| tun:ClosureSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  ClosureSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:FloorSurfaceType a|
+| tun:FloorSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  FloorSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:InteriorWallSurfaceType a|
+| tun:InteriorWallSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  InteriorWallSurface
-| x a|
+| x |
 
-a|
+|
 
 | new attribute
 
-| tun:CeilingSurfaceType a|
+| tun:CeilingSurfaceType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-a|
+|
 
-a| _GenericApplicationPropertyOf +
+| _GenericApplicationPropertyOf +
  CeilingSurface
-| x a|
+| x |
 
-a|
-
-| new attribute
-
-| tun:AbstractOpeningType a|
-
-| x a|
-
-a|
-
-| new feature
-
-.5+a|
-
-| lod3MultiSurface | x a|
-
-a|
+|
 
 | new attribute
 
-.<| lod4MultiSurface .<| x .<a|
+| tun:AbstractOpeningType |
 
-.<a|
+| x |
 
-.<| new attribute
-
-.<| lod3ImplicitRepresentation .<| x .<a|
-
-.<a|
-
-.<| new attribute
-
-.<| lod4ImplicitRepresentation .<| x .<a|
-
-.<a|
-
-.<| new attribute
-
-.<| _GenericApplicationPropertyOfOpening .<| x .<a|
-
-.<a|
-
-.<| new attribute
-
-| tun:WindowType a|
-
-| x a|
-
-a|
+|
 
 | new feature
 
-a|
+.5+|
 
-| _GenericApplicationPropertyOfWindow | x a|
+| lod3MultiSurface | x |
 
-a|
+|
 
 | new attribute
 
-| tun:DoorType a|
+.<| lod4MultiSurface .<| x .<|
 
-| x a|
-
-a|
-
-| new feature
-
-a|
-
-.<| _GenericApplicationPropertyOfDoor .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-| tun:HollowSpaceType a|
+.<| lod3ImplicitRepresentation .<| x .<|
 
-| x a|
+.<|
 
-a|
+.<| new attribute
+
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOfOpening .<| x .<|
+
+.<|
+
+.<| new attribute
+
+| tun:WindowType |
+
+| x |
+
+|
 
 | new feature
 
-.9+a|
+|
 
-| class | x a|
+| _GenericApplicationPropertyOfWindow | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+| tun:DoorType |
 
-.<a|
+| x |
 
-.<| new attribute
+|
 
-.<| usage .<| x .<a|
+| new feature
 
-.<a|
+|
 
-.<| new attribute
+.<| _GenericApplicationPropertyOfDoor .<| x .<|
 
-.<| lod4Solid .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4MultiSurface .<| x .<a|
+| tun:HollowSpaceType |
 
-.<a|
+| x |
 
-.<| new attribute
+|
 
-.<| boundedBy .<| x .<a|
+| new feature
 
-.<a|
+.9+|
 
-.<| new attribute
+| class | x |
 
-.<| interiorFurniture .<| x .<a|
+|
 
-.<a|
+| new attribute
 
-.<| new attribute
+.<| function .<| x .<|
 
-.<| hollowSpaceInstallation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOf +
+.<| usage .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4Solid .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4MultiSurface .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| boundedBy .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| interiorFurniture .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| hollowSpaceInstallation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOf +
  HollowSpace
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-| tun:TunnelFurnitureType a|
+| tun:TunnelFurnitureType |
 
-| x a|
+| x |
 
-a|
+|
 
 | new feature
 
-.6+a|
+.6+|
 
-| class | x a|
+| class | x |
 
-a|
+|
 
 | new attribute
 
-.<| function .<| x .<a|
+.<| function .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| usage .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4Geometry .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
-
-.<| new attribute
-
-.<| lod4ImplicitRepresentation .<| x .<a|
-
-.<a|
+.<|
 
 .<| new attribute
 
-.<a| _GenericApplicationPropertyOf +
+.<| lod4Geometry .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| lod4ImplicitRepresentation .<| x .<|
+
+.<|
+
+.<| new attribute
+
+.<| _GenericApplicationPropertyOf +
  TunnelFurniture
-.<| x .<a|
+.<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
 6+.<| *Vegetation module*
 
-| veg:PlantCoverType a| a| a| a| a|
+| veg:PlantCoverType | | | | |
 
-.4+a|
+.4+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-.<| usage .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
 
-.<| lod4MultiSolid .<| x .<a|
+.<| lod4MultiSolid .<| x .<|
 
-.<a|
+.<|
 
 .<| New Representation
 
-| veg:PlantCoverClassType a|
+| veg:PlantCoverClassType |
 
-a|
+|
 
-a|
-
-| x | replaced by gml:CodeType
-
-| veg:PlantCoverFunctionType a|
-
-a|
-
-a|
+|
 
 | x | replaced by gml:CodeType
 
-a| veg:SolitaryVegetationObject +
+| veg:PlantCoverFunctionType |
+
+|
+
+|
+
+| x | replaced by gml:CodeType
+
+| veg:SolitaryVegetationObject +
  Type
-a|
+|
 
-a|
+|
 
-a|
+|
 
-a|
+|
 
-a|
+|
 
-.3+a|
+.3+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
-.<| usage .<| x .<a|
+.<| usage .<| x .<|
 
-.<a|
+.<|
 
 .<| new attribute
-a|
+|
 
-| species a| | x a| | &#8594;gml:CodeType
-| veg:PlantClassType a|
+| species | | x | | &#8594;gml:CodeType
+| veg:PlantClassType |
 
-a|
+|
 
-a|
-
-| x | replaced by gml:CodeType
-
-| veg:PlantFunctionType a|
-
-a|
-
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| veg:SpeciesType a|
+| veg:PlantFunctionType |
 
-a|
+|
 
-a|
+|
+
+| x | replaced by gml:CodeType
+
+| veg:SpeciesType |
+
+|
+
+|
 
 | x | replaced by gml:CodeType
 
 6+.<| *WaterObject module*
 
-| wtr:WaterBodyType a| a| a| a| a|
+| wtr:WaterBodyType | | | | |
 
-.3+a|
+.3+|
 
-| class a| | x a| | &#8594;gml:CodeType
+| class | | x | | &#8594;gml:CodeType
 
-.<| function .<a|
+.<| function .<|
 
-.<| x .<a|
-
-.<| &#8594;gml:CodeType
-
-.<| usage .<a|
-
-.<| x .<a|
+.<| x .<|
 
 .<| &#8594;gml:CodeType
 
-| wtr:WaterBodyClassType a|
+.<| usage .<|
 
-a|
+.<| x .<|
 
-a|
+.<| &#8594;gml:CodeType
 
-| x | replaced by gml:CodeType
+| wtr:WaterBodyClassType |
 
-| wtr:WaterBodyFunctionType a|
+|
 
-a|
-
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| wtr:WaterBodyUsageType a|
+| wtr:WaterBodyFunctionType |
 
-a|
+|
 
-a|
+|
 
 | x | replaced by gml:CodeType
 
-| wtr:WaterSurfaceType a| a| a| a| a|
+| wtr:WaterBodyUsageType |
 
-a|
+|
 
-| waterLevel a| | x a| | &#8594;gml:CodeType
+|
 
-| wtr:WaterLevelType a|
+| x | replaced by gml:CodeType
 
-a|
+| wtr:WaterSurfaceType | | | | |
 
-a|
+|
+
+| waterLevel | | x | | &#8594;gml:CodeType
+
+| wtr:WaterLevelType |
+
+|
+
+|
 
 | x | replaced by gml:CodeType
 

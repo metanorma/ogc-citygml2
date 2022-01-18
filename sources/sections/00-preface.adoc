@@ -13,26 +13,31 @@ The aim of the development of CityGML is to reach a common definition of the bas
 
 [cols="a,a",options="unnumbered"]
 |===
-a| image::citygml.png[]
-a| This is the official CityGML logo. For current news on CityGML and information about ongoing projects and fields of research in the area of CityGML see
+|
+image::citygml.png[]
+| This is the official CityGML logo. For current news on CityGML and information about ongoing projects and fields of research in the area of CityGML see
 http://www.citygml.org and http://www.citygmlwiki.org
 
-a| image::ogc_logo.png[]
-a| OGC work on CityGML is discussed and coordinated by the OGC 3D Information Management (3DIM) Working Group.CityGMLwas initally implemented and evaluated as part of the OGC Web Services Testbed, Phase 4 (OWS-4) in the CAD/GIS/BIM thread.
+|
+image::ogc_logo.png[]
+| OGC work on CityGML is discussed and coordinated by the OGC 3D Information Management (3DIM) Working Group.CityGMLwas initally implemented and evaluated as part of the OGC Web Services Testbed, Phase 4 (OWS-4) in the CAD/GIS/BIM thread.
 
 Version 2.0 of this standards document was prepared by the OGC CityGML Standards Working Group (SWG). Future discussion and development will be led by the 3DIM Working Group.
 
 For further information see http://www.opengeospatial.org/projects/groups/3dimwg
 
 
-a| image::sig3d.png[]
-a| CityGML also continues to be developed by the members of the Special Interest Group 3D (SIG 3D) of the GDI-DE Geodateninfrastruktur Deutschland (Spatial Data Infrastructure Germany) in joint cooperation with the 3DIM Working Group and the CityGML SWG within OGC.
+|
+image::sig3d.png[]
+| CityGML also continues to be developed by the members of the Special Interest Group 3D (SIG 3D) of the GDI-DE Geodateninfrastruktur Deutschland (Spatial Data Infrastructure Germany) in joint cooperation with the 3DIM Working Group and the CityGML SWG within OGC.
 
-a| image::gdi-de.png[]
-a| For further information see http://www.sig3d.org/
+|
+image::gdi-de.png[]
+| For further information see http://www.sig3d.org/
 
-a| image::eurosdr.png[]
-a| The preparation of the English document version and the European discussion has been supported by the European Spatial Data Research Organization (EuroSDR; formerly known as OEEPE) in an EuroSDR Commission III project.
+|
+image::eurosdr.png[]
+| The preparation of the English document version and the European discussion has been supported by the European Spatial Data Research Organization (EuroSDR; formerly known as OEEPE) in an EuroSDR Commission III project.
 
 For further information see http://www.eurosdr.net
 |===
@@ -47,54 +52,54 @@ All questions regarding this document should be directed to the editors or the c
 |===
 | Name | Institution | Email
 
-a| Prof. Dr. Thomas H. Kolbe +
+| Prof. Dr. Thomas H. Kolbe +
 Claus Nagel +
 Alexandra Lorenz
 
-a| Institute for Geodesy and Geoinformation Science, Technical University Berlin
+| Institute for Geodesy and Geoinformation Science, Technical University Berlin
 
-a| thomas.kolbe<at>tu-berlin.de +
-claus.nagel<at>tu-berlin.de +
-alexandra.lorenz<at>tu-berlin.de
+| thomas.kolbe@tu-berlin.de +
+claus.nagel@tu-berlin.de +
+alexandra.lorenz@tu-berlin.de
 
-a| Dr. Gerhard Gröger +
+| Dr. Gerhard Gröger +
 Prof. Dr. Lutz Plümer +
 Angela Czerwinski
 
-a| Institute for Geodesy and Geoinformation, University of Bonn
+| Institute for Geodesy and Geoinformation, University of Bonn
 
-a| Groeger<at>ikg.uni-bonn.de +
-Pluemer<at>ikg.uni-bonn.de +
-Czerwinski<at>ikg.uni-bonn.de +
+| Groeger@ikg.uni-bonn.de +
+Pluemer@ikg.uni-bonn.de +
+Czerwinski@ikg.uni-bonn.de +
 
-a| Haik Lorenz
-a| Autodesk, Inc.
-a| haik.lorenz<at>autodesk.com
+| Haik Lorenz
+| Autodesk, Inc.
+| haik.lorenz@autodesk.com
 
-a| Alain Lapierre +
+| Alain Lapierre +
 Stefan Apfel +
 Paul Scarponcini
 
-a| Bentley Systems, Inc.
+| Bentley Systems, Inc.
 
-a| alain.lapierre<at>bentley.com +
-stefan.apfel<at>bentley.com +
-paul.scarponcini<at>bentley.com
+| alain.lapierre@bentley.com +
+stefan.apfel@bentley.com +
+paul.scarponcini@bentley.com
 
-a| Carsten Rönsdorf
-a| Ordnance Survey, Great Britain
-a| carsten.roensdorf<at>ordnancesurvey.co.uk
+| Carsten Rönsdorf
+| Ordnance Survey, Great Britain
+| carsten.roensdorf@ordnancesurvey.co.uk
 
-a| Prof. Dr. Jürgen Döllner
-a| Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam
-a| juergen.doellner<at>hpi.uni-potsdam.de
+| Prof. Dr. Jürgen Döllner
+| Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam
+| juergen.doellner@hpi.uni-potsdam.de
 
-a| Dr. Joachim Benner +
+| Dr. Joachim Benner +
 Karl-Heinz Häfele
-a| Institute for Applied Computer Science,
+| Institute for Applied Computer Science,
 Karlsruhe Institute of Technology
-a| joachim.benner<at>kit.edu +
-karl-heinz.haefele<at>kit.edu
+| joachim.benner@kit.edu +
+karl-heinz.haefele@kit.edu
 |===
 
 
@@ -107,77 +112,77 @@ karl-heinz.haefele<at>kit.edu
 |===
 | Name | Institution
 
-a| Ulrich Gruber, Sandra Schlüter
-a| District Administration Recklinghausen, Cadastre Department, Germany
+| Ulrich Gruber, Sandra Schlüter
+| District Administration Recklinghausen, Cadastre Department, Germany
 
-a| Frank Bildstein
-a| Rheinmetall Defence Electronics, Germany
+| Frank Bildstein
+| Rheinmetall Defence Electronics, Germany
 
-a| Rüdiger Drees
-a| T-Systems Enterprise Services GmbH, Bonn, Germany
+| Rüdiger Drees
+| T-Systems Enterprise Services GmbH, Bonn, Germany
 
-a| Andreas Kohlhaas
-a| GIStec GmbH (formerly), Germany
+| Andreas Kohlhaas
+| GIStec GmbH (formerly), Germany
 
-a| Frank Thiemann
-a| Institute for Cartography and Geoinformatics, University of Hannover
+| Frank Thiemann
+| Institute for Cartography and Geoinformatics, University of Hannover
 
-a| Martin Degen
-a| Cadastre Department, City of Dortmund
+| Martin Degen
+| Cadastre Department, City of Dortmund
 
-a| Heinrich Geerling
-a| Architekturbüro Geerling, Germany
+| Heinrich Geerling
+| Architekturbüro Geerling, Germany
 
-a| Dr. Frank Knospe
-a| Cadastre and Mapping Department, City of Essen,
+| Dr. Frank Knospe
+| Cadastre and Mapping Department, City of Essen,
 
-a| Hardo Müller
-a| Snowflake Software Ltd., Great Britain
+| Hardo Müller
+| Snowflake Software Ltd., Great Britain
 
-a| Martin Rechner
-a| rechner logistic, Germany
+| Martin Rechner
+| rechner logistic, Germany
 
-a| Jörg Haist +
+| Jörg Haist +
 Daniel Holweg
-a| Fraunhofer Institute for Computer Graphics (IGD), Darmstadt, Germany
+| Fraunhofer Institute for Computer Graphics (IGD), Darmstadt, Germany
 
-a| Prof. Dr. Peter A. Henning
-a| Faculty for Computer Science,
+| Prof. Dr. Peter A. Henning
+| Faculty for Computer Science,
 University of Applied Sciences, Karlsruhe, Germany
 
-a| Rolf Wegener +
+| Rolf Wegener +
 Stephan Heitmann
-a| State Cadastre and Mapping Agency of
+| State Cadastre and Mapping Agency of
 North-Rhine Westphalia, Germany
 
-a| Prof. Dr. Marc-O. Löwner
-a| Institute for Geodesy and Photogrammetry, Technical University of Braunschweig
+| Prof. Dr. Marc-O. Löwner
+| Institute for Geodesy and Photogrammetry, Technical University of Braunschweig
 
-a| Dr. Egbert Casper
-a| Zerna Ingenieure, Germany
+| Dr. Egbert Casper
+| Zerna Ingenieure, Germany
 
-a| Christian Dahmen
-a| con terra GmbH, Germany
+| Christian Dahmen
+| con terra GmbH, Germany
 
-a| Nobuhiro Ishimaru +
+| Nobuhiro Ishimaru +
 Kishiko Maruyama +
 Eiichiro Umino +
 Takahiro Hirose
-a| Hitachi, Ltd., Japan
+| Hitachi, Ltd., Japan
 
-a| Linda van den Brink
-a| Geonovum, The Netherlands
+| Linda van den Brink
+| Geonovum, The Netherlands
 
-a| Ron Lake +
+| Ron Lake +
 David Burggraf
-a| Galdos Systems Inc., Canada
+| Galdos Systems Inc., Canada
 
-a| Marie-Lise Vautier +
+| Marie-Lise Vautier +
 Emmanuel Devys
-a| Institut géographique national, France
+| Institut géographique national, France
 
-a| Mark Pendlington
-a| Ordnance Survey, Great Britain
+| Mark Pendlington
+| Ordnance Survey, Great Britain
 |===
 
 
