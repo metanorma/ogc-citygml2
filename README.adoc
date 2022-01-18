@@ -1,0 +1,55 @@
+= OGC CityGML 2.0
+
+image:https://github.com/metanorma/ogc-citygml2/workflows/generate/badge.svg["Build Status", link="https://github.com/metanorma/ogc-citygml2/actions?query=workflow%3Agenerate"]
+
+The document is available in its rendered forms here:
+
+* https://metanorma.github.io/ogc-citygml2/[OGC CityGML 2.0 in Metanorma (HTML)]
+
+== General
+
+This repository contains the OGC CityGML 2.0 standard.
+
+== Structure
+
+`sources/`::
+source of the OGC CityGML 2.0 documents and models
+
+`site/`::
+(automatically generated, in the `gh-pages` branch) published document.
+
+
+== Usage
+
+This repository uses `metanorma` to run these processes.
+
+
+== Installing build tools
+
+See https://www.metanorma.org/install/
+
+
+== Building the document
+
+If you have installed the build tools locally, and wish to run the
+locally-installed compilation tools, there is nothing further to set.
+
+If you use a locally installed Metanorma, run:
+
+[source,sh]
+----
+metanorma site generate
+----
+
+If you don't want to deal with local dependencies, use the docker
+version by:
+
+[source,sh]
+----
+docker run -v "$(pwd)":/metanorma -w /metanorma -it metanorma/mn metanorma site generate
+----
+
+
+== License
+
+Copyright OGC.
