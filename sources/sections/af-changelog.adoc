@@ -2,7 +2,10 @@
 [appendix,obligation="informative"]
 == Changelog for CityGML 2.0
 
-The following table lists all feature types, properties, and data types which have been added or changed for CityGML 2.0. In order to maintain backwards compatibility, none of the classes marked as being deprecated in CityGML 1.0 has been deleted.
+The following table lists all feature types, properties, and data types which
+have been added or changed for CityGML 2.0. In order to maintain backwards
+compatibility, none of the classes marked as being deprecated in CityGML 1.0 has
+been deleted.
 
 
 [cols="<a,<a,^a,^a,^a,<a",options="unnumbered,header"]

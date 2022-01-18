@@ -3,11 +3,39 @@
 [appendix,obligation="informative"]
 == Example ADE for Noise Immission Simulation
 
-This annex illustrates the usage of CityGML within an environmental simulation application. The definition of the corresponding Application Domain Extension (ADE) is included as an example.
+This annex illustrates the usage of CityGML within an environmental simulation
+application. The definition of the corresponding Application Domain Extension
+(ADE) is included as an example.
 
-The Environmental Noise Directive of the European Union 2002/49/EG obligates the EU member states to calculate every 5 years the noise levels at a height of 4m on buildings and to document the results in noise maps. The noise maps serve as information for the European Union and the citizens affected by noise (<<fig_94>>). These noise maps are generated on the basis of acoustic models and noise propagation calculations, not on the basis of measurements (<<fig_95>>). For the noise propagation calculations, a great number of thematic data and 3D geodata is necessary for each EU member state. Because of the large spatial extent of the noise calculation, the provision of statewide and ubiquitous 3D geodata on buildings, roads, railways and terrain for a multitude of users is necessary, in part with high requirements on resolution.
+The Environmental Noise Directive of the European Union 2002/49/EG obligates the
+EU member states to calculate every 5 years the noise levels at a height of 4m
+on buildings and to document the results in noise maps. The noise maps serve as
+information for the European Union and the citizens affected by noise
+(<<fig_94>>). These noise maps are generated on the basis of acoustic models and
+noise propagation calculations, not on the basis of measurements (<<fig_95>>).
+For the noise propagation calculations, a great number of thematic data and 3D
+geodata is necessary for each EU member state. Because of the large spatial
+extent of the noise calculation, the provision of statewide and ubiquitous 3D
+geodata on buildings, roads, railways and terrain for a multitude of users is
+necessary, in part with high requirements on resolution.
 
-The calculation of noise levels from a road requires information about the traffic flow, the heavy vehicle percentage, the speed limits, the road surface types and the road gradient. Furthermore, the noise level depends on the distance between point of emission and reception (immission) as well as on reflection (e.g. on building facades) or shielding effects (e.g. noise barriers). The noise level is calculated separately for the day (06.00-18.00), the evening (18.00-22.00) and the night (22.00-06.00). As the noise level is calculated at a height of 4m and as the influence of vertical reflecting surfaces is considered (e.g. noise barriers and buildings), a multitude of geodata in the third dimension is necessary. In addition to all 3D geodata specific thematic data are required. For example the following data are necessary for the noise calculation of roads: Digital Terrain Model with 10m grid, 3D building models with their thematic attributes (e.g. reflection, inhabitants), 3D road data with their thematic attributes (e.g. traffic flow, heavy vehicle percentage, speed limit, type of road surface, road gradient, width of a road), 3D noise barriers and their thematic attributes (e.g. reflection).
+The calculation of noise levels from a road requires information about the
+traffic flow, the heavy vehicle percentage, the speed limits, the road surface
+types and the road gradient. Furthermore, the noise level depends on the
+distance between point of emission and reception (immission) as well as on
+reflection (e.g. on building facades) or shielding effects (e.g. noise
+barriers). The noise level is calculated separately for the day (06.00-18.00),
+the evening (18.00-22.00) and the night (22.00-06.00). As the noise level is
+calculated at a height of 4m and as the influence of vertical reflecting
+surfaces is considered (e.g. noise barriers and buildings), a multitude of
+geodata in the third dimension is necessary. In addition to all 3D geodata
+specific thematic data are required. For example the following data are
+necessary for the noise calculation of roads: Digital Terrain Model with 10m
+grid, 3D building models with their thematic attributes (e.g. reflection,
+inhabitants), 3D road data with their thematic attributes (e.g. traffic flow,
+heavy vehicle percentage, speed limit, type of road surface, road gradient,
+width of a road), 3D noise barriers and their thematic attributes (e.g.
+reflection).
 
 
 
@@ -23,9 +51,23 @@ image::218.png["",432,277]
 
 
 
-In the state of North Rhine-Westphalia, special conditions have to be considered: high population and transportation route density and therefore the highest amount of noise calculation areas and objects in Germany. The aim is to provide a sustainable, efficient and variable access to the required 3D geodata for the 5 years iteration period and the different noise calculation authorities.
+In the state of North Rhine-Westphalia, special conditions have to be
+considered: high population and transportation route density and therefore the
+highest amount of noise calculation areas and objects in Germany. The aim is to
+provide a sustainable, efficient and variable access to the required 3D geodata
+for the 5 years iteration period and the different noise calculation
+authorities.
 
-In order to provide this considerable amount of statewide 3D geodata, the responsible partners, in particular the State Ministry of Environment, Nature Conservation, Agriculture and Consumer Protection of North Rhine-Westphalia, the State Agency for nature, environment and consumer protection of North Rhine-Westphalia and the Surveying and Mapping Agency of North Rhine-Westphalia, have decided to use the Spatial Data Infrastructure in North Rhine-Westphalia (GDI NRW) and to extend it with statewide Web Services for 2.5D and 3D geoinformation. Therefore, new OGC Web Services for building models, terrain, road and railway data were implemented (e.g. Web Feature Service for 3D block models in LOD1 and for 3D road and railway data, Web Coverage Service for DTM).
+In order to provide this considerable amount of statewide 3D geodata, the
+responsible partners, in particular the State Ministry of Environment, Nature
+Conservation, Agriculture and Consumer Protection of North Rhine-Westphalia, the
+State Agency for nature, environment and consumer protection of North
+Rhine-Westphalia and the Surveying and Mapping Agency of North Rhine-Westphalia,
+have decided to use the Spatial Data Infrastructure in North Rhine-Westphalia
+(GDI NRW) and to extend it with statewide Web Services for 2.5D and 3D
+geoinformation. Therefore, new OGC Web Services for building models, terrain,
+road and railway data were implemented (e.g. Web Feature Service for 3D block
+models in LOD1 and for 3D road and railway data, Web Coverage Service for DTM).
 
 
 [[fig_96]]
@@ -34,9 +76,29 @@ image::224.png["",754,455]
 
 
 
-CityGML is used together with GeoTIFF as the only exchange formats between web services and noise calculation software (<<fig_96>> - <<fig_98>>). For the special requirements of the noise directive, a CityGML noise application schema has been developed by the Institute of Geodesy and Geoinformation University of Bonn and the Special Interest Group SIG 3D of GDI NRW. It is based on the ADE mechanism (see <<scls_6-12>> and <<scls_10-13>>). This mechanism allows the supplementation of existing classes and objects in CityGML (e.g. buildings) by thematic attributes. The quantity as well as the type of these attributes is selectable. The CityGML schema can also be complemented by new classes. Hence, the noise application schema contains new objects (e.g. segmentation of roads according to noise requirements - _NoiseRoadSegment_, <<fig_99>>) as well as noise attributes attached to existing objects (e.g. reflection of buildings, <<fig_100>>). These additional noise attributes are derived from regulations issued by the Federal Government of Germany realising the obligations of the Environmental Noise Directive of the European Union (cf. BImSchV 2006, VBUS 2006, VBUSch 2006).
+CityGML is used together with GeoTIFF as the only exchange formats between web
+services and noise calculation software (<<fig_96>> - <<fig_98>>). For the
+special requirements of the noise directive, a CityGML noise application schema
+has been developed by the Institute of Geodesy and Geoinformation University of
+Bonn and the Special Interest Group SIG 3D of GDI NRW. It is based on the ADE
+mechanism (see <<scls_6-12>> and <<scls_10-13>>). This mechanism allows the
+supplementation of existing classes and objects in CityGML (e.g. buildings) by
+thematic attributes. The quantity as well as the type of these attributes is
+selectable. The CityGML schema can also be complemented by new classes. Hence,
+the noise application schema contains new objects (e.g. segmentation of roads
+according to noise requirements - _NoiseRoadSegment_, <<fig_99>>) as well as
+noise attributes attached to existing objects (e.g. reflection of buildings,
+<<fig_100>>). These additional noise attributes are derived from regulations
+issued by the Federal Government of Germany realising the obligations of the
+Environmental Noise Directive of the European Union (cf. BImSchV 2006, VBUS
+2006, VBUSch 2006).
 
-The interoperability techniques of this project demonstrate a remarkable innovation, as for the first time statewide 3D geodata are provided via common standards and web services (cf. Czerwinski et al. 2006b). Therefore, the Spatial Data Infrastructure for noise calculation in North Rhine-Westphalia provides an application example for the INSPIRE directive of the European Union 2007/2/EC (Infrastructure for Spatial Information in Europe) (cf. Czerwinski et al. 2007).
+The interoperability techniques of this project demonstrate a remarkable
+innovation, as for the first time statewide 3D geodata are provided via common
+standards and web services (cf. Czerwinski et al. 2006b). Therefore, the Spatial
+Data Infrastructure for noise calculation in North Rhine-Westphalia provides an
+application example for the INSPIRE directive of the European Union 2007/2/EC
+(Infrastructure for Spatial Information in Europe) (cf. Czerwinski et al. 2007).
 
 [[fig_97]]
 .3D geodata in CityGML for the calculation of the noise map in <<fig_94>>: Derived contour lines for the generation of CityGML breaklines, 3D block model in CityGML, 3D road and railway data in CityGML, state road data for higher-level roads in CityGML (source: Surveying and Mapping Agency NRW, State Road Enterprise NRW, Stapelfeldt GmbH, Institute of Geodesy and Geoinformation Uni Bonn).
@@ -51,7 +113,14 @@ image::227.png["",703,241]
 
 === CityGML Noise ADE
 
-In this section the data models for the CityGML Noise ADE are given as UML diagrams and XML schema. As the semantics of the specific attributes and object types result from the German regulations for noise immision computations, they are not explained in detail here (see BimSchV 2006, VBUS 2006, VBUSch 2006). The purpose of this section is to provide an example how CityGML can be extended using the ADE mechanism. The XML Schema definition of the CityGML Noise ADE together with example datasets can be obtained from http://schemas.opengis.net/citygml/examples/2.0/ade/noise-ade/[http://schemas.opengis.net/citygml/examples/2.0/ade/noise-ade/].
+In this section the data models for the CityGML Noise ADE are given as UML
+diagrams and XML schema. As the semantics of the specific attributes and object
+types result from the German regulations for noise immision computations, they
+are not explained in detail here (see BimSchV 2006, VBUS 2006, VBUSch 2006). The
+purpose of this section is to provide an example how CityGML can be extended
+using the ADE mechanism. The XML Schema definition of the CityGML Noise ADE
+together with example datasets can be obtained from
+http://schemas.opengis.net/citygml/examples/2.0/ade/noise-ade/[http://schemas.opengis.net/citygml/examples/2.0/ade/noise-ade/].
 
 
 
@@ -277,7 +346,18 @@ image::230.png["",755,370]
 
 === Example dataset
 
-The following dataset illustrates a CityGML instance document which uses the application noise schema. It contains two CityObject features: a road object and a building object. The dataset references the XML Schema definition file of the CityGML Noise ADE which explicitly imports the XML Schema definitions of the CityGML modules extended by the Noise ADE (_CityGML Core_, _Building_, _Transportation_, and _CityFurniture_ module). Thus, all classes defined by the employed CityGML modules can be used in the instance document. Furthermore, the application specific additions such as new object types (e.g. _NoiseRoadSegment_) and additional thematic attributes (e.g. the attributes defined for __AbstractBuilding_) are available. These additional elements are distinguished from standard CityGML elements by the namespace prefix _noise_ which refers to the noise schema definition.
+The following dataset illustrates a CityGML instance document which uses the
+application noise schema. It contains two CityObject features: a road object and
+a building object. The dataset references the XML Schema definition file of the
+CityGML Noise ADE which explicitly imports the XML Schema definitions of the
+CityGML modules extended by the Noise ADE (_CityGML Core_, _Building_,
+_Transportation_, and _CityFurniture_ module). Thus, all classes defined by the
+employed CityGML modules can be used in the instance document. Furthermore, the
+application specific additions such as new object types (e.g.
+_NoiseRoadSegment_) and additional thematic attributes (e.g. the attributes
+defined for __AbstractBuilding_) are available. These additional elements are
+distinguished from standard CityGML elements by the namespace prefix _noise_
+which refers to the noise schema definition.
 
 
 [[listing_14:]]

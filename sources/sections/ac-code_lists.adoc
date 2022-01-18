@@ -39,7 +39,6 @@ The SIG 3D code lists can be downloaded from these URLs in order to allow applic
 The entire code list for building roof types is given as example below, while the others are depicted in the following subclauses in tabular form for space reasons. The subclauses are arranged according to thematic modules.
 
 
-
 .Code list for roof types _(http://www.sig3d.org/codelists/standard/building/2.0/_AbstractBuilding_roofType.xml)_
 [source%unnumbered,xml]
 ----
@@ -350,7 +349,6 @@ http://www.sig3d.org/codelists/standard/building/2.0/BuildingFurniture_usage.xml
 | 2000 | sanitation equipment | 2860 | mirror
 
 |===
-
 
 
 

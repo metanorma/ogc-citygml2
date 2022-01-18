@@ -20,7 +20,7 @@ http://www.citygml.org and http://www.citygmlwiki.org
 
 |
 image::ogc_logo.png[]
-| OGC work on CityGML is discussed and coordinated by the OGC 3D Information Management (3DIM) Working Group.CityGMLwas initally implemented and evaluated as part of the OGC Web Services Testbed, Phase 4 (OWS-4) in the CAD/GIS/BIM thread.
+| OGC work on CityGML is discussed and coordinated by the OGC 3D Information Management (3DIM) Working Group.CityGML was initally implemented and evaluated as part of the OGC Web Services Testbed, Phase 4 (OWS-4) in the CAD/GIS/BIM thread.
 
 Version 2.0 of this standards document was prepared by the OGC CityGML Standards Working Group (SWG). Future discussion and development will be led by the 3DIM Working Group.
 
@@ -100,6 +100,7 @@ Karl-Heinz Häfele
 Karlsruhe Institute of Technology
 | joachim.benner@kit.edu +
 karl-heinz.haefele@kit.edu
+
 |===
 
 
@@ -189,34 +190,65 @@ Emmanuel Devys
 [.preface]
 == Changes to the OGC^(R)^ Abstract Specification
 
-The OGC^(R)^ Abstract Specification does not require changes to accommodate this OGC^(R)^ standard.
+The OGC^(R)^ Abstract Specification does not require changes to accommodate this
+OGC^(R)^ standard.
 
 
 [.preface]
 == Acknowledgments
 
-The SIG 3D wishes to thank the members of the CityGML Standards Working Group and the 3D Information Management (3DIM) Working Group of the OGC as well as all contributors of change requests and comments. In particular: Tim Case, Scott Simmons, Paul Cote, Clemens Portele, Jeffrey Bell, Chris Body, Greg Buehler, François Golay, John Herring, Jury Konga, Kai-Uwe Krause, Gavin Park, Richard Pearsall, George Percivall, Mauro Salvemini, Alessandro Triglia, David Wesloh, Tim Wilson, Greg Yetman, Jim Farley, Cliff Behrens, Lukas Herman, Danny Kita, and Simon Cox.
+The SIG 3D wishes to thank the members of the CityGML Standards Working Group
+and the 3D Information Management (3DIM) Working Group of the OGC as well as all
+contributors of change requests and comments. In particular: Tim Case, Scott
+Simmons, Paul Cote, Clemens Portele, Jeffrey Bell, Chris Body, Greg Buehler,
+François Golay, John Herring, Jury Konga, Kai-Uwe Krause, Gavin Park, Richard
+Pearsall, George Percivall, Mauro Salvemini, Alessandro Triglia, David Wesloh,
+Tim Wilson, Greg Yetman, Jim Farley, Cliff Behrens, Lukas Herman, Danny Kita,
+and Simon Cox.
 
-Further credits for careful reviewing and commenting of this document go to: Ludvig Emgard, Bettina Petzold, Dave Capstick, Mark Pendlington, Alain Lapierre, and Frank Steggink.
+Further credits for careful reviewing and commenting of this document go to:
+Ludvig Emgard, Bettina Petzold, Dave Capstick, Mark Pendlington, Alain Lapierre,
+and Frank Steggink.
 
 
 [.preface]
 == Foreword
 
-Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights. However, to date, no such rights have been claimed or identified.
+Attention is drawn to the possibility that some of the elements of this document
+may be the subject of patent rights. Open Geospatial Consortium shall not be
+held responsible for identifying any or all such patent rights. However, to
+date, no such rights have been claimed or identified.
 
-Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+Recipients of this document are requested to submit, with their comments,
+notification of any relevant patent claims or other intellectual property rights
+of which they may be aware that might be infringed by any implementation of the
+standard set forth in this document, and to provide supporting documentation.
 
-Significant changes between CityGML version 2.0.0 and CityGML version 1.0.0 (OGC document no. 08-007r1):
+Significant changes between CityGML version 2.0.0 and CityGML version 1.0.0 (OGC
+document no. 08-007r1):
 
 * New thematic modules for the representation of tunnels and bridges;
-* Additional boundary surfaces for the semantic classification of the outer shell of buildings and building parts (_OuterCeilingSurface_ and _OuterFloorSurface_);
-* LOD0 representation (footprint and roof egde representations) for buildings and building parts;
-* Additional attributes denoting a city object’s location with respect to the surrounding terrain and water surface (_relativeToTerrain_ and _relativeToWater_);
-* Additional generic attributes for measured values and attribute sets; and
-* Redesign of the CityGML code list mechanism (enumerative attributes are now of type _gml:CodeType_ which facilitates to provide additional code lists enumerating their possible attribute values).
 
-Migration of existing CityGML 1.0 instances to valid 2.0 instances only requires changing the CityGML namespace and schema location values in the document to the actual 2.0 values.
+* Additional boundary surfaces for the semantic classification of the outer
+shell of buildings and building parts (_OuterCeilingSurface_ and
+_OuterFloorSurface_);
+
+* LOD0 representation (footprint and roof egde representations) for buildings
+and building parts;
+
+* Additional attributes denoting a city object's location with respect to the
+surrounding terrain and water surface (_relativeToTerrain_ and
+_relativeToWater_);
+
+* Additional generic attributes for measured values and attribute sets; and
+
+* Redesign of the CityGML code list mechanism (enumerative attributes are now of
+type _gml:CodeType_ which facilitates to provide additional code lists
+enumerating their possible attribute values).
+
+Migration of existing CityGML 1.0 instances to valid 2.0 instances only requires
+changing the CityGML namespace and schema location values in the document to the
+actual 2.0 values.
 
 
 [.preface]
@@ -224,91 +256,261 @@ Migration of existing CityGML 1.0 instances to valid 2.0 instances only requires
 
 === Motivation
 
-An increasing number of cities and companies are building virtual 3D city models for different application areas like urban planning, mobile telecommunication, disaster management, 3D cadastre, tourism, vehicle and pedestrian navigation, facility management and environmental simulations. Furthermore, in the implementation of the European Environmental Noise Directive ( http://ec.europa.eu/environment/noise/home.htm[END, 2002/49/EC]) 3D geoinformation and 3D city models play an important role.
+An increasing number of cities and companies are building virtual 3D city models
+for different application areas like urban planning, mobile telecommunication,
+disaster management, 3D cadastre, tourism, vehicle and pedestrian navigation,
+facility management and environmental simulations. Furthermore, in the
+implementation of the European Environmental Noise Directive (
+http://ec.europa.eu/environment/noise/home.htm[END, 2002/49/EC]) 3D
+geoinformation and 3D city models play an important role.
 
-In recent years, most virtual 3D city models have been defined as purely graphical or geometrical models, neglecting the semantic and topological aspects. Thus, these models could almost only be used for visualisation purposes but not for thematic queries, analysis tasks, or spatial data mining. Since the limited reusability of models inhibits the broader use of 3D city models, a more general modelling approach had to be taken in order to satisfy the information needs of the various application fields.
+In recent years, most virtual 3D city models have been defined as purely
+graphical or geometrical models, neglecting the semantic and topological
+aspects. Thus, these models could almost only be used for visualisation purposes
+but not for thematic queries, analysis tasks, or spatial data mining. Since the
+limited reusability of models inhibits the broader use of 3D city models, a more
+general modelling approach had to be taken in order to satisfy the information
+needs of the various application fields.
 
-CityGML is a common semantic information model for the representation of 3D urban objects that can be shared over different applications. The latter capability is especially important with respect to the cost-effective sustainable maintenance of 3D city models, allowing the possibility of selling the same data to customers from different application fields. The targeted application areas explicitly include city planning, architectural design, tourist and leisure activities, environmental simulation, mobile telecommunication, disaster management, homeland security, real estate management, vehicle and pedestrian navigation, and training simulators.
+CityGML is a common semantic information model for the representation of 3D
+urban objects that can be shared over different applications. The latter
+capability is especially important with respect to the cost-effective
+sustainable maintenance of 3D city models, allowing the possibility of selling
+the same data to customers from different application fields. The targeted
+application areas explicitly include city planning, architectural design,
+tourist and leisure activities, environmental simulation, mobile
+telecommunication, disaster management, homeland security, real estate
+management, vehicle and pedestrian navigation, and training simulators.
 
-CityGML is designed as an open data model and XML-based format for the storage and exchange of virtual 3D city models. It is implemented as an application schema of the Geography Markup Language 3 (GML3), the extendible international standard for spatial data exchange and encoding issued by the Open Geospatial Consortium (OGC) and the ISO TC211. CityGML is based on a number of standards from the ISO 191xx family, the Open Geospatial Consortium, the W3C Consortium, the Web 3D Consortium, and OASIS.
+CityGML is designed as an open data model and XML-based format for the storage
+and exchange of virtual 3D city models. It is implemented as an application
+schema of the Geography Markup Language 3 (GML3), the extendible international
+standard for spatial data exchange and encoding issued by the Open Geospatial
+Consortium (OGC) and the ISO TC211. CityGML is based on a number of standards
+from the ISO 191xx family, the Open Geospatial Consortium, the W3C Consortium,
+the Web 3D Consortium, and OASIS.
 
-CityGML defines the classes and relations for the most relevant topographic objects in cities and regional models with respect to their geometrical, topological, semantical, and appearance properties. "City" is broadly defined to comprise not just built structures, but also elevation, vegetation, water bodies, "city furniture", and more. Included are generalisation hierarchies between thematic classes, aggregations, relations between objects, and spatial properties. CityGML is applicable for large areas and small regions and can represent the terrain and 3D objects in different levels of detail simultaneously. Since either simple, single scale models without topology and few semantics or very complex multi-scale models with full topology and fine-grained semantical differentiations can be represented, CityGML enables lossless information exchange between different GI systems and users.
+CityGML defines the classes and relations for the most relevant topographic
+objects in cities and regional models with respect to their geometrical,
+topological, semantical, and appearance properties. "City" is broadly defined to
+comprise not just built structures, but also elevation, vegetation, water
+bodies, "city furniture", and more. Included are generalisation hierarchies
+between thematic classes, aggregations, relations between objects, and spatial
+properties. CityGML is applicable for large areas and small regions and can
+represent the terrain and 3D objects in different levels of detail
+simultaneously. Since either simple, single scale models without topology and
+few semantics or very complex multi-scale models with full topology and
+fine-grained semantical differentiations can be represented, CityGML enables
+lossless information exchange between different GI systems and users.
 
 
 [[scls_0-2]]
 === Historical background
 
-CityGML has been developed since 2002 by the members of the Special Interest Group 3D ( http://www.sig3d.org/[SIG 3D]). Since 2010, this group is part of the initiative Spatial Data Infrastructure Germany (GDI-DE). Before 2010, the SIG 3D was affiliated to the initiative Geodata Infrastructure North Rhine-Westphalia (GDI NRW). The SIG 3D is an open group consisting of more than 70 companies, municipalities, and research institutions from Germany, Great Britain, Switzerland, and Austria working on the development and commercial exploitation of interoperable 3D city models and geovisualisation. Another result of the work from the SIG 3D is the proposition of the Web 3D Service (W3DS), a 3D portrayal service that is also being discussed in the Open Geospatial Consortium (OGC Doc. No. 05-019 and OGC Doc. No. 09-104r1).
+CityGML has been developed since 2002 by the members of the Special Interest
+Group 3D ( http://www.sig3d.org/[SIG 3D]). Since 2010, this group is part of the
+initiative Spatial Data Infrastructure Germany (GDI-DE). Before 2010, the SIG 3D
+was affiliated to the initiative Geodata Infrastructure North Rhine-Westphalia
+(GDI NRW). The SIG 3D is an open group consisting of more than 70 companies,
+municipalities, and research institutions from Germany, Great Britain,
+Switzerland, and Austria working on the development and commercial exploitation
+of interoperable 3D city models and geovisualisation. Another result of the work
+from the SIG 3D is the proposition of the Web 3D Service (W3DS), a 3D portrayal
+service that is also being discussed in the Open Geospatial Consortium (OGC Doc.
+No. 05-019 and OGC Doc. No. 09-104r1).
 
-A first successful implementation and evaluation of a subset of CityGML has been performed in the project "Pilot 3D" of the GDI NRW in 2005. Participants came from all over Germany and demonstrated city planning scenarios and tourist applications. By the beginning of 2006, a CityGML project within EuroSDR ( http://www.eurosdr.net/[European Spatial Data Research]) started focusing on the European harmonisation of 3D city modelling. From June to December 2006, CityGML was employed and evaluated in the CAD/GIS/BIM thread of the OpenGIS Web Services Testbed #4 (OWS-4). Since 2008, CityGML (version 1.0.0) is an adopted OGC standard.
+A first successful implementation and evaluation of a subset of CityGML has been
+performed in the project "Pilot 3D" of the GDI NRW in 2005. Participants came
+from all over Germany and demonstrated city planning scenarios and tourist
+applications. By the beginning of 2006, a CityGML project within EuroSDR (
+http://www.eurosdr.net/[European Spatial Data Research]) started focusing on the
+European harmonisation of 3D city modelling. From June to December 2006, CityGML
+was employed and evaluated in the CAD/GIS/BIM thread of the OpenGIS Web Services
+Testbed #4 (OWS-4). Since 2008, CityGML (version 1.0.0) is an adopted OGC
+standard.
 
-From that point in time, CityGML has disseminated worldwide. Many cities in Germany and in other countries in Europe provide their 3D city model in CityGML (Berlin, Cologne, Dresden and Munich, to mention only a few). In France, the project Bâti3D (IGN France) defines a profile of CityGML LOD2 and provides data from Paris and the city centres of Aix-en-Provence, Lille, Nantes and Marseille. CityGML also plays an important role in the pilot 3D project to obtain a 3D geoinformation standard and a 3D infrastructure for The Netherlands. Many cities in Europe like Monaco, Geneva, Zurich, Leewarden use CityGML LOD 2 or 3 to represent and exchange data, as well as cities in Denmark (LOD 2 and 3, partly LOD4). CityGML has strongly influenced the building model (version 2.0) of the INSPIRE initiative of the EU commission, which aims at the creation of an European spatial data infrastructure providing public sector data in an interoperable way. In Asia, the 3D city models of Istanbul (LOD 1 and 2), Doha, Katar (LOD3), and Yokohama (LOD2) are represented and exchanged in CityGML. Moreover, CityGML plays a crucial role for the 3D Spatial data infrastructure in Malaysia.
+From that point in time, CityGML has disseminated worldwide. Many cities in
+Germany and in other countries in Europe provide their 3D city model in CityGML
+(Berlin, Cologne, Dresden and Munich, to mention only a few). In France, the
+project Bâti3D (IGN France) defines a profile of CityGML LOD2 and provides data
+from Paris and the city centres of Aix-en-Provence, Lille, Nantes and Marseille.
+CityGML also plays an important role in the pilot 3D project to obtain a 3D
+geoinformation standard and a 3D infrastructure for The Netherlands. Many cities
+in Europe like Monaco, Geneva, Zurich, Leewarden use CityGML LOD 2 or 3 to
+represent and exchange data, as well as cities in Denmark (LOD 2 and 3, partly
+LOD4). CityGML has strongly influenced the building model (version 2.0) of the
+INSPIRE initiative of the EU commission, which aims at the creation of an
+European spatial data infrastructure providing public sector data in an
+interoperable way. In Asia, the 3D city models of Istanbul (LOD 1 and 2), Doha,
+Katar (LOD3), and Yokohama (LOD2) are represented and exchanged in CityGML.
+Moreover, CityGML plays a crucial role for the 3D Spatial data infrastructure in
+Malaysia.
 
-Today many commercial and academic tools support CityGML by providing import interfaces, export interfaces or both. An example is the 3D City Database which is a free and open source 3D geo database to store, represent, and manage virtual 3D city models on top of Oracle 10g R2 and 11g R1/R2 provided by the Technische Universität Berlin. It fully supports CityGML and is shipped with a tool for the import and export of CityGML models. Furthermore, an open source Java class library and API for the processing of CityGML models (citygml4j) is provided by the Technische Universität Berlin. The conversion tool FME (Feature Manipulation Engine) from Safe Software Inc., which is part of the interoperability extension of ESRI's ArcGIS, has read and write interfaces for CityGML. The same applies to CAD tools as BentleyMap from Bentley Systems as well as to GIS tools like SupportGIS from CPA Geo-Information. Many 3D viewers (which all are freely available) provide read interfaces for CityGML: the Aristoteles Viewer from the University of Bonn, LandXplorer CityGML Viewer from Autodesk Inc. (the studio version for authoring and management is not free) and the FZKViewer for IFC and CityGML from KIT Karlsruhe and BS Contact from Bitmanagement Software GmbH which offers a CityGML plugin for the geospatial extension BS Contact Geo. This enumeration of software tools is not exhaustive and steadily growing. Please refer to the official website of CityGML at http://www.citygml.org/[http://www.citygml.org] as well as the CityGML Wiki at http://www.citygmlwiki.org/[http://www.citygmlwiki.org] for more information.
+Today many commercial and academic tools support CityGML by providing import
+interfaces, export interfaces or both. An example is the 3D City Database which
+is a free and open source 3D geo database to store, represent, and manage
+virtual 3D city models on top of Oracle 10g R2 and 11g R1/R2 provided by the
+Technische Universität Berlin. It fully supports CityGML and is shipped with a
+tool for the import and export of CityGML models. Furthermore, an open source
+Java class library and API for the processing of CityGML models (citygml4j) is
+provided by the Technische Universität Berlin. The conversion tool FME (Feature
+Manipulation Engine) from Safe Software Inc., which is part of the
+interoperability extension of ESRI's ArcGIS, has read and write interfaces for
+CityGML. The same applies to CAD tools as BentleyMap from Bentley Systems as
+well as to GIS tools like SupportGIS from CPA Geo-Information. Many 3D viewers
+(which all are freely available) provide read interfaces for CityGML: the
+Aristoteles Viewer from the University of Bonn, LandXplorer CityGML Viewer from
+Autodesk Inc. (the studio version for authoring and management is not free) and
+the FZKViewer for IFC and CityGML from KIT Karlsruhe and BS Contact from
+Bitmanagement Software GmbH which offers a CityGML plugin for the geospatial
+extension BS Contact Geo. This enumeration of software tools is not exhaustive
+and steadily growing. Please refer to the official website of CityGML at
+http://www.citygml.org/[http://www.citygml.org] as well as the CityGML Wiki at
+http://www.citygmlwiki.org/[http://www.citygmlwiki.org] for more information.
 
 
 [[scls_0-3]]
 === Additions in CityGML 2.0
 
-CityGML 2.0 is a major revision of the previous version 1.0 of this International Standard (OGC Doc. No. 08-007r1), and introduces substantial additions and new features to the thematic model of CityGML. The revision was originally planned to be a minor update to version 1.1. The main endeavor of the revision process was to ensure backwards compatibility both on the level of the conceptual model and on the level of CityGML instance documents. However, some changes could not be implemented consistent with directives for minor revisions and backwards compatibility as enforced by OGC policy (cf. OGC Doc. No. 135r11). The major version number change to 2.0 is therefore a consequence of conforming to the OGC versioning policy without having to abandon any changes or additions which reflect requests from the CityGML community.
+CityGML 2.0 is a major revision of the previous version 1.0 of this
+International Standard (OGC Doc. No. 08-007r1), and introduces substantial
+additions and new features to the thematic model of CityGML. The revision was
+originally planned to be a minor update to version 1.1. The main endeavor of the
+revision process was to ensure backwards compatibility both on the level of the
+conceptual model and on the level of CityGML instance documents. However, some
+changes could not be implemented consistent with directives for minor revisions
+and backwards compatibility as enforced by OGC policy (cf. OGC Doc. No. 135r11).
+The major version number change to 2.0 is therefore a consequence of conforming
+to the OGC versioning policy without having to abandon any changes or additions
+which reflect requests from the CityGML community.
 
-CityGML 2.0 is backwards compatible with version 1.0 in the following sense: each valid 1.0 instance is a valid 2.0 instance provided that the CityGML namespaces and schema locations in the document are changed to their actual 2.0 values. This step is required because the CityGML version number is encoded in these values, but no further actions have to be taken. Hence, there is a simple migration path from existing CityGML 1.0 instances to valid 2.0 instances.
+CityGML 2.0 is backwards compatible with version 1.0 in the following sense:
+each valid 1.0 instance is a valid 2.0 instance provided that the CityGML
+namespaces and schema locations in the document are changed to their actual 2.0
+values. This step is required because the CityGML version number is encoded in
+these values, but no further actions have to be taken. Hence, there is a simple
+migration path from existing CityGML 1.0 instances to valid 2.0 instances.
 
 The following clauses provide an overview of what is new in CityGML 2.0.
 
 
-===== New thematic modules for the representation of bridges and tunnels
+==== New thematic modules for the representation of bridges and tunnels
 
-Bridges and tunnels are important objects in city and landscape models. They are an essential part of the transportation infrastructure and are often easily recognizable landmarks of a city. CityGML 1.0 has been lacking thematic modules dedicated to bridges and tunnels, and thus such objects had to be modelled and exchanged using a _GenericCityObject_ as proxy (cf. <<scls_10-12>>). CityGML 2.0 now introduces two new thematic modules for the explicit representation of bridges and tunnels which complement the thematic model of CityGML: the _Bridge_ module (cf. <<scls_10-4>>) and the _Tunnel_ module (cf. <<scls_10-5>>).
+Bridges and tunnels are important objects in city and landscape models. They are
+an essential part of the transportation infrastructure and are often easily
+recognizable landmarks of a city. CityGML 1.0 has been lacking thematic modules
+dedicated to bridges and tunnels, and thus such objects had to be modelled and
+exchanged using a _GenericCityObject_ as proxy (cf. <<scls_10-12>>). CityGML 2.0
+now introduces two new thematic modules for the explicit representation of
+bridges and tunnels which complement the thematic model of CityGML: the _Bridge_
+module (cf. <<scls_10-4>>) and the _Tunnel_ module (cf. <<scls_10-5>>).
 
-Bridges and tunnels can be represented in LOD 1 - 4 and the underlying data models have a coherent structure with the _Building_ model. For example, bridges and tunnels can be decomposed into parts, thematic boundary surfaces with openings are available to semantically classify parts of the shell, and installations as well as interior built structures can be represented. This coherent model structure facilitates the similar understanding of semantic entities and helps to reduce software implementation efforts. Both the _Bridge_ and the _Tunnel_ model introduce further concepts and model elements which are specific to bridges and tunnels respectively.
+Bridges and tunnels can be represented in LOD 1 - 4 and the underlying data
+models have a coherent structure with the _Building_ model. For example, bridges
+and tunnels can be decomposed into parts, thematic boundary surfaces with
+openings are available to semantically classify parts of the shell, and
+installations as well as interior built structures can be represented. This
+coherent model structure facilitates the similar understanding of semantic
+entities and helps to reduce software implementation efforts. Both the _Bridge_
+and the _Tunnel_ model introduce further concepts and model elements which are
+specific to bridges and tunnels respectively.
 
 
-===== Additions to existing thematic modules
+==== Additions to existing thematic modules
 
 * _CityGML Core module (cf. <<scls_10-1>>)_ +
-Two new optional attributes have been added to the abstract base class _core:_CityObject_ within the _CityGML Core_ module: _relativeToTerrain_ and _relativeToWater._ These attributesdenote the feature's location with respect to the terrain and water surface in a qualitative way, and thus facilitate simple and efficient queries (e.g., for the number of subsurface buildings) without the need for an additional digital terrain model or a model of the water body.
+Two new optional attributes have been added to the abstract base class
+_core:_CityObject_ within the _CityGML Core_ module: _relativeToTerrain_ and
+_relativeToWater._ These attributesdenote the feature's location with respect to
+the terrain and water surface in a qualitative way, and thus facilitate simple
+and efficient queries (e.g., for the number of subsurface buildings) without the
+need for an additional digital terrain model or a model of the water body.
 
 
 * _Building module (cf. <<scls_10-3>>)_
+
 ** _LOD0 representation_ +
-Buildings can now be represented in LOD0 by footprint and/or roof edge polygons. This allows the easy integration of existing 2D data and of roof reconstructions from aerial and satellite imagery into a 3D city model. The representations are restricted to horizontal, 3-dimensional surfaces.
+Buildings can now be represented in LOD0 by footprint and/or roof edge polygons.
+This allows the easy integration of existing 2D data and of roof reconstructions
+from aerial and satellite imagery into a 3D city model. The representations are
+restricted to horizontal, 3-dimensional surfaces.
+
 ** _Additional thematic boundary surfaces_ +
-In order to semantically classify parts of the outer building shell which are neither horizontal wall surfaces nor parts of the roof, two additional boundary surfaces are introduced: +
+In order to semantically classify parts of the outer building shell which are
+neither horizontal wall surfaces nor parts of the roof, two additional boundary
+surfaces are introduced: +
 _OuterFloorSurface_ and _OuterCeilingSurface_.
+
 ** _Additional relations to thematic boundary surfaces_ +
- In addition to &#95;__AbstractBuilding__ and _Room_, the surface geometries of _BuildingInstallation_ and _IntBuildingInstallation_ features can now be semantically classified using thematic boundary surfaces. For example, this facilitates the semantic differentiation between roof and wall surfaces of dormers which are modeled as _BuildingInstallation_.
+In addition to &#95;__AbstractBuilding__ and _Room_, the surface geometries of
+_BuildingInstallation_ and _IntBuildingInstallation_ features can now be
+semantically classified using thematic boundary surfaces. For example, this
+facilitates the semantic differentiation between roof and wall surfaces of
+dormers which are modeled as _BuildingInstallation_.
+
 ** _Additional use of implicit geometries_ +
- Implicit geometries (cf. <<scls_8-3>>) are now available for the representation of __Opening_, _BuildingInstallation_, and _IntBuildingInstallation_ in addition to _BuildingFurniture_. A prototypical geometry for these city objects can thus be stored once and instantiated at different locations in the 3D city model.
+Implicit geometries (cf. <<scls_8-3>>) are now available for the representation
+of __Opening_, _BuildingInstallation_, and _IntBuildingInstallation_ in addition
+to _BuildingFurniture_. A prototypical geometry for these city objects can thus
+be stored once and instantiated at different locations in the 3D city model.
 
 * _Generics module (cf. <<scls_10-12>>)_ +
 Two generic attributes have been added to the _Generics_ module: _MeasureAttribute_ and +
-_GenericAttributeSet_. A _MeasureAttribute_ facilitates the representation of measured values together with a reference to the employed unit. A _GenericAttributeSet_&nbsp;is a named collection of arbitrary generic attributes. It provides an optional _codeSpace_ attribute to denote the authority organization who defined the attribute set.
+_GenericAttributeSet_. A _MeasureAttribute_ facilitates the representation of
+measured values together with a reference to the employed unit. A
+_GenericAttributeSet_&nbsp;is a named collection of arbitrary generic
+attributes. It provides an optional _codeSpace_ attribute to denote the
+authority organization who defined the attribute set.
 
 * _LandUse module (cf. <<scls_10-10>>)_ +
-The scope of the feature type _LandUse_ has been broadened to comprise both areas of the earth's surface dedicated to a specific land use and areas of the earth's surface having a specific land cover with or without vegetation.
+The scope of the feature type _LandUse_ has been broadened to comprise both
+areas of the earth's surface dedicated to a specific land use and areas of the
+earth's surface having a specific land cover with or without vegetation.
 
 * _Attributes_ class, function, _and_ usage _(all modules)_ +
-In order to harmonize the use of the attributes _class_, _function_, and _usage_, this attribute triplet has been complemented for all feature classes that at least provided one of the attributes in CityGML 1.0.
+In order to harmonize the use of the attributes _class_, _function_, and
+_usage_, this attribute triplet has been complemented for all feature classes
+that at least provided one of the attributes in CityGML 1.0.
 
 
-===== Additions to the CityGML code list mechanism
+==== Additions to the CityGML code list mechanism
 
-In CityGML, code lists providing the allowed values for enumerative attributes such as _class_, _function_, and _usage_ can be specified outside the CityGML schema by any organization or information community according to their specific information needs. This mechanism is, however, not fully reflected in the CityGML 1.0 encoding schema, because in a CityGML 1.0 instance document a corresponding attribute cannot point to the dictionary with the used code list values. This has been corrected for CityGML 2.0: All attributes taking values from code lists are now of type _gml:CodeType_ following the GML 3.1.1 mechanism for the encoding of code list values (cf. <<scls_10-14>> for more information). The _gml:CodeType_ adds an optional _codeSpace_ value to enumerative attributes which allows for providing a persistent URI pointing to the corresponding dictionary.
+In CityGML, code lists providing the allowed values for enumerative attributes
+such as _class_, _function_, and _usage_ can be specified outside the CityGML
+schema by any organization or information community according to their specific
+information needs. This mechanism is, however, not fully reflected in the
+CityGML 1.0 encoding schema, because in a CityGML 1.0 instance document a
+corresponding attribute cannot point to the dictionary with the used code list
+values. This has been corrected for CityGML 2.0: All attributes taking values
+from code lists are now of type _gml:CodeType_ following the GML 3.1.1 mechanism
+for the encoding of code list values (cf. <<scls_10-14>> for more information).
+The _gml:CodeType_ adds an optional _codeSpace_ value to enumerative attributes
+which allows for providing a persistent URI pointing to the corresponding
+dictionary.
 
 
-===== Changelog for CityGML 2.0
+==== Changelog for CityGML 2.0
 
 Changes on the level of XML schema components are provided in <<annex_f>>.
 
 
-===== Further edits to the specification document
+==== Further edits to the specification document
 
 * _Accuracy requirements for Levels of Detail (LOD) (cf. <<scls_6-2>>)_ +
-The accuracy requirements for the different CityGML LODs proposed in <<scls_6-2>> are non-normative. The wording of <<scls_6-2>> in CityGML 1.0 is however inconsistent with regard to this fact and thus has been clarified for CityGML 2.0.
+The accuracy requirements for the different CityGML LODs proposed in
+<<scls_6-2>> are non-normative. The wording of <<scls_6-2>> in CityGML 1.0 is
+however inconsistent with regard to this fact and thus has been clarified for
+CityGML 2.0.
 
 * _Rework of the CityGML example datasets (cf. <<annex_g>>)_ +
- The CityGML examples provided in <<annex_g>> have been reworked and extended. They now show a consistent building model in all five LODs and demonstrate, for example, the semantic and geometric refinement of the building throughout the different LODs as well as the usage of XLinks to share geometry elements between features. The datasets are shipped with the CityGML XML Schema package, and are available at http://schemas.opengis.net/citygml/examples/2.0/[http://schemas.opengis.net/citygml/examples/2.0/].
+The CityGML examples provided in <<annex_g>> have been reworked and extended.
+They now show a consistent building model in all five LODs and demonstrate, for
+example, the semantic and geometric refinement of the building throughout the
+different LODs as well as the usage of XLinks to share geometry elements between
+features. The datasets are shipped with the CityGML XML Schema package, and are
+available at
+http://schemas.opengis.net/citygml/examples/2.0/[http://schemas.opengis.net/citygml/examples/2.0/].
 
 * _New example for the usage of Application Domain Extensions (cf. <<annex_i>>)_ +
-A second example for the usage of Application Domain Extensions in the field of Ubiquitous Network Robots Services has been added in <<annex_i>>.
+A second example for the usage of Application Domain Extensions in the field of
+Ubiquitous Network Robots Services has been added in <<annex_i>>.

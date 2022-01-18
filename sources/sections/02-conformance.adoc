@@ -1,14 +1,26 @@
 
 [[cls_2]]
-== Conformance 
+== Conformance
 
-Conformance targets addressed by this International standard are CityGML instance documents only. Future revisions of this International Standard may also address consumers or producers as conformance targets.
+Conformance targets addressed by this International standard are CityGML
+instance documents only. Future revisions of this International Standard may
+also address consumers or producers as conformance targets.
 
-<<cls_8>> to <<cls_10>> of this International standard specify separate CityGML XML Schema definitions and normative aspects, i.e. CityGML modules, which shall be used in CityGML instance documents in accordance with <<cls_7>>. Implementations are not required to support the full range of capabilities provided by the universe of all CityGML modules. Valid partial implementations are supported following the rules and guidelines for CityGML profiles in <<scls_7-2>>.
+<<cls_8>> to <<cls_10>> of this International standard specify separate CityGML
+XML Schema definitions and normative aspects, i.e. CityGML modules, which shall
+be used in CityGML instance documents in accordance with <<cls_7>>.
+Implementations are not required to support the full range of capabilities
+provided by the universe of all CityGML modules. Valid partial implementations
+are supported following the rules and guidelines for CityGML profiles in
+<<scls_7-2>>.
 
-CityGML instance documents claiming conformance to this International Standard shall:
+CityGML instance documents claiming conformance to this International Standard
+shall:
 
 [start=a]
 . conform to the rules and requirements specified in <<cls_7>> to <<cls_10>>;
+
 . pass all relevant test cases of the abstract test suite in <<a_B-1>>;
-. satisfy all relevant conformance classes of the abstract test suite related to CityGML modules in <<a_B-2>>.
+
+. satisfy all relevant conformance classes of the abstract test suite related to
+CityGML modules in <<a_B-2>>.

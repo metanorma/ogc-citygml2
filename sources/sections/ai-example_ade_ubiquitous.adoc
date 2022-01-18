@@ -3,21 +3,62 @@
 [appendix,obligation="informative"]
 == Example ADE for Ubiquitous Network Robots Services
 
-This annex illustrates the usage of CityGML within Robotics services. The definition of the corresponding _Application Domain Extension_ (ADE) is included as an example.
+This annex illustrates the usage of CityGML within Robotics services. The
+definition of the corresponding _Application Domain Extension_ (ADE) is included
+as an example.
 
 
 [[a_I-1]]
 === Overview of Ubiquitous Network Robots
 
-In the field of robotics, there is a concept which originated in Japan called _network robots_, which aims to achieve advanced robot services by connecting multiple robots. The goal is to go beyond the capacity limits of a single robot. Sensors embedded in the environment and agents on the internet are also broadly regarded as robots, and the research and development of network robot technology that connects robots through a network has been promoted. Connecting multiple robots provides improved cognitive ability and interactive capability compared to a single robot, and it is thought that advanced robot services are achievable.
+In the field of robotics, there is a concept which originated in Japan called
+_network robots_, which aims to achieve advanced robot services by connecting
+multiple robots. The goal is to go beyond the capacity limits of a single robot.
+Sensors embedded in the environment and agents on the internet are also broadly
+regarded as robots, and the research and development of network robot technology
+that connects robots through a network has been promoted. Connecting multiple
+robots provides improved cognitive ability and interactive capability compared
+to a single robot, and it is thought that advanced robot services are
+achievable.
 
-In Japan, the Network Robot Forum was established in 2003. Its goal is to smoothly and effectively advance the research and development of network robots and their standardization. There are approximately 150 members including machinery manufacturers, electronic manufacturers, telecommunications carriers, research institutes, academic experts, economic organizations, and local government. They engage in activities such as research, promotion, development, and standardization of network robots.
+In Japan, the Network Robot Forum was established in 2003. Its goal is to
+smoothly and effectively advance the research and development of network robots
+and their standardization. There are approximately 150 members including
+machinery manufacturers, electronic manufacturers, telecommunications carriers,
+research institutes, academic experts, economic organizations, and local
+government. They engage in activities such as research, promotion, development,
+and standardization of network robots.
 
-At a national level, the Ministry of Internal Affairs and Communications has started "Research and development of ubiquitous network robot technology (UNR) for the elderly and physically challenged" since 2009, and the research and development for _ubiquitous network robots_ is fully in progress in Japan.
+At a national level, the Ministry of Internal Affairs and Communications has
+started "Research and development of ubiquitous network robot technology (UNR)
+for the elderly and physically challenged" since 2009, and the research and
+development for _ubiquitous network robots_ is fully in progress in Japan.
 
-In the research and development projects for ubiquitous network robots, the extension of network robot services from a single point to multiple points is being considered. In order to expand the activities of network robots and provide various robot services, it is necessary to have a framework that controls the information about surrounding environments as spatial attributes and provides services in a way that robots can understand. In these research and development projects, the database that controls the spatial attributes for network robots is referred to as the _spatial master database_. On the assumption that robots move around inside and outside buildings, CityGML which is able to provide models for the representation of both outdoor and indoor features has been used in the spatial master database. However, there was a lack of essential information for mobile robots, such as storey structuring, flooring materials, and door attributes. Therefore, the CityGML data model was extended using an ADE mechanism. <<fig_102>> shows an example 3D visualization of a spatial master database, which is generated from CityGML with Robotics ADE and is used in these research projects.
+In the research and development projects for ubiquitous network robots, the
+extension of network robot services from a single point to multiple points is
+being considered. In order to expand the activities of network robots and
+provide various robot services, it is necessary to have a framework that
+controls the information about surrounding environments as spatial attributes
+and provides services in a way that robots can understand. In these research and
+development projects, the database that controls the spatial attributes for
+network robots is referred to as the _spatial master database_. On the
+assumption that robots move around inside and outside buildings, CityGML which
+is able to provide models for the representation of both outdoor and indoor
+features has been used in the spatial master database. However, there was a lack
+of essential information for mobile robots, such as storey structuring, flooring
+materials, and door attributes. Therefore, the CityGML data model was extended
+using an ADE mechanism. <<fig_102>> shows an example 3D visualization of a
+spatial master database, which is generated from CityGML with Robotics ADE and
+is used in these research projects.
 
-The coordinate system used for indoor positioning of mobile robots is not a global coordinate system as used outdoors, but a local coordinate system configured for each building. If a building has multiple floors, different coordinate systems might be applied for each floor. Furthermore, multiple coordinate systems might be applied for one floor. For interaction with humans, it is important to control multiple coordinate systems set up for each building and manage the semantic knowledge of individual objects by using a spatial master database.
+The coordinate system used for indoor positioning of mobile robots is not a
+global coordinate system as used outdoors, but a local coordinate system
+configured for each building. If a building has multiple floors, different
+coordinate systems might be applied for each floor. Furthermore, multiple
+coordinate systems might be applied for one floor. For interaction with humans,
+it is important to control multiple coordinate systems set up for each building
+and manage the semantic knowledge of individual objects by using a spatial
+master database.
 
 
 [[fig_102]]
@@ -25,9 +66,29 @@ The coordinate system used for indoor positioning of mobile robots is not a glob
 image::236.png["",607,516]
 
 
-In the research and development project, a demonstration experiment was conducted at a commercial facility in 2010. <<fig_103>> shows the experiment conducted at a shopping mall. Robots provided services such as talking with customers, showing customers around the store, and assisting with shopping. The shopping mall facility consists of multiple buildings, and services, in which robots move around inside and outside the buildings and show customers around the store, were also experimented with.
+In the research and development project, a demonstration experiment was
+conducted at a commercial facility in 2010. <<fig_103>> shows the experiment
+conducted at a shopping mall. Robots provided services such as talking with
+customers, showing customers around the store, and assisting with shopping. The
+shopping mall facility consists of multiple buildings, and services, in which
+robots move around inside and outside the buildings and show customers around
+the store, were also experimented with.
 
-Spatial master database information was converted into a grid map (raster map) format, and was provided to the robots by a server. The grid map is a PNG image format, and four types of grid maps are supported: obstacles, flooring materials, floor slope, and floor bumps. The grid map is the flooring surface divided into grid cells of a given size and information for each grid cell is coded. The information of each grid cell is displayed by different color pixels in an image format of grid map. The information about flooring materials, floor slope, and floor bumps is required because such items can become impassable obstacles depending on the functions and constraints of the robot-moving mechanism. In the shopping mall used for the demonstration experiment, there are some high-angle slopes in the hallway between buildings. Two different types of robots were used in the experiment, one type was able to go over the slope and the other was not. The latter robot calls the former robot through a network and turned over the customer guidance, when it arrives at an impassable zone indicated in the grid maps.
+Spatial master database information was converted into a grid map (raster map)
+format, and was provided to the robots by a server. The grid map is a PNG image
+format, and four types of grid maps are supported: obstacles, flooring
+materials, floor slope, and floor bumps. The grid map is the flooring surface
+divided into grid cells of a given size and information for each grid cell is
+coded. The information of each grid cell is displayed by different color pixels
+in an image format of grid map. The information about flooring materials, floor
+slope, and floor bumps is required because such items can become impassable
+obstacles depending on the functions and constraints of the robot-moving
+mechanism. In the shopping mall used for the demonstration experiment, there are
+some high-angle slopes in the hallway between buildings. Two different types of
+robots were used in the experiment, one type was able to go over the slope and
+the other was not. The latter robot calls the former robot through a network and
+turned over the customer guidance, when it arrives at an impassable zone
+indicated in the grid maps.
 
 
 [[fig_103]]
@@ -38,11 +99,26 @@ image::237.png["",649,193]
 
 === Overview of the Spatial Master Database
 
-This section gives an overview of the spatial master databases used for network robots.
+This section gives an overview of the spatial master databases used for network
+robots.
 
-When the data model for a spatial master database is constructed, the compatibility with CityGML LOD4 is taken into consideration. Moreover, the concepts of flooring materials (_materialType_), _Storey_, and door attributes (_doorOperationType_), which are essential for mobile robots, are added. Section I.3 provides more details.
+When the data model for a spatial master database is constructed, the
+compatibility with CityGML LOD4 is taken into consideration. Moreover, the
+concepts of flooring materials (_materialType_), _Storey_, and door attributes
+(_doorOperationType_), which are essential for mobile robots, are added. Section
+I.3 provides more details.
 
-<<fig_104>> shows the configuration of a spatial master database management system used in the demonstration experiment described in section <<a_I-1>>. This system imports information of a building, such as CAD data or CityGML data, and stores it in spatial master database. And when converting it into a grid map, this system searches the targeted 3D objects and projects them onto a 2D floor surface. The next step is to divide it into grid, designating floor number, floor area (Boundary Box) and grid size (width and height) that the floor surface is divided into. Finally, it generates PNG images whose pixel values are related to each grid information, such as flooring materials or whether some obstacles exist or not. After converting the 3D model to this grid map, this system provides it to the Area management gateway server.
+<<fig_104>> shows the configuration of a spatial master database management
+system used in the demonstration experiment described in section <<a_I-1>>. This
+system imports information of a building, such as CAD data or CityGML data, and
+stores it in spatial master database. And when converting it into a grid map,
+this system searches the targeted 3D objects and projects them onto a 2D floor
+surface. The next step is to divide it into grid, designating floor number,
+floor area (Boundary Box) and grid size (width and height) that the floor
+surface is divided into. Finally, it generates PNG images whose pixel values are
+related to each grid information, such as flooring materials or whether some
+obstacles exist or not. After converting the 3D model to this grid map, this
+system provides it to the Area management gateway server.
 
 
 
@@ -51,7 +127,15 @@ When the data model for a spatial master database is constructed, the compatibil
 image::239.gif["",755,223]
 
 
-The shopping mall where the demonstration experiment was conducted consists of two buildings (indoor) and a hallway (outdoor) that connects the buildings (shown in <<fig_105>>). The spatial master database mainly stores the indoor spatial data, and stores outdoor spatial data only for the hallway. <<fig_106>> shows an example of a generated grid map for which the pixel values indicate flooring materials. The service providing the grid map is developed as an extended WMS interface. This WMS interface is based on the work which was developed in "Outdoor and Indoor 3D Routing Services Engineering Report" (cf. Sato 2009, OGC Doc. No. 09-067r2).
+The shopping mall where the demonstration experiment was conducted consists of
+two buildings (indoor) and a hallway (outdoor) that connects the buildings
+(shown in <<fig_105>>). The spatial master database mainly stores the indoor
+spatial data, and stores outdoor spatial data only for the hallway. <<fig_106>>
+shows an example of a generated grid map for which the pixel values indicate
+flooring materials. The service providing the grid map is developed as an
+extended WMS interface. This WMS interface is based on the work which was
+developed in "Outdoor and Indoor 3D Routing Services Engineering Report" (cf.
+Sato 2009, OGC Doc. No. 09-067r2).
 
 
 
@@ -69,9 +153,30 @@ image::241.gif["",755,202]
 
 === Overview of the CityGML ADE
 
-This section describes the implementation of the spatial master database explained in section I.2 by using CityGML. Specifically, this section shows UML diagrams and XML schemas for the data model of the Robotics application schema that was implemented as two independent ADEs. The reason for preparing two ADEs is that there are two types of information which is needed for Ubiquitous Network Robots service. One ADE is for more general information which can be used not only for robots service but also for indoor service. The other ADE is for information which is focused on robots service. The first ADE is the _CityGML Standard Opening ADE_, which is a schema extending the __Opening_, _Door_, and _Window_ classes of CityGML. The second ADE is the _UNR (_Ubiquitous Network Robots_) _ADE_, which is a schema adding classes such as _Storey_ and attributes such as door type and floor materials that are essential for ubiquitous network robots.
+This section describes the implementation of the spatial master database
+explained in section I.2 by using CityGML. Specifically, this section shows UML
+diagrams and XML schemas for the data model of the Robotics application schema
+that was implemented as two independent ADEs. The reason for preparing two ADEs
+is that there are two types of information which is needed for Ubiquitous
+Network Robots service. One ADE is for more general information which can be
+used not only for robots service but also for indoor service. The other ADE is
+for information which is focused on robots service. The first ADE is the
+_CityGML Standard Opening ADE_, which is a schema extending the __Opening_,
+_Door_, and _Window_ classes of CityGML. The second ADE is the _UNR (_Ubiquitous
+Network Robots_) _ADE_, which is a schema adding classes such as _Storey_ and
+attributes such as door type and floor materials that are essential for
+ubiquitous network robots.
 
-The purpose of this section is to provide an example showing how CityGML can be extended using multiple ADEs. As the semantics of the specific attributes and object types, which are implemented as codelists, result from the Japanese national research project for Ubiquitous Network Robots services, they are not explained in detail here. This section explains the Standard Opening ADE and UNR ADE. ADE details are explained in the CityGML Wiki (see http://www.citygmlwiki.org/index.php/CityGML-ADEs[http://www.citygmlwiki.org/index.php/CityGML-ADEs]). The XML Schema definition of both ADEs together with example datasets and code lists can be additionally obtained from http://schemas.opengis.net/citygml/examples/2.0/ade/robotics-ade/[http://schemas.opengis.net/citygml/examples/2.0/ade/robotics-ade/].
+The purpose of this section is to provide an example showing how CityGML can be
+extended using multiple ADEs. As the semantics of the specific attributes and
+object types, which are implemented as codelists, result from the Japanese
+national research project for Ubiquitous Network Robots services, they are not
+explained in detail here. This section explains the Standard Opening ADE and UNR
+ADE. ADE details are explained in the CityGML Wiki (see
+http://www.citygmlwiki.org/index.php/CityGML-ADEs[http://www.citygmlwiki.org/index.php/CityGML-ADEs]).
+The XML Schema definition of both ADEs together with example datasets and code
+lists can be additionally obtained from
+http://schemas.opengis.net/citygml/examples/2.0/ade/robotics-ade/[http://schemas.opengis.net/citygml/examples/2.0/ade/robotics-ade/].
 
 
 [[fig_107]]
@@ -230,9 +335,30 @@ image::245.png["",643,347]
 
 === Example Dataset
 
-The following dataset illustrates a CityGML instance document that uses the Robotics application schema. It contains three _CityObject_ features: a _CityObjectGroup_ object with a _Storey_ object property, a _FloorSurface_ object with a material type attribute, and a _Door_ object with a _doorOperationType_ attribute. The dataset references the XML schema definition files of the Robotics ADE, which explicitly imports the XML schema definitions of the CityGML modules extended by the CityGML Standard Opening ADE (_CityGML Core_ and _Building_ module) and the UNR ADE (_CityGML Core_, _Building_, and _CityObjectGroup_ module). Thus, all classes defined by the employed CityGML modules can be used in the instance document. Furthermore, the application specific additions such as new object types (e.g. _Storey_) and additional thematic attributes (e.g. the attributes defined for _Door_) are available. These additional elements are distinguished from standard CityGML elements by the namespace prefix _stdOp_ and _unr_ which refer to the Robotics schema definition.
+The following dataset illustrates a CityGML instance document that uses the
+Robotics application schema. It contains three _CityObject_ features: a
+_CityObjectGroup_ object with a _Storey_ object property, a _FloorSurface_
+object with a material type attribute, and a _Door_ object with a
+_doorOperationType_ attribute. The dataset references the XML schema definition
+files of the Robotics ADE, which explicitly imports the XML schema definitions
+of the CityGML modules extended by the CityGML Standard Opening ADE (_CityGML
+Core_ and _Building_ module) and the UNR ADE (_CityGML Core_, _Building_, and
+_CityObjectGroup_ module). Thus, all classes defined by the employed CityGML
+modules can be used in the instance document. Furthermore, the application
+specific additions such as new object types (e.g. _Storey_) and additional
+thematic attributes (e.g. the attributes defined for _Door_) are available.
+These additional elements are distinguished from standard CityGML elements by
+the namespace prefix _stdOp_ and _unr_ which refer to the Robotics schema
+definition.
 
-In order to use multiple ADE files, it is necessary to follow the XML schema rules and explicitly specify in the _xsi:schemaLocation_ tag that multiple ADE files (of the XML schema) are to be read. In the following dataset, the two pairs of schema location, Standard Opening ADE and UNR ADE, are coded in _xsi:schemaLocation_. When software such as a CityGML parser is implemented, multiple XML schema files must be read. Also, when multiple ADE files are used, problems such as circular references might occur and should be avoided carefully.
+In order to use multiple ADE files, it is necessary to follow the XML schema
+rules and explicitly specify in the _xsi:schemaLocation_ tag that multiple ADE
+files (of the XML schema) are to be read. In the following dataset, the two
+pairs of schema location, Standard Opening ADE and UNR ADE, are coded in
+_xsi:schemaLocation_. When software such as a CityGML parser is implemented,
+multiple XML schema files must be read. Also, when multiple ADE files are used,
+problems such as circular references might occur and should be avoided
+carefully.
 
 
 [[listing_15]]

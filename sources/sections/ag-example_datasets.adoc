@@ -2,15 +2,40 @@
 [appendix,obligation="informative"]
 == Example CityGML datasets
 
-The following chapters provide example CityGML models and excerpts of the corresponding CityGML instance documents. In <<a_G-1>> to <<a_G-6>>, a single CityGML building is subsequently illustrated and refined from a coarse LOD0 representation up to a semantically rich and geometric-topologically sound LOD4 model including the building interior. The model exemplifies concepts from the CityGML _Building_ module and demonstrates the coherent modelling of semantics and geometric/topological properties. In <<a_G-7>>, the building and its surrounding terrain are enriched with visual appearance information to show the usage of the CityGML _Appearance_ module. A further example for the _Appearance_ module is presented in <<a_G-8>> illustrating the texturing of polygons with inner holes. Finally, the use of a local engineering coordinate reference system in CityGML is illustrated in <<a_G-9>>.
+The following chapters provide example CityGML models and excerpts of the
+corresponding CityGML instance documents. In <<a_G-1>> to <<a_G-6>>, a single
+CityGML building is subsequently illustrated and refined from a coarse LOD0
+representation up to a semantically rich and geometric-topologically sound LOD4
+model including the building interior. The model exemplifies concepts from the
+CityGML _Building_ module and demonstrates the coherent modelling of semantics
+and geometric/topological properties. In <<a_G-7>>, the building and its
+surrounding terrain are enriched with visual appearance information to show the
+usage of the CityGML _Appearance_ module. A further example for the _Appearance_
+module is presented in <<a_G-8>> illustrating the texturing of polygons with
+inner holes. Finally, the use of a local engineering coordinate reference system
+in CityGML is illustrated in <<a_G-9>>.
 
-All CityGML instance documents contained in this annex are bundled with the CityGML schema package, and are available at http://schemas.opengis.net/citygml/examples/2.0/[http://schemas.opengis.net/citygml/examples/2.0/].
+All CityGML instance documents contained in this annex are bundled with the
+CityGML schema package, and are available at
+http://schemas.opengis.net/citygml/examples/2.0/[http://schemas.opengis.net/citygml/examples/2.0/].
 
 
 [[a_G-1]]
 === Example of a CityGML dataset for a building in LOD0
 
-The first example illustrates a CityGML building in LOD0 surrounded by a terrain model represented as LOD0 Triangulated Irregular Network (_dem:TINRefief_). Both a footprint and a roof edge representation is assigned to the building (_bldg:lod0FootPrint_ and _bldg:lod0RoofEdge_). The geometry is given as _gml:MultiSurface_ following the conformance requirement no. 2. of the _Building_ module (cf. <<scls_10-3-9>>) according to which the height values of all 3D coordinate tuples belonging to the same surface must be identical (which results in horizontal surfaces). The footprint (painted in dark blue) is located at the lowest elevation of the building whereas the roof egde representation (painted in light cyan) is at roof level (eaves height) and hence is floating over the terrain. The building is assigned address information using the xAL address schema. The left side of <<fig_75>> visualizes the LOD0 model, whereas the hierarchy of the contained semantic entities is depicted on the right.
+The first example illustrates a CityGML building in LOD0 surrounded by a terrain
+model represented as LOD0 Triangulated Irregular Network (_dem:TINRefief_). Both
+a footprint and a roof edge representation is assigned to the building
+(_bldg:lod0FootPrint_ and _bldg:lod0RoofEdge_). The geometry is given as
+_gml:MultiSurface_ following the conformance requirement no. 2. of the
+_Building_ module (cf. <<scls_10-3-9>>) according to which the height values of
+all 3D coordinate tuples belonging to the same surface must be identical (which
+results in horizontal surfaces). The footprint (painted in dark blue) is located
+at the lowest elevation of the building whereas the roof egde representation
+(painted in light cyan) is at roof level (eaves height) and hence is floating
+over the terrain. The building is assigned address information using the xAL
+address schema. The left side of <<fig_75>> visualizes the LOD0 model, whereas
+the hierarchy of the contained semantic entities is depicted on the right.
 
 
 
@@ -150,7 +175,13 @@ image::190.png["",293,213]
 [[a_G-2]]
 === Example of a CityGML dataset for a building in LOD1
 
-The following <<fig_76>> shows both the building and the terrain model in LOD1. The building is represented as block model. Its geometry is described by a solid (_gml:Solid_) whose exterior shell is bounded by six surfaces (_gml:Polygon_). In addition to the geometry, the building is enriched with further thematic attributes. Some of these attributes are enumerative and demonstrate the usage of the CityGML _code list_ mechanism (cf. <<scls_10-14>>). The coded attribute values are taken from the code lists proposed by the SIG 3D (cf. <<annex_c>>).
+The following <<fig_76>> shows both the building and the terrain model in LOD1.
+The building is represented as block model. Its geometry is described by a solid
+(_gml:Solid_) whose exterior shell is bounded by six surfaces (_gml:Polygon_).
+In addition to the geometry, the building is enriched with further thematic
+attributes. Some of these attributes are enumerative and demonstrate the usage
+of the CityGML _code list_ mechanism (cf. <<scls_10-14>>). The coded attribute
+values are taken from the code lists proposed by the SIG 3D (cf. <<annex_c>>).
 
 
 
@@ -342,7 +373,16 @@ image::192.png["",319,213]
 [[a_G-3]]
 === Example of a CityGML dataset for a building in LOD2
 
-The building model from the previous chapters is now represented in LOD2. The model reflects the actual roof structure and contains boundary surfaces (_bldg:boundedBy_) which semantically classify the surfaces of the exterior building shell (_bldg:RoofSurface_, _bldg:WallSurface_, and _bldg:GroundSurface_). In addition to the thematic boudary surfaces, the building geometry is also described using an LOD2 solid geometry (_gml:Solid_). According to conformance requirement no. 4. of the _Building_ module (cf. <<scls_10-3-9>>), this solid geometry must reference the geometry of the boundary surfaces by using the GML3 XLink mechanism (_xlink:href_, printed in bold in the following <<listing_5>>).
+The building model from the previous chapters is now represented in LOD2. The
+model reflects the actual roof structure and contains boundary surfaces
+(_bldg:boundedBy_) which semantically classify the surfaces of the exterior
+building shell (_bldg:RoofSurface_, _bldg:WallSurface_, and
+_bldg:GroundSurface_). In addition to the thematic boudary surfaces, the
+building geometry is also described using an LOD2 solid geometry (_gml:Solid_).
+According to conformance requirement no. 4. of the _Building_ module (cf.
+<<scls_10-3-9>>), this solid geometry must reference the geometry of the
+boundary surfaces by using the GML3 XLink mechanism (_xlink:href_, printed in
+bold in the following <<listing_5>>).
 
 
 
@@ -413,7 +453,8 @@ image::194.png["",306,213]
 								<gml:Polygon gml:id="GML_d3981803-d4b0-4b5b-969c-53f657594757">
 									<gml:exterior>
 										<gml:LinearRing>
-											<gml:posList>458875.0 5438350.0 112.0 458875.0 5438355.0 112.0 458885.0 5438355.0 112.0 458885.0 5438350.0 											112.0 458875.0 5438350.0 112.0 </gml:posList>
+											<gml:posList>458875.0 5438350.0 112.0 458875.0 5438355.0 112.0 458885.0 5438355.0 112.0 458885.0 5438350.0
+                      112.0 458875.0 5438350.0 112.0 </gml:posList>
 										</gml:LinearRing>
 									</gml:exterior>
 								</gml:Polygon>
@@ -431,7 +472,8 @@ image::194.png["",306,213]
 								<gml:Polygon gml:id="GML_1d350a50-6acc-4d3c-8c28-326ca4305fd1">
 									<gml:exterior>
 										<gml:LinearRing>
-											<gml:posList>458875.0 5438350.0 112.0 458885.0 5438350.0 112.0 458885.0 5438350.0 115.0 458875.0 5438350.0 											115.0 458875.0 5438350.0 112.0 </gml:posList>
+											<gml:posList>458875.0 5438350.0 112.0 458885.0 5438350.0 112.0 458885.0 5438350.0 115.0 458875.0 5438350.0
+ 											115.0 458875.0 5438350.0 112.0 </gml:posList>
 										</gml:LinearRing>
 									</gml:exterior>
 								</gml:Polygon>
@@ -552,7 +594,21 @@ image::194.png["",306,213]
 [[a_G-4]]
 === Example of a CityGML dataset for a building in LOD2 with an adjacent building part illustrating CityGML's topology representation
 
-This example illustrates CityGML's topology representation which uses the XLink mechanism of GML3 (cf. <<scls_8-1>>). The LOD2 model of <<a_G-3>> is extended by placing an adjacent garage next to the building (cf. <<fig_78>>). The garage is modelled as building part (_bldg:BuildingPart_) and shares a common surface geometry with the building shell. For both the building and the garage thematic boundary surfaces (_bldg:boundedBy_) as well as separate solid geometries are given. The wall surface of the building where the garage touches the building is depicted in <<fig_79>>. For the building, the surface geometry is split into a non-shared and a shared part (see _bldg:WallSurface_ with _gml:name_ "Wall East"). The latter is referenced by the garage both by its corresponding _bldg:WallSurface_ (_gml:name_ "Garage Wall West") and its solid geometry. Since the orientation of the shared surface has to be reversed in the context of the garage, the XLink reference is embraced by a _gml:OrientableSurface_ element. The XLinks pointing from the garage to the building geometry explicitly denote the topological adjacency relation between both features.
+This example illustrates CityGML's topology representation which uses the XLink
+mechanism of GML3 (cf. <<scls_8-1>>). The LOD2 model of <<a_G-3>> is extended by
+placing an adjacent garage next to the building (cf. <<fig_78>>). The garage is
+modelled as building part (_bldg:BuildingPart_) and shares a common surface
+geometry with the building shell. For both the building and the garage thematic
+boundary surfaces (_bldg:boundedBy_) as well as separate solid geometries are
+given. The wall surface of the building where the garage touches the building is
+depicted in <<fig_79>>. For the building, the surface geometry is split into a
+non-shared and a shared part (see _bldg:WallSurface_ with _gml:name_ "Wall
+East"). The latter is referenced by the garage both by its corresponding
+_bldg:WallSurface_ (_gml:name_ "Garage Wall West") and its solid geometry. Since
+the orientation of the shared surface has to be reversed in the context of the
+garage, the XLink reference is embraced by a _gml:OrientableSurface_ element.
+The XLinks pointing from the garage to the building geometry explicitly denote
+the topological adjacency relation between both features.
 
 
 [[fig_78]]
@@ -777,7 +833,19 @@ image::197.png[]
 
 === Example of a CityGML dataset for a building in LOD3
 
-The LOD3 building model illustrated in this chapter (cf. <<fig_80>>) adds doors (_bldg:Door_), windows (_bldg:Window_) and roof overhangs (_bldg:RoofSurface_) to the LOD2 representation of the previous chapters. Again, a solid geometry for the LOD3 of the building is realized by referencing the geometries of the thematic boundary surfaces using the GML3 XLink mechanism (_xlink:href_). In order to get a valid solid geometry, the roof surfaces are geometrically split into the roof slab and the roof overhang parts. Only the geometry of the roof slab is referenced by the solid. Walls composed of serveral surfaces (e.g. reveals) are modeled as _gml:CompositeSurface_ which then is referenced by the building solid. Boundary surfaces containing openings for doors or windows are modeled with polygons having one exterior and serval interior linear rings (according to conformance requirement no. 8. of the _Building_ module, cf. <<scls_10-4-8>>).
+The LOD3 building model illustrated in this chapter (cf. <<fig_80>>) adds doors
+(_bldg:Door_), windows (_bldg:Window_) and roof overhangs (_bldg:RoofSurface_)
+to the LOD2 representation of the previous chapters. Again, a solid geometry for
+the LOD3 of the building is realized by referencing the geometries of the
+thematic boundary surfaces using the GML3 XLink mechanism (_xlink:href_). In
+order to get a valid solid geometry, the roof surfaces are geometrically split
+into the roof slab and the roof overhang parts. Only the geometry of the roof
+slab is referenced by the solid. Walls composed of serveral surfaces (e.g.
+reveals) are modeled as _gml:CompositeSurface_ which then is referenced by the
+building solid. Boundary surfaces containing openings for doors or windows are
+modeled with polygons having one exterior and serval interior linear rings
+(according to conformance requirement no. 8. of the _Building_ module, cf.
+<<scls_10-4-8>>).
 
 
 
@@ -1027,7 +1095,17 @@ image::200.png["",284,236]
 [[a_G-6]]
 === Example of a CityGML dataset for a building in LOD4
 
-In LOD4, the building is completed with the representation of the building interior (cf. <<fig_81>>). The model contains a room (_bldg:Room_), which is equipped with a rocking chair (_bldg:BuildingFurniture_). The room is bounded by interior boundary surfaces (_bldg:InteriorWallSurface, bldg:FloorSurface, bldg:CeilingSurface,_ associated through the _bldg:boundedBy_ property of the room) whose geometries are referenced by the LOD4 solid geometry of the room (_xlink:href_). If the normal vector of an interior boundary surface is pointing into the room, its orientation has to be flipped using an orientable surface (_gml:OrientableSurface_) when referenced from the solid in order to create a valid solid geometry (for a _gml:Solid_, the normal vectors of the surfaces bounding the volume have to point outwards the volume).
+In LOD4, the building is completed with the representation of the building
+interior (cf. <<fig_81>>). The model contains a room (_bldg:Room_), which is
+equipped with a rocking chair (_bldg:BuildingFurniture_). The room is bounded by
+interior boundary surfaces (_bldg:InteriorWallSurface, bldg:FloorSurface,
+bldg:CeilingSurface,_ associated through the _bldg:boundedBy_ property of the
+room) whose geometries are referenced by the LOD4 solid geometry of the room
+(_xlink:href_). If the normal vector of an interior boundary surface is pointing
+into the room, its orientation has to be flipped using an orientable surface
+(_gml:OrientableSurface_) when referenced from the solid in order to create a
+valid solid geometry (for a _gml:Solid_, the normal vectors of the surfaces
+bounding the volume have to point outwards the volume).
 
 
 
@@ -1361,9 +1439,23 @@ image::202.png["",250,260]
 [[a_G-7]]
 === Example of a CityGML dataset illustrating the appearance model
 
-The following CityGML dataset is based on the simple building model from <<a_G-2>> and <<a_G-3>> given in LOD1 and LOD2. Furthermore two separate appearance themes are defined -- a summer theme and a winter theme -- describing different visual appearances for the building and the surrounding terrain. Each LOD has an individual appearance for these specific themes.
+The following CityGML dataset is based on the simple building model from
+<<a_G-2>> and <<a_G-3>> given in LOD1 and LOD2. Furthermore two separate
+appearance themes are defined -- a summer theme and a winter theme -- describing
+different visual appearances for the building and the surrounding terrain. Each
+LOD has an individual appearance for these specific themes.
 
-Several concepts of CityGML's appearance model are used in this dataset. Regarding LOD1, an _X3DMaterial_ object defines the material of the whole building which is applied to all of its surfaces. In addition, a _GeoreferencedTexture_ is assigned both to the terrain and the roof surface of the building. In LOD2 the vertical surfaces of the building are texturised individually using _ParameterizedTexture_ objects whereas the roof surfaces and the terrain again are described by a _GeoreferencedTexture._ The texture mapping for the _GeoreferencedTexture_ objects is given inline (cf. <<listing_9>>) as wells as using an ESRI world file (cf. <<listing_11>>). The modelling approach results in four possible visualizations of the dataset that are represented in <<fig_82>> and <<fig_83>>.
+Several concepts of CityGML's appearance model are used in this dataset.
+Regarding LOD1, an _X3DMaterial_ object defines the material of the whole
+building which is applied to all of its surfaces. In addition, a
+_GeoreferencedTexture_ is assigned both to the terrain and the roof surface of
+the building. In LOD2 the vertical surfaces of the building are texturised
+individually using _ParameterizedTexture_ objects whereas the roof surfaces and
+the terrain again are described by a _GeoreferencedTexture._ The texture mapping
+for the _GeoreferencedTexture_ objects is given inline (cf. <<listing_9>>) as
+wells as using an ESRI world file (cf. <<listing_11>>). The modelling approach
+results in four possible visualizations of the dataset that are represented in
+<<fig_82>> and <<fig_83>>.
 
 
 [[fig_82]]
@@ -1726,7 +1818,15 @@ Instead of denoting the georeference of the _GeoreferencedTexture_ elements inli
 ----
 
 
-In order to make use of this world file, it has to be stored together with the texture image (for filename conventions, see http://en.wikipedia.org/wiki/World_file[http://en.wikipedia.org/wiki/World_file]). Additionally, the inline texture mapping has to be removed from both _GeoreferencedTexture_ elements in <<listing_9>> as shown in the following excerpt. Both alternatives for denoting the georeference of a _GeoreferencedTexture_ are bundled with the CityGML schemas, and are available at http://schemas.opengis.net/citygml/examples/2.0/appearance/[http://schemas.opengis.net/citygml/examples/2.0/appearance/].
+In order to make use of this world file, it has to be stored together with the
+texture image (for filename conventions, see
+http://en.wikipedia.org/wiki/World_file[http://en.wikipedia.org/wiki/World_file]).
+Additionally, the inline texture mapping has to be removed from both
+_GeoreferencedTexture_ elements in <<listing_9>> as shown in the following
+excerpt. Both alternatives for denoting the georeference of a
+_GeoreferencedTexture_ are bundled with the CityGML schemas, and are available
+at
+http://schemas.opengis.net/citygml/examples/2.0/appearance/[http://schemas.opengis.net/citygml/examples/2.0/appearance/].
 
 
 [[listing_11]]
@@ -1748,7 +1848,21 @@ In order to make use of this world file, it has to be stored together with the t
 [[a_G-8]]
 === Example of a CityGML dataset illustrating the use of texture coordinates for complex surfaces with holes
 
-The following example demonstrates the use of texture coordinates for complex surfaces with holes. Additionally, the concept of overwriting (cf. <<scls_9-1>>) is exemplified. The example shows a textured road in LOD1, which consists of a roundabout and two entering streets (<<fig_89>>). It uses two _app:ParameterizedTexture_ objects, a regular road piece (rd, <<fig_90>>) and a dirt track becoming a paved road (dt, <<fig_91>>). All geometry is contained in a single _gml:MultiSurface_ (road) being the target of rd. The roundabout is modelled as a polygon with holes (roundaboutPoly). Both rings raEx and raIn need to receive texture coordinates. For efficient texturing, texture coordinates and wrap mode are chosen such that the regular road piece is draped onto the polygonal ring as desired at the price of some distortion. A distortion-free alternative, e.g. for higher LODs, requires an additional road piece texture for the roundabout (<<fig_92>>) or a texture for the complete roundabout (<<fig_93>>). In both cases, texture space is wasted. Wasted areas are marked red.
+The following example demonstrates the use of texture coordinates for complex
+surfaces with holes. Additionally, the concept of overwriting (cf. <<scls_9-1>>)
+is exemplified. The example shows a textured road in LOD1, which consists of a
+roundabout and two entering streets (<<fig_89>>). It uses two
+_app:ParameterizedTexture_ objects, a regular road piece (rd, <<fig_90>>) and a
+dirt track becoming a paved road (dt, <<fig_91>>). All geometry is contained in
+a single _gml:MultiSurface_ (road) being the target of rd. The roundabout is
+modelled as a polygon with holes (roundaboutPoly). Both rings raEx and raIn need
+to receive texture coordinates. For efficient texturing, texture coordinates and
+wrap mode are chosen such that the regular road piece is draped onto the
+polygonal ring as desired at the price of some distortion. A distortion-free
+alternative, e.g. for higher LODs, requires an additional road piece texture for
+the roundabout (<<fig_92>>) or a texture for the complete roundabout
+(<<fig_93>>). In both cases, texture space is wasted. Wasted areas are marked
+red.
 
 
 
@@ -1878,7 +1992,21 @@ The entering dirt track requires a different texture. Even though its geometry (
 [[a_G-9]]
 === Example of a CityGML dataset illustrating the use of local coordinate reference systems
 
-The following dataset demonstrates the use of local engineering coordinate reference systems in CityGML. The dataset is based on the LOD1 example given in <<a_G-2>>. The definition of the local CRS is encoded in the _gml:metaDataProperty_ of the _CityModel_ element and describes a 3D Cartesian reference system. Its origin corresponds to an anchor point which references a point on the earth's surface (here: in Germany). This anchor point is defined in the _EngineeringDatum_ element that is used by the local CRS, and is associated with a compound 3D CRS which combines a Projected CRS (ETRS89 / UTM zone 32N; EPSG code 25832) for the planimetry with a Vertical CRS (DHHN92 height, EPSG code 5783) for the height reference. The _gml:Envelope_ of the _CityModel_ references the local CRS by its _gml:id "local-CRS-1"_&nbsp;and thus it is inherited by all geometries in all properties of the _CityModel_ and members of this feature collection. If required, the reference system may be overridden by the members of the _CityModel_, for example, to provide a separate anchor point for each city object.
+The following dataset demonstrates the use of local engineering coordinate
+reference systems in CityGML. The dataset is based on the LOD1 example given in
+<<a_G-2>>. The definition of the local CRS is encoded in the
+_gml:metaDataProperty_ of the _CityModel_ element and describes a 3D Cartesian
+reference system. Its origin corresponds to an anchor point which references a
+point on the earth's surface (here: in Germany). This anchor point is defined in
+the _EngineeringDatum_ element that is used by the local CRS, and is associated
+with a compound 3D CRS which combines a Projected CRS (ETRS89 / UTM zone 32N;
+EPSG code 25832) for the planimetry with a Vertical CRS (DHHN92 height, EPSG
+code 5783) for the height reference. The _gml:Envelope_ of the _CityModel_
+references the local CRS by its _gml:id "local-CRS-1"_&nbsp;and thus it is
+inherited by all geometries in all properties of the _CityModel_ and members of
+this feature collection. If required, the reference system may be overridden by
+the members of the _CityModel_, for example, to provide a separate anchor point
+for each city object.
 
 
 [[listing_13]]

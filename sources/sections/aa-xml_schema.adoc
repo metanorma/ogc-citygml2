@@ -13,7 +13,7 @@ The _CityGML Core_ module is defined within the XML Schema definition file _city
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.opengis.net/citygml/2.0" xmlns:xAL="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml"
-	targetNamespace="http://www.opengis.net/citygml/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+	targetNamespace="http://www.opengis.net/citygml/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified"
 	version="2.0.0">
 	<xs:annotation>
 		<xs:documentation>
@@ -23,7 +23,7 @@ The _CityGML Core_ module is defined within the XML Schema definition file _city
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" 
+	<xs:import namespace="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"
 						  schemaLocation="http://docs.oasis-open.org/election/external/xAL.xsd"/>
 	<xs:complexType name="CityModelType">
 		<xs:annotation>
@@ -328,7 +328,7 @@ The CityGML _Appearance_ module is defined within the XML Schema definition file
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="AppearanceType">
 		<xs:annotation>
@@ -655,7 +655,7 @@ The CityGML _Bridge_ module is defined within the XML Schema definition file _br
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.opengis.net/citygml/bridge/2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:core="http://www.opengis.net/citygml/2.0" xmlns:gml="http://www.opengis.net/gml"
-	targetNamespace="http://www.opengis.net/citygml/bridge/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+	targetNamespace="http://www.opengis.net/citygml/bridge/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified"
 	version="2.0.0">
 	<xs:annotation>
 		<xs:documentation>
@@ -665,7 +665,7 @@ The CityGML _Bridge_ module is defined within the XML Schema definition file _br
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="AbstractBridgeType" abstract="true">
 		<xs:annotation>
@@ -1152,7 +1152,7 @@ The CityGML _Bridge_ module is defined within the XML Schema definition file _br
 					<xs:element name="lod4MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
 					<xs:element name="boundedBy" type="BoundarySurfacePropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="interiorFurniture" type="InteriorFurniturePropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="bridgeRoomInstallation" type="IntBridgeInstallationPropertyType" minOccurs="0" 
+					<xs:element name="bridgeRoomInstallation" type="IntBridgeInstallationPropertyType" minOccurs="0"
 											maxOccurs="unbounded"/>
 					<xs:element ref="_GenericApplicationPropertyOfBridgeRoom" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
@@ -1237,7 +1237,7 @@ The CityGML _Building_ module is defined within the XML Schema definition file _
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="AbstractBuildingType" abstract="true">
 		<xs:annotation>
@@ -1281,7 +1281,7 @@ The CityGML _Building_ module is defined within the XML Schema definition file _
 					<xs:element name="lod2MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
 					<xs:element name="lod2MultiCurve" type="gml:MultiCurvePropertyType" minOccurs="0"/>
 					<xs:element name="lod2TerrainIntersection" type="gml:MultiCurvePropertyType" minOccurs="0"/>
-					<xs:element name="outerBuildingInstallation" type="BuildingInstallationPropertyType" minOccurs="0" 
+					<xs:element name="outerBuildingInstallation" type="BuildingInstallationPropertyType" minOccurs="0"
 											maxOccurs="unbounded"/>
 					<xs:element name="interiorBuildingInstallation" type="IntBuildingInstallationPropertyType" minOccurs="0"
 											maxOccurs="unbounded"/>
@@ -1766,7 +1766,7 @@ The CityGML _CityFurniture_ module is defined within the XML Schema definition f
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="CityFurnitureType">
 		<xs:annotation>
@@ -1826,7 +1826,7 @@ The CityGML _CityObjectGroup_ module is defined within the XML Schema definition
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<!-- ========================================================================================= -->
 	<xs:complexType name="CityObjectGroupType">
@@ -1910,7 +1910,7 @@ _generics.xsd_. The target namespace http://www.opengis.net/citygml/generics/2.0
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="GenericCityObjectType">
 		<xs:annotation>
@@ -2085,7 +2085,7 @@ The CityGML _LandUse_ module is defined within the XML Schema definition file _l
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.opengis.net/citygml/landuse/2.0" xmlns:core="http://www.opengis.net/citygml/2.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml"
-	targetNamespace="http://www.opengis.net/citygml/landuse/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+	targetNamespace="http://www.opengis.net/citygml/landuse/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified"
 	version="2.0.0">
 	<xs:annotation>
 		<xs:documentation>
@@ -2095,11 +2095,11 @@ The CityGML _LandUse_ module is defined within the XML Schema definition file _l
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="LandUseType">
 		<xs:annotation>
-			<xs:documentation>Type describing the class for Land Use in all LOD. LandUse objects describe areas of the earth’s surface
+			<xs:documentation>Type describing the class for Land Use in all LOD. LandUse objects describe areas of the earth's surface
 				dedicated to a specific land use. The geometry must consist of 3-D surfaces. As subclass of _CityObject, a LandUse
 				inherits all attributes and relations, in particular an id, names, external references, and generalization relations.
 			</xs:documentation>
@@ -2141,7 +2141,7 @@ The CityGML _Relief_ module is defined within the XML Schema definition file _re
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.opengis.net/citygml/relief/2.0" xmlns:core="http://www.opengis.net/citygml/2.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml"
-	targetNamespace="http://www.opengis.net/citygml/relief/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+	targetNamespace="http://www.opengis.net/citygml/relief/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified"
 	version="2.0.0">
 	<xs:annotation>
 		<xs:documentation>
@@ -2151,7 +2151,7 @@ The CityGML _Relief_ module is defined within the XML Schema definition file _re
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="ReliefFeatureType">
 		<xs:annotation>
@@ -2340,7 +2340,7 @@ The CityGML _Transportation_ module is defined within the XML Schema definition 
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="AbstractTransportationObjectType" abstract="true">
 		<xs:annotation>
@@ -2556,7 +2556,7 @@ The CityGML _Tunnel_ module is defined within the XML Schema definition file _tu
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.opengis.net/citygml/tunnel/2.0" xmlns:core="http://www.opengis.net/citygml/2.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml"
-	targetNamespace="http://www.opengis.net/citygml/tunnel/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+	targetNamespace="http://www.opengis.net/citygml/tunnel/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified"
 	version="2.0.0">
 	<xs:annotation>
 		<xs:documentation>
@@ -2566,7 +2566,7 @@ The CityGML _Tunnel_ module is defined within the XML Schema definition file _tu
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="AbstractTunnelType">
 		<xs:annotation>
@@ -2945,7 +2945,7 @@ The CityGML _Tunnel_ module is defined within the XML Schema definition file _tu
 					<xs:element name="lod4MultiSurface" type="gml:MultiSurfacePropertyType" minOccurs="0"/>
 					<xs:element name="boundedBy" type="BoundarySurfacePropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="interiorFurniture" type="InteriorFurniturePropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="hollowSpaceInstallation" type="IntTunnelInstallationPropertyType" minOccurs="0" 
+					<xs:element name="hollowSpaceInstallation" type="IntTunnelInstallationPropertyType" minOccurs="0"
 											maxOccurs="unbounded"/>
 					<xs:element ref="_GenericApplicationPropertyOfHollowSpace" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
@@ -3096,7 +3096,7 @@ The CityGML _Vegetation_ module is defined within the XML Schema definition file
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="AbstractVegetationObjectType" abstract="true">
 		<xs:annotation>
@@ -3198,7 +3198,7 @@ The CityGML _WaterBody_ module is defined within the XML Schema definition file 
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.opengis.net/citygml/waterbody/2.0" xmlns:core="http://www.opengis.net/citygml/2.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml"
-	targetNamespace="http://www.opengis.net/citygml/waterbody/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+	targetNamespace="http://www.opengis.net/citygml/waterbody/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified"
 	version="2.0.0">
 	<xs:annotation>
 		<xs:documentation>
@@ -3208,7 +3208,7 @@ The CityGML _WaterBody_ module is defined within the XML Schema definition file 
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="AbstractWaterObjectType" abstract="true">
 		<xs:annotation>
@@ -3386,7 +3386,7 @@ The CityGML _TexturedSurface_ module is defined within the XML Schema definition
 		</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" 
+	<xs:import namespace="http://www.opengis.net/citygml/2.0"
 						  schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
 	<xs:complexType name="TexturedSurfaceType">
 		<xs:annotation>
@@ -3539,9 +3539,9 @@ The following excerpt of _referentialIntegrity.sch_ illustrates the abstract bas
     ...
 	<sch:pattern name="Check either href or content not both">
 		<sch:rule abstract="true" id="hrefOrContent">
-			<sch:report test="@xlink:href and (*|text())">Property element may not carry both a reference to an object and contain an 
+			<sch:report test="@xlink:href and (*|text())">Property element may not carry both a reference to an object and contain an
 				object.</sch:report>
-			<sch:assert test="@xlink:href | (*|text())">Property element must either carry a reference to an object or contain an 
+			<sch:assert test="@xlink:href | (*|text())">Property element must either carry a reference to an object or contain an
 				object.</sch:assert>
 		</sch:rule>
 	</sch:pattern>

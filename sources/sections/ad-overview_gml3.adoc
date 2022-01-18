@@ -2,9 +2,10 @@
 [appendix,obligation="informative"]
 == Overview of employed GML3 geometry classes
 
-[options="unnumbered"]
+[options="unnumbered,header"]
 |===
-h| *Abstract GML classes referenced in CityGML* h| *GML subclass actually used in CityGML*
+| Abstract GML classes referenced in CityGML | GML subclass actually used in CityGML
+
 | _Geometry |
 | _Solid | Solid (boundary is restricted to OrientableSurfaces, TexturedSurfaces, Polygons or CompositeSurfaces)
 

@@ -4,9 +4,10 @@
 [appendix,obligation="informative"]
 == Revision history
 
-[options="unnumbered"]
+[cols="a,a,a,a",options="unnumbered,header"]
 |===
-h| Date h| Release h| Editor h| Description
+| Date | Release | Editor | Description
+
 | 2006-02-01 | 0.1.0 | Czerwinski, Kolbe, Gröger | Initialisation of the document.
 | 2006-02-22 | 0.1.0 | Gröger, Gruber | Additions to UML diagrams.
 | 2006-04-26 | 0.2.0 | Kolbe, Gröger, Czerwi­nski | Release of CityGML draft standard to EuroSDR.
