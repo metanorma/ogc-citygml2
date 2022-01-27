@@ -957,7 +957,7 @@ object.
 
 [[fig_28]]
 .Examples of buildings consisting of one and two building parts (source: City of Coburg).
-image::058.gif[Shape1]
+image::058.png[Shape1]
 
 
 .AbstractBuildingType, _AbstractBuilding
