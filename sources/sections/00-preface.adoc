@@ -58,9 +58,9 @@ Alexandra Lorenz
 
 | Institute for Geodesy and Geoinformation Science, Technical University Berlin
 
-| thomas.kolbe@tu-berlin.de +
-claus.nagel@tu-berlin.de +
-alexandra.lorenz@tu-berlin.de
+| thomas.kolbe<at>tu-berlin.de +
+claus.nagel<at>tu-berlin.de +
+alexandra.lorenz<at>tu-berlin.de
 
 | Dr. Gerhard Gröger +
 Prof. Dr. Lutz Plümer +
@@ -68,13 +68,13 @@ Angela Czerwinski
 
 | Institute for Geodesy and Geoinformation, University of Bonn
 
-| Groeger@ikg.uni-bonn.de +
-Pluemer@ikg.uni-bonn.de +
-Czerwinski@ikg.uni-bonn.de +
+| Groeger<at>ikg.uni-bonn.de +
+Pluemer<at>ikg.uni-bonn.de +
+Czerwinski<at>ikg.uni-bonn.de +
 
 | Haik Lorenz
 | Autodesk, Inc.
-| haik.lorenz@autodesk.com
+| haik.lorenz<at>autodesk.com
 
 | Alain Lapierre +
 Stefan Apfel +
@@ -82,24 +82,24 @@ Paul Scarponcini
 
 | Bentley Systems, Inc.
 
-| alain.lapierre@bentley.com +
-stefan.apfel@bentley.com +
-paul.scarponcini@bentley.com
+| alain.lapierre<at>bentley.com +
+stefan.apfel<at>bentley.com +
+paul.scarponcini<at>bentley.com
 
 | Carsten Rönsdorf
 | Ordnance Survey, Great Britain
-| carsten.roensdorf@ordnancesurvey.co.uk
+| carsten.roensdorf<at>ordnancesurvey.co.uk
 
 | Prof. Dr. Jürgen Döllner
 | Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam
-| juergen.doellner@hpi.uni-potsdam.de
+| juergen.doellner<at>hpi.uni-potsdam.de
 
 | Dr. Joachim Benner +
 Karl-Heinz Häfele
 | Institute for Applied Computer Science,
 Karlsruhe Institute of Technology
-| joachim.benner@kit.edu +
-karl-heinz.haefele@kit.edu
+| joachim.benner<at>kit.edu +
+karl-heinz.haefele<at>kit.edu
 
 |===
 
