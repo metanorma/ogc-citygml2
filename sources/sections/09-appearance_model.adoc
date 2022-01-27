@@ -785,7 +785,7 @@ The _mimeType_ attribute of the feature remote &#95;__Texture__ is specified as 
 [[scls_9-7]]
 === Conformance requirements
 
-===== Base requirements
+*Base requirements*
 
 . A surface geometry object may be the target of at most two textures and two materials (one for front and back respectively) per theme.
 . The _referencePoint_ property (type: _gml:PointPropertyType_) of the element _GeoreferencedTexture_ may only contain or reference a point geometry object with 2D coordinate values.
