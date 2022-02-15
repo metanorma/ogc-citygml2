@@ -11,7 +11,7 @@ The aim of the development of CityGML is to reach a common definition of the bas
 [.preface]
 == Preface and Acknowledgements
 
-[cols="1,4",options="unnumbered"]
+[cols="1a,4a",options="unnumbered"]
 |===
 a|
 image::citygml.png[]
@@ -48,7 +48,7 @@ For further information see http://www.eurosdr.net
 
 All questions regarding this document should be directed to the editors or the contributors (including participants in development, cf. <<cls_v>>):
 
-[cols="a,a,a",options="header,unnumbered"]
+[cols="2a,2a,2a",options="header,unnumbered"]
 |===
 | Name | Institution | Email
 
@@ -107,7 +107,6 @@ karl-heinz.haefele<at>kit.edu
 [[cls_v]]
 [.preface]
 == Participants in development
-
 
 [cols="a,a",options="header,unnumbered"]
 |===
@@ -184,6 +183,7 @@ Emmanuel Devys
 
 | Mark Pendlington
 | Ordnance Survey, Great Britain
+
 |===
 
 
