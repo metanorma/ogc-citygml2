@@ -186,6 +186,7 @@ Emmanuel Devys
 
 |===
 
+CityGML was originally developed by the Special Interest Group 3D (SIG 3D), 2002 – 2012 - www.citygml.org.
 
 [.preface]
 == Changes to the OGC^(R)^ Abstract Specification
