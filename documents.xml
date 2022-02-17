@@ -1,0 +1,119 @@
+<relaton-collection xmlns="https://open.ribose.com/relaton-xml"><title>OGC CityGML 2.0</title><contributor><role type='author'/><organization><name>OGC</name></organization></contributor><relation type='partOf'><bibdata type="standard">
+  <title format="text/plain" language="en">OGC City Geography Markup Language (CityGML) Encoding Standard</title>
+  <uri type="xml">documents/document.xml</uri>
+  <uri type="pdf">documents/document.pdf</uri>
+  <uri type="doc">documents/document.doc</uri>
+  <uri type="html">documents/document.html</uri>
+  <uri type="rxl">documents/document.rxl</uri>
+  <docidentifier type="ogc-external">http://www.opengis.net/spec/citygml/2.0</docidentifier>
+  <docidentifier type="ogc-internal">12-019</docidentifier>
+  <docnumber>12-019</docnumber>
+  <date type="published">
+    <on>2012-04-04</on>
+  </date>
+  <date type="issued">
+    <on>2012-03-09</on>
+  </date>
+  <date type="received">
+    <on>2011-05-24</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Autodesk, Inc. (primary submitter)</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Bentley Systems, Inc. (primary submitter)</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Technical University Berlin (submitter of technology)</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Ordnance Survey, UK</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>University of Bonn, Germany</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Institute for Applied Computer Science, Karlsruhe Institute of Technology</name>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename>Gerhard Gröger</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename>Thomas H. Kolbe</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename>Claus Nagel</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename>Karl-Heinz Häfele</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <edition>2.0.0</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>approved</stage>
+  </status>
+  <copyright>
+    <from>2012</from>
+    <owner>
+      <organization>
+        <name>Open Geospatial Consortium</name>
+      </organization>
+    </owner>
+  </copyright>
+  <ext>
+    <doctype>standard</doctype>
+    <subdoctype>encoding</subdoctype>
+  </ext>
+</bibdata></relation>
+</relaton-collection>
