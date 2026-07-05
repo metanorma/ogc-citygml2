@@ -1,0 +1,33 @@
+<bibdata type="standard">
+<title language="en" type="main">OGC City Geography Markup Language (CityGML) Encoding Standard</title>
+<docidentifier type="ogc-internal" primary="true">12-019</docidentifier><docidentifier type="ogc-external">http://www.opengis.net/spec/citygml/2.0</docidentifier><docnumber>12-019</docnumber><date type="published"><on>2012-04-04</on></date><date type="issued"><on>2012-03-09</on></date><date type="received"><on>2011-05-24</on></date><contributor><role type="author"/><organization>
+<name>Autodesk, Inc. (primary submitter)</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Bentley Systems, Inc. (primary submitter)</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Technical University Berlin (submitter of technology)</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Ordnance Survey, UK</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>University of Bonn, Germany</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Hasso-Plattner-Institute for IT Systems Engineering, University of Potsdam</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Institute for Applied Computer Science, Karlsruhe Institute of Technology</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Gerhard Gröger</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Thomas H. Kolbe</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Claus Nagel</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Karl-Heinz Häfele</completename></name>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Open Geospatial Consortium</name>
+<subdivision type="Committee">
+<name>technical</name>
+</subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></contributor><edition>2.0.0</edition><language>en</language><script>Latn</script><status><stage>approved</stage></status><copyright><from>2012</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><ext><doctype>standard</doctype><subdoctype>encoding</subdoctype><flavor>ogc</flavor></ext></bibdata>
