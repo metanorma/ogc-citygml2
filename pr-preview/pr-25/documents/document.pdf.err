@@ -1,0 +1,6 @@
+WARNING: font '/config/fonts/google/fira_code/FiraCode[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
+WARNING: font '/config/fonts/google/overpass/Overpass-Italic[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
+WARNING: font '/config/fonts/google/overpass/Overpass[wght].ttf' from the fontist manifest file is the variable font and doesn't supported by Apache FOP!
+Page #1: Font "Fira Code,normal,700" not found. Substituting with "Fira Code,normal,400".
+The contents of fo:region-body on page 102 exceed its viewport by 26945 millipoints. (See position 1:2030)
+Please check the PDF and if necessary, report this issue at the following link: https://github.com/metanorma/mn-native-pdf/issues/new, and attach the XSL-FO file or fragment: '/__w/ogc-citygml2/ogc-citygml2/_site/documents/document.pdf.fo.xml'.
